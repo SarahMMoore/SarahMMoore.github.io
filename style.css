@@ -20,33 +20,46 @@ body {
 }
 
 /* 2. Navigation Bar Styling */
+/* Navigation Bar Core Styling */
 nav {
+    background-color: #0b0c10; /* Dark premium background color theme */
+    padding: 15px 30px;
+    border-bottom: 1px solid #1f2833;
+}
+
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
-    background-color: var(--dark-bg);
-    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav .logo {
+    color: #66fcf1; /* Neon accent color for branding visibility */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 nav ul {
-    display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
+    display: flex;
+    gap: 25px; /* Spaces out your page links horizontally */
+    margin: 0;
+    padding: 0;
 }
 
 nav ul li a {
-    color: white;
+    color: #c5c6c7;
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
+/* Brightens link elements when user hovers mouse over them */
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: #66fcf1; 
 }
 
 /* 3. Hero Header Section */
