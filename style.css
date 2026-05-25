@@ -27,21 +27,6 @@ nav {
     border-bottom: 1px solid #1f2833;
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-nav .logo {
-    color: #66fcf1; /* Neon accent color for branding visibility */
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
 nav ul {
     list-style: none;
     display: flex;
