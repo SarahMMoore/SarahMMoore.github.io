@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarah M. Moore | Portfolio</title>
+    <link rel="stylesheet" href="https://typekit.net">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://use.typekit.net/nwq2ife.css">
 </head>
 <body>
 
-    <!-- Transparent Header Layout -->
+    <!-- Global Fixed Navigation Header Bar -->
     <header class="main-header">
         <nav class="nav-container">
             <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#background">Background</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#gallery">Gallery</a></li>
@@ -22,16 +22,128 @@
         </nav>
     </header>
 
-    <!-- Full Screen Hero Section -->
     <main>
+        <!-- SECTION 1: HOME (HERO) -->
         <section id="home" class="hero-section">
             <div class="hero-content">
                 <p class="hero-tagline">
-                    Hi, I'm Sarah M. Moore. I am a Full-Stack Web Developer 
-                    and Commercial Photographer blending over a decade of 
-                    corporate database logic with high-end visual asset creation.
+                    Hi, I'm Sarah M. Moore. <br>I am a Full-Stack Web Developer and Commercial Photographer blending over a decade of corporate database logic with high-end visual asset creation.
                 </p>
                 <a href="#gallery" class="btn-cta">View Portfolio</a>
+            </div>
+        </section>
+
+        <!-- SECTION 2: BACKGROUND (3-COLUMN SPLIT) -->
+        <section id="background" class="content-section">
+            <div class="grid-three-col">
+                <div class="info-block">
+                    <h3>Corporate Precision</h3>
+                    <p>I spent over a decade mastering corporate financial infrastructure, account workflows, and database modeling. This phase instilled a rigorous eye for detail, procedural logic, and structural precision. I don't just design interfaces; I understand complex business operations, tight deadlines, and backend data flows from the inside out.</p>
+                </div>
+                <div class="info-block">
+                    <h3>Creative Awakening</h3>
+                    <p>In 2019, I transitioned my lifestyle to full-time U.S. travel, transforming my analytical mindset into a visual asset engine. I logged thousands of miles behind the lens, capturing leading-line landscape narratives and complex macro floral photography. This deep immersion taught me how to curate, edit, and manage vast digital asset libraries for production readiness.</p>
+                </div>
+                <div class="info-block">
+                    <h3>Technical Execution</h3>
+                    <p>Today, I combine my analytical roots with my creative drive by pursuing Web Development and Media Creation at Arizona State University, maintaining a 3.98 GPA on the Dean's List. Specializing in full-stack architecture, I merge advanced toolsets like the Adobe Creative Suite with modern code deployment pipelines in Java, HTML, and CSS to build highly functional, visually striking digital products.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: ABOUT (IMAGE + TEXT SPLIT) -->
+        <section id="about" class="content-section">
+            <div class="about-layout">
+                <div class="about-image-frame">
+                    <!-- Placeholder representing the portrait box with X from wireframe -->
+                    <div class="wireframe-x-box"></div>
+                </div>
+                <div class="about-text-content">
+                    <h3>The Intersection of Systemic Logic and Visual Storytelling</h3>
+                    <p>My professional path is built on a rare combination of structural precision and creative execution. For over a decade, I operated within the rigorous frameworks of corporate financial systems—mastering database modeling, accounts infrastructure, and complex procedural operations. This background instilled in me an analytical mindset, a deep respect for systemic architecture, and an eye for data integrity.</p>
+                    <p>In 2019, I stepped away from the desk to embrace full-time travel across the United States. Living on the road became a profound creative catalyst. Pushing me behind the camera lens, I logged thousands of hours capturing raw landscape narratives and detailed floral macro work, developing an extensive asset library of digital photography that I continue to edit, curate, and deploy across my design work.</p>
+                    <p>To bridge these technical and visual chapters, I immersed myself in Graphic Information Technology at Arizona State University, maintaining a 3.98 GPA and consistent placement on the Dean's List. I am also a candidate for the Family First Scholarship. By pairing my corporate analytical foundation with an academic specialization in full-stack web development, Java technologies, human systems engineering, and commercial photography, I build robust, responsive digital environments where backend engineering meets compelling, user-centered design.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: GALLERY (4-COLUMN PORTFOLIO MATRIX) -->
+        <section id="gallery" class="content-section">
+            <div class="gallery-wrapper">
+                <h3>Visual Assets Portfolio</h3>
+                <div class="grid-four-col">
+                    <div class="gallery-card">
+                        <div class="wireframe-x-box ratio-1-1"></div>
+                        <h4>Landscape Narratives</h4>
+                    </div>
+                    <div class="gallery-card">
+                        <div class="wireframe-x-box ratio-1-1"></div>
+                        <h4>Macro Floral Study</h4>
+                    </div>
+                    <div class="gallery-card">
+                        <div class="wireframe-x-box ratio-1-1"></div>
+                        <h4>Commercial Photography Tool Assets</h4>
+                    </div>
+                    <div class="gallery-card">
+                        <div class="wireframe-x-box ratio-1-1"></div>
+                        <h4>Commercial Photography Equipment Assets</h4>
+                    </div>
+                </div>
+                <p class="gallery-footer-statement">High-utility visual assets—meticulously curated, edited, and optimized for modern web deployment.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 5: RESUME (TOP GRID & BOTTOM TRACK ROWS) -->
+        <section id="resume" class="content-section">
+            <div class="resume-wrapper">
+                <!-- Top Skills Matrix Grid -->
+                <div class="grid-three-col resume-skills">
+                    <div class="skill-category">
+                        <h3>Systems & Database Logic</h3>
+                        <p>Database Management Systems (IFT 300), Java Technologies, Data Storage & Retrieval, Financial Accounts Infrastructure.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Visual Asset Production</h3>
+                        <p>Commercial Photography (GIT 384), Digital Illustration, Asset Curation & Editing, Adobe Creative Suite Mastery.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Strategic Media & UI/UX</h3>
+                        <p>Human Systems Engineering (UX Design Logic), The Digital Audience, Web Content Programming (GIT 337), Metrics Strategy.</p>
+                    </div>
+                </div>
+
+                <!-- Bottom History Tracking List Blocks -->
+                <div class="resume-history">
+                    <h2>Professional Experience & Education</h2>
+                    
+                    <div class="history-block">
+                        <h4>Corporate Operations & Financial Systems (2009 – 2019)</h4>
+                        <ul>
+                            <li>Mastered database modeling, accounts infrastructure, and complex procedural operations.</li>
+                            <li>Managed structural data integrity, high-volume financial pipelines, and internal business logic.</li>
+                            <li>Developed an analytical mindset and a rigorous eye for detail under tight operational deadlines.</li>
+                        </ul>
+                    </div>
+
+                    <div class="history-block">
+                        <h4>Creative Media Asset Curation (2019 – Present)</h4>
+                        <ul>
+                            <li>Clocked thousands of hours behind the camera lens capturing raw landscape and macro narratives.</li>
+                            <li>Built and managed an extensive visual library of custom, production-ready digital assets.</li>
+                            <li>Specialized in commercial product photography, focusing on precision lighting and item staging.</li>
+                        </ul>
+                    </div>
+
+                    <div class="history-block">
+                        <h4>Arizona State University (B.S. Candidate)</h4>
+                        <ul>
+                            <li>Major: Graphic Information Technology (Full-Stack Web Development Focus)</li>
+                            <li>Academic Standing: 3.98 Cumulative GPA | Continuous Dean's List Honor Roll</li>
+                            <li>Honors: Family First Scholarship Candidate</li>
+                            <li>Core Tracks: Database Management Systems, Java Technologies, Human Systems Engineering (UX), Commercial Photography.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
