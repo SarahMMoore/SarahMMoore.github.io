@@ -3,49 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Sarah M. Moore | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/nwq2ife.css">
 </head>
-
 <body>
-    <!-- 1. NAVIGATION BAR -->
-	<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="projects.html">Projects</a></li>
-					<li><a href="contact.html">Contact</a></li>
-				</ul>
-	</nav>
 
-		<!-- 2. HERO / INTRODUCTION SECTION -->
-	<header id="hero">
-    <h1>Sarah M. Moore</h1>
-    <p>I build digital experiences where logic meets layout, lens, and timeline.</p>
-	</header>
+    <!-- Transparent Header Layout -->
+    <header class="main-header">
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#background">Background</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- 3. PORTFOLIO PROJECTS CONTAINER -->
-<main id="projects">
-    <h2>My Featured Work</h2>
-    <div class="project-grid">
+    <!-- Full Screen Hero Section -->
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <p class="hero-tagline">
+                    Hi, I'm Sarah M. Moore. I am a Full-Stack Web Developer 
+                    and Commercial Photographer blending over a decade of 
+                    corporate database logic with high-end visual asset creation.
+                </p>
+                <a href="#gallery" class="btn-cta">View Portfolio</a>
+            </div>
+        </section>
+    </main>
 
-    <!-- PROJECT 1: JAVA APPLICATION -->
-    <div class="project-card">
-    <div class="project-image-placeholder">
-        <span class="tech-badge java">Java</span>
-    </div>
-    <div class="project-info">
-        <h3>Stock Portfolio Application</h3>
-        <p>Final project for IFT210. A robust Java application simulating a brokerage account. Features functionalities allowing users to seamlessly deposit or withdraw cash, alongside executing buy and sell stock orders.</p>
-        <div class="project-links">
-            <!-- This points directly to your repository in the screenshot -->
-            <a href="https://github.com" class="btn" target="_blank">View Code</a>
-        </div>
-    </div>
-</div>
-
-</div>
-
-</main>
 </body>
 </html>
