@@ -1,0 +1,180 @@
+/* ==========================================
+   1. FLUID RESPONSIVE BASE & DESKTOP
+   ========================================== */
+:root {
+    --font-headings: "termina", sans-serif;
+    --font-body: "neue-haas-grotesk-display", sans-serif;
+    --color-bg: #1a1a2e;       /* Dark blue header bar */
+    --color-text: #e2e8f0;     
+    --color-accent: #00adb5;   /* Turquoise button */
+    --transition-smooth: all 0.3s ease;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-weight: 400;
+    overflow-x: hidden; /* Blocks ugly side-scrolling entirely */
+}
+
+/* Section scales seamlessly to match monitor sizes */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(26, 26, 46, 0.4), rgba(26, 26, 46, 0.4)), url('images/BWTexas2019.jpg') no-repeat center center/cover;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center; /* Keeps layout balanced vertically */
+}
+
+/* Header Bar matches your full browser canvas width */
+.main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 80px;  
+    background-color: var(--color-bg); 
+    z-index: 100;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end; 
+    list-style: none;
+    margin: 0;
+    padding: 0 6.25%; /* Converted 120px padding into fluid layout percentage */
+}
+
+.nav-links li a {
+    font-family: var(--font-headings);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: #ffffff; 
+    text-decoration: none;
+    margin-left: 45px; 
+    white-space: nowrap;
+    transition: var(--transition-smooth);
+}
+
+.nav-links li a:hover {
+    color: var(--color-accent);
+}
+
+/* Fluid Hero Content — Converted from exact pixels to responsive metrics */
+.hero-content {
+    position: absolute;
+    left: 16.66%;        /* Placed precisely at the 3rd purple column guideline (320/1920) */
+    top: 22%;            /* Safe baseline vertical spacing */
+    width: 49.37%;       /* Keeps the 948px column frame proportional (948/1920) */
+    max-width: 948px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Fluid Hero Statement Typography */
+.hero-tagline {
+    font-family: var(--font-headings);
+    font-weight: 700;          /* Applies clean, bold typography look */
+    font-size: 48px;           /* Locks the large typography size on desktop screens */
+    line-height: 1.6;          /* Spacious leading to prevent overlapping rows */
+    letter-spacing: 0.09em;    /* Your precise horizontal tracking tracking */
+    margin: 0;
+    padding: 0;
+}
+
+/* Button setup stays proportionally pinned inside guidelines */
+.btn-cta {
+    font-family: var(--font-headings);
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    text-decoration: none;
+    padding: 14px 38px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 5%; 
+    transition: var(--transition-smooth);
+}
+
+
+/* ==========================================
+   2. TABLET BREAKPOINT (Under 1024px)
+   ========================================== */
+@media (max-width: 1024px) {
+    .hero-content {
+        left: 8%;        /* Shifts content leftward so text doesn't squeeze too tightly */
+        width: 84%;
+        top: 25%;
+    }
+    .hero-content h1 {
+        font-size: 3.5vw; /* Slightly bigger font ratio relative to smaller tablet views */
+        line-height: 1.6;
+    }
+    .nav-links {
+        padding: 0 4%;
+    }
+    .nav-links li a {
+        margin-left: 25px;
+    }
+}
+
+
+/* ==========================================
+   3. SMARTPHONE BREAKPOINT (Under 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    .hero-section {
+        /* Darkens mobile backdrop layer significantly to preserve type contrast */
+        background: linear-gradient(rgba(26, 26, 46, 0.75), rgba(26, 26, 46, 0.75)), url('images/BWTexas2019.jpg') no-repeat center center/cover;
+    }
+    .main-header {
+        position: relative; /* Unpins header layout flow on small phone screens */
+    }
+    .nav-links {
+        justify-content: center; /* Centers options for natural touch alignment */
+        padding: 20px 0;
+        flex-wrap: wrap; 
+    }
+    .nav-links li a {
+        margin: 5px 12px;
+        font-size: 0.85rem;
+    }
+    .hero-content {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding: 60px 24px;
+        text-align: center; /* Clean stacked centering alignment for mobile thumbs */
+        align-items: center;
+    }
+    .hero-content h1 {
+        font-size: 1.8rem; /* Static sizing for reliable reading on phones */
+        line-height: 1.5;
+    }
+    .btn-cta {
+        margin-top: 35px;
+        width: 80%;
+        max-width: 280px;
+        text-align: center;
+    }
+}
