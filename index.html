@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah M. Moore | Portfolio</title>
-    <link rel="stylesheet" href="https://use.typekit.net/nwq2ife.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Sarah M. Moore">
+        <meta name="description" content="Website for a professional portfolio showcasing the work of Sarah M. Moore, Full-stack web developer, graphic designer, and photographer.">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://typekit.net">
+        <title>Sarah M. Moore | Full-Stack Developer & Photographer</title>
+    </head>
 
+    <body>
     <!-- Global Fixed Navigation Header Bar -->
     <header class="main-header">
         <nav class="nav-container">
@@ -25,9 +27,13 @@
     <main>
         <!-- SECTION 1: HOME (HERO) -->
         <section id="home" class="hero-section">
+            <picture class="hero-picture">
+                <source srcset="images/hero-travel.webp" type="image/webp">
+                <img src="images/hero-travel.jpg" alt="Scenic cross-country travel landscape photograph by Sarah M. Moore" class="hero-bg-img" loading="eager" decoding="sync">
+            </picture>
             <div class="hero-content">
                 <p class="hero-tagline">
-                    Hi, I'm Sarah M. Moore. <br>I am a Full-Stack Web Developer and Commercial Photographer blending over a decade of corporate database logic with high-end visual asset creation.
+                    Hi, I'm Sarah M. Moore. I am a Full-Stack Web Developer and Commercial Photographer blending over a decade of corporate database logic with high-end visual asset creation.
                 </p>
                 <a href="#gallery" class="btn-cta">View Portfolio</a>
             </div>
@@ -55,8 +61,10 @@
         <section id="about" class="content-section">
             <div class="about-layout">
                 <div class="about-image-frame">
-                    <!-- Placeholder representing the portrait box with X from wireframe -->
-                    <div class="wireframe-x-box"></div>
+                    <picture>
+                        <source srcset="images/sarah-portrait.webp" type="image/webp">
+                        <img src="images/sarah-portrait.jpg" alt="Portrait of Sarah M. Moore" class="about-img" loading="lazy">
+                    </picture>
                 </div>
                 <div class="about-text-content">
                     <h3>The Intersection of Systemic Logic and Visual Storytelling</h3>
@@ -73,20 +81,29 @@
                 <h3>Visual Assets Portfolio</h3>
                 <div class="grid-four-col">
                     <div class="gallery-card">
-                        <div class="wireframe-x-box ratio-1-1"></div>
+                        <picture>
+                            <source srcset="images/gallery-landscape.webp" type="image/webp">
+                            <img src="images/gallery-landscape.jpg" alt="Landscape photography project sample" loading="lazy">
+                        </picture>
                         <h4>Landscape Narratives</h4>
                     </div>
                     <div class="gallery-card">
-                        <div class="wireframe-x-box ratio-1-1"></div>
+                        <picture>
+                            <source srcset="images/gallery-floral.webp" type="image/webp">
+                            <img src="images/gallery-floral.jpg" alt="Macro floral photography project sample" loading="lazy">
+                        </picture>
                         <h4>Macro Floral Study</h4>
                     </div>
                     <div class="gallery-card">
-                        <div class="wireframe-x-box ratio-1-1"></div>
+                        <picture>
+                            <source srcset="images/gallery-tools.webp" type="image/webp">
+                            <img src="images/gallery-tools.jpg" alt="Commercial tool photography project sample" loading="lazy">
+                        </picture>
                         <h4>Commercial Photography Assets</h4>
                     </div>
                     <div class="gallery-card">
-                        <div class="wireframe-x-box ratio-1-1"></div>
-                        <h4>Videography Assets</h4>
+                        <img src="images/daughter-visual-schedule.svg" alt="Vector graphic illustrative visual schedule project" loading="lazy">
+                        <h4>Vector Graphic Design</h4>
                     </div>
                 </div>
                 <p class="gallery-footer-statement">High-utility visual assets—meticulously curated, edited, and optimized for modern web deployment.</p>
