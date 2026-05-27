@@ -86,7 +86,7 @@ body {
    UPDATED SECTION STYLING: HOME (HTML5 HERO)
    ========================================== */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    background: linear-gradient(--color-bg 100%),var(--color-bg 0%)), 
     url('images/BWTexas2019flipped.webp') no-repeat center center/cover;
     position: relative;
     width: 100%;
