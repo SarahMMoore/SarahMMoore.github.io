@@ -1,383 +1,282 @@
-/* ==========================================
-   GLOBAL VARIABLES & MASTER SYSTEM SETUP
-   ========================================== */
+/* Core Styling Resets */
 :root {
-    --font-headings: "termina", sans-serif;
-    --font-body: "neue-haas-grotesk-display", sans-serif;
-    --color-bg: #1a1a2e;       /* Deep dark navy signature color */
-    --color-text: #e2e8f0;     /* Light crisp typography slate */
-    --color-accent: #00adb5;   /* Turquoise highlight accent color */
-    --transition-smooth: all 0.3s ease;
+    --bg-dark: #0f172a;
+    --bg-card: #1e293b;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-hover: #0ea5e9;
+    --border-color: #334155;
 }
 
-html {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     scroll-behavior: smooth;
-    background-color: var(--color-bg);
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    color: var(--color-text);
-    font-family: var(--font-body);
-    font-weight: 400;
-    overflow-x: hidden;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
 }
 
-/* ==========================================
-   NAVIGATION BAR GRID STRUCTURAL SETUP
-   ========================================== */
-.main-header {
-    position: fixed; /* Holds header locked at the screen top when scrolling */
-    top: 0;
-    left: 0;
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+/* Header & Nav */
+header {
+    background-color: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(10px);
+    position: fixed;
     width: 100%;
-    height: 80px;
-    background-color: rgba(26, 26, 46, 0.95); /* Translucent dark navy background */
-    backdrop-filter: blur(10px); /* Seamless modern glassy texture blend */
-    z-index: 1000;
-    display: flex;
-    align-items: center;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .nav-container {
-    width: 100%;
-    max-width: 1920px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text-main);
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--bg-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255,255,255,0.05);
+}
+
+.btn-sm {
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    color: var(--accent) !important;
+}
+
+.btn-sm:hover {
+    background-color: rgba(56, 189, 248, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 8rem;
+    background: linear-gradient(180deg, rgba(56, 189, 248, 0.05) 0%, rgba(15, 23, 42, 0) 100%);
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    max-width: 850px;
+}
+
+.sub-tagline {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+}
+
+/* Section Common */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    border-left: 4px solid var(--accent);
+    padding-left: 1rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.skill-card ul {
+    list-style: none;
+}
+
+.skill-card li {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+.skill-card li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-tags {
+    margin-bottom: 1rem;
+}
+
+.project-tags span {
+    font-size: 0.75rem;
+    background-color: rgba(255,255,255,0.05);
+    color: var(--text-muted);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.project-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.project-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.project-link {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Contact Box */
+.contact-box {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.nav-links {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    margin: 0;
-    padding: 0 6.25%; /* Pads inward matching right limits */
+.contact-box h2 {
+    margin-bottom: 1rem;
 }
 
-.nav-links li a {
-    font-family: var(--font-headings);
-    font-weight: 700;
-    font-size: 0.9rem;
-    letter-spacing: 0.05em;
-    color: var(--color-text);
-    text-decoration: none;
-    margin-left: 45px;
-    transition: var(--transition-smooth);
+.contact-box p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
 }
 
-.nav-links li a:hover {
-    color: var(--color-accent);
-}
-
-/* ==========================================
-   REUSABLE CONTAINER ROWS SYSTEM
-   ========================================== */
-.content-section {
-    width: 100%;
-    min-height: 100vh;
-    padding: 140px 6.25% 80px 6.25%; /* Standardized padding across sections */
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* ==========================================
-   UPDATED SECTION STYLING: HOME (HTML5 HERO)
-   ========================================== */
-.hero-section {
-    background: linear-gradient(--color-bg 100%),var(--color-bg 0%)), 
-    url('images/BWTexas2019flipped.webp') no-repeat center center/cover;
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Set to viewport height for an immersive screen cover */
-    overflow: hidden;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-}
-
-/* Modern responsive HTML5 canvas scaling container */
-.hero-picture {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.hero-bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Crops and covers responsively without distortion */
-    object-position: center; /* Keeps the core composition framed perfectly */
-}
-
-/* Linear-gradient overlay layer protecting dark typography legibility */
-.hero-section::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        180deg, 
-        --color-bg 0%, 
-       --color-bg 100%
-    );
-    z-index: 2;
-}
-
-/* Fluid Hero Content Layered on Top */
-.hero-content {
-    position: relative; /* Placed relatively to float over z-index graphics layers */
-    z-index: 3;
-    left: 16.66%;        /* Locked to 3rd grid column guideline */
-    width: 49.37%;       
-    max-width: 948px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 40px;   /* Shifts content blocks down safely away from the navigation */
-}
-
-.hero-tagline {
-    font-family: var(--font-headings);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.5;
-    letter-spacing: 0.06em;
-    margin: 0;
-    color: #ffffff;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.75); /* Extra safety layer for text display over photos */
-}
-
-.btn-cta {
-    font-family: var(--font-headings);
-    display: inline-block;
-    background-color: var(--color-accent);
-    color: var(--color-bg);
-    text-decoration: none;
-    padding: 14px 38px;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 1rem;
-    margin-top: 40px;
-    transition: var(--transition-smooth);
-}
-
-.btn-cta:hover { 
-    opacity: 0.9;
-    transform: translateY(-2px); /* Slight lift animation for sleek user interaction */
-}
-
-/* ==========================================
-   SECTION STYLING: BACKGROUND & SKILLS (3-COL)
-   ========================================== */
-.grid-three-col {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 fluid columns */
-    gap: 60px;
-    width: 100%;
-    max-width: 1920px;
-    align-items: start;
-}
-
-.info-block h3, .skill-category h3 {
-    font-family: var(--font-headings);
-    font-weight: 700;
-    font-size: 28px;
-    letter-spacing: 0.05em;
-    margin: 0 0 25px 0;
-    color: var(--color-text);
-}
-
-.info-block p, .skill-category p {
-    font-size: 1.15rem;
-    line-height: 1.65;
-    margin: 0;
-    text-align: justify;
-}
-
-/* ==========================================
-   SECTION STYLING: ABOUT SPLIT ROW GRID
-   ========================================== */
-.about-layout {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr; /* Holds wide copy fields right */
-    gap: 80px;
-    width: 100%;
-    max-width: 1920px;
-    align-items: center; /* Centers your portrait vertically with the text block */
-}
-
-.about-image-frame {
-    width: 100%;
-    display: flex;
-}
-
-.about-img {
-    width: 100%;
-    height: 650px;
-    object-fit: cover; /* Keeps your portrait proportioned perfectly without warping */
-    object-position: center;
-    border-radius: 8px;
-}
-
-.about-text-content h3 {
-    font-family: var(--font-headings);
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 1.4;
-    letter-spacing: 0.05em;
-    margin: 0 0 30px 0;
-    color: var(--color-text);
-}
-
-.about-text-content p {
-    font-size: 1.15rem;
-    line-height: 1.65;
-    margin: 0 0 20px 0;
-}
-
-/* ==========================================
-   SECTION STYLING: PORTFOLIO GALLERY GRID MATRIX
-   ========================================== */
-.gallery-wrapper {
-    width: 100%;
-    max-width: 1920px;
-}
-
-.gallery-wrapper h3 {
-    font-family: var(--font-headings);
-    font-weight: 700;
-    font-size: 32px;
-    letter-spacing: 0.05em;
-    margin: 0 0 45px 0;
-    color: var(--color-text);
-}
-
-.grid-four-col {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Forms 4 items layout row */
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-.gallery-card {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Replaced wireframe box references with responsive production asset styling */
-.gallery-card picture,
-.gallery-card img {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Locks your tool shots and macro photos into a crisp square matrix */
-    object-fit: cover; /* Automatically targets center compositions without skewing layout items */
-    border-radius: 6px;
-    background-color: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: var(--transition-smooth);
-}
-
-/* Clean UI lift effect when employers hover over your photographic content */
-.gallery-card img:hover {
-    transform: scale(1.02);
-    border-color: var(--color-accent);
-}
-
-.gallery-card h4 {
-    font-family: var(--font-headings);
-    font-weight: 700;
-    font-size: 1.05rem;
-    letter-spacing: 0.03em;
-    margin: 15px 0 0 0;
-    color: var(--color-text);
-}
-
-.gallery-footer-statement {
-    font-family: var(--font-body);
-    font-size: 1.3rem;
+/* Footer */
+footer {
     text-align: center;
-    margin: 40px 0 0 0;
-    opacity: 0.8;
+    padding: 2rem;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
 }
 
-/* ==========================================
-   SECTION STYLING: RESUME HISTORY LIST BLOCKS
-   ========================================== */
-.resume-wrapper {
-    width: 100%;
-    max-width: 1920px;
-}
-
-.resume-skills {
-    padding-bottom: 60px;
-    margin-bottom: 60px;
-}
-
-.resume-history h2 {
-    font-family: var(--font-headings);
-    font-weight: 700;
-    font-size: 30px;
-    letter-spacing: 0.06em;
-    margin: 0 0 40px 0;
-    color: var(--color-text);
-}
-
-.history-block {
-    margin-bottom: 45px;
-}
-
-.history-block h4 {
-    font-family: var(--font-headings);
-    font-weight: 700;
-    font-size: 1.3rem;
-    letter-spacing: 0.04em;
-    color: var(--color-accent);
-    margin: 0 0 15px 0;
-}
-
-.history-block ul {
-    margin: 0;
-    padding-left: 20px;
-}
-
-.history-block li {
-    font-size: 1.15rem;
-    line-height: 1.7;
-    margin-bottom: 8px;
-}
-
-/* ==========================================
-   TABLET & LAPTOP LAYOUT ADAPTATION CODES
-   ========================================== */
-@media (max-width: 1200px) {
-    .grid-three-col { gap: 30px; }
-    .about-layout { gap: 40px; }
-    .hero-tagline { font-size: 36px; }
-}
-
-@media (max-width: 1024px) {
-    /* Shifts position values fluidly to keep tagline clear of screen bounds */
-    .hero-content { position: relative; left: 5%; width: 90%; top: 0; }
-    .grid-three-col { grid-template-columns: 1fr; gap: 45px; } /* Wraps blocks vertically */
-    .about-layout { grid-template-columns: 1fr; }             /* Unwraps portrait row split */
-    .about-img { height: 450px; }
-    .grid-four-col { grid-template-columns: repeat(2, 1fr); }  /* Drops matrix into a 2x2 column matrix grid */
-}
-
-/* ==========================================
-   SMARTPHONE VIEW ADAPTATION BREAKPOINTS
-   ========================================== */
+/* Responsive Queries */
 @media (max-width: 768px) {
-    .content-section { padding: 100px 4% 60px 4%; }
-    
-    .nav-links { justify-content: center; padding: 0; flex-wrap: wrap; }
-    .nav-links li a { margin: 5px 12px; font-size: 0.8rem; }
+    .hero h1 { font-size: 2rem; }
+    .nav-container { flex-direction: column; gap: 1rem; }
+    nav a { margin: 0 0.75rem; }
 }
-    /* Center aligns text elements for tight touchscreen layouts */
