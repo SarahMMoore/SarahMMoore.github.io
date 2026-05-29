@@ -319,3 +319,33 @@ footer {
     color: #f8fafc;
 }
 
+/* Symmetrical Grid Content Alignment Overrides */
+.projects-grid .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Force the dashboard boxes to stretch completely to the bottom of the card */
+.projects-grid .project-card .ai-dashboard-container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: stretch; /* Forces left and right inner panels to match height */
+}
+
+/* Ensure inner panels inside the dashboard share identical vertical heights */
+.projects-grid .project-card .dashboard-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%; /* Fills the container completely */
+}
+
+/* Let the discrepancy feeds stretch downward evenly */
+.projects-grid .project-card .discrepancy-feed {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
