@@ -280,3 +280,23 @@ footer {
     .nav-container { flex-direction: column; gap: 1rem; }
     nav a { margin: 0 0.75rem; }
 }
+
+/* Media Content Creation Accent Styles */
+.media-dashboard {
+    border-color: #38bdf8 !important;
+}
+
+.status-optimized {
+    background-color: rgba(56, 189, 248, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.alert-success {
+    background-color: rgba(56, 189, 248, 0.05);
+    border-left: 4px solid #38bdf8;
+    color: #f8fafc;
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
