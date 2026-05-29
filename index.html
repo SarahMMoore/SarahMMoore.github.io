@@ -95,30 +95,84 @@
     </section>
 
     <!-- AI Projects Placeholders -->
-    <section class="projects-section" id="projects">
-        <div class="container">
-            <h2 class="section-title">Applied AI Case Studies</h2>
-            <div class="projects-grid">
+   <!-- Applied AI Case Studies Section -->
+<section class="projects-section" id="projects">
+    <div class="container">
+        <h2 class="section-title">Applied AI Case Studies</h2>
+        <div class="projects-grid">
 
-                <!-- Project 1 Placeholder -->
-                <div class="project-card">
-                    <div class="project-tags"><span>Python</span><span>OpenAI API</span><span>FinTech</span></div>
-                    <h3>Financial Document Intelligence Tool</h3>
-                    <p>An applied AI system utilizing Python pipelines to automatically ingest, parse, and audit mock financial ledgers for compliance anomalies, featuring a clean human-in-the-loop dashboard interface.</p>
-                    <span class="project-link">Case Study Coming Soon &rarr;</span>
+            <!-- PROJECT 1: Financial Document Intelligence Tool -->
+            <div class="project-card">
+                <div class="project-tags"><span>Python</span><span>OpenAI API</span><span>FinTech</span></div>
+                <h3>Financial Document Intelligence Tool</h3>
+                <p>An applied AI system utilizing Python data pipelines and structured schema validation (Pydantic) to automatically ingest, parse, and audit unstructured financial text for compliance anomalies.</p>
+                
+                <!-- Embedded Interface Dashboard Component -->
+                <div class="ai-dashboard-container">
+                    <div class="dashboard-panel text-input-panel">
+                        <h4>📄 Uploaded Ledger Text</h4>
+                        <div class="code-preview-box">
+                            <p><strong>INVOICE #98234-A</strong><br>
+                            From: Acme Corporate Consulting (Tax ID: Pending)<br>
+                            Line 2: Late Night Open Bar Catering ... $850.00<br>
+                            TOTAL DUE: $6,000.00</p>
+                        </div>
+                        <div class="status-indicator-badge status-rejected">SYSTEM STATUS: REJECTED</div>
+                    </div>
+                    <div class="dashboard-panel reporting-panel">
+                        <h4>🤖 AI Human-in-the-Loop Audit Logs</h4>
+                        <div class="discrepancy-feed">
+                            <div class="alert-item alert-high">
+                                <strong>🚨 High Risk: Policy Compliance Error</strong>
+                                <p>Alcohol charges coded under general consulting. Reallocate or reject.</p>
+                            </div>
+                            <div class="alert-item alert-high">
+                                <strong>🚨 High Risk: Missing Metadata</strong>
+                                <p>Tax ID listed as 'Pending'. Withhold payment until W-9 is submitted.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- Project 2 Placeholder -->
-                <div class="project-card">
-                    <div class="project-tags"><span>LLM Evaluation</span><span>Prompt Engineering</span></div>
-                    <h3>Legal AI Logic & Bias Audit</h3>
-                    <p>A data quality case study detailing the systematic stress-testing, adversarial prompting, and error-correction of a large language model tasked with processing complex estate planning legal scenarios.</p>
-                    <span class="project-link">Case Study Coming Soon &rarr;</span>
-                </div>
-
             </div>
+
+            <!-- PROJECT 2: Legal AI Logic & Bias Audit -->
+            <div class="project-card">
+                <div class="project-tags"><span>LLM Evaluation</span><span>Prompt Engineering</span><span>LegalTech</span></div>
+                <h3>Legal AI Logic & Bias Audit</h3>
+                <p>An adversarial stress-testing framework evaluating Large Language Model behavior against strict regulatory, ethical, and edge-case multi-jurisdictional estate planning criteria.</p>
+                
+                <!-- Embedded Interface Dashboard Component -->
+                <div class="ai-dashboard-container legal-dashboard">
+                    <div class="dashboard-panel text-input-panel">
+                        <h4>⚖️ Test Case: Estate Execution</h4>
+                        <div class="code-preview-box">
+                            <p><strong>SCENARIO EVALUATED:</strong> Multi-state trust asset distribution involving complex tax exemptions and contradictory local probate boundaries.</p>
+                        </div>
+                        <div class="bias-metric-score">
+                            <span class="metric-label">Model Alignment Score:</span>
+                            <span class="metric-value value-warn">84% Consistency</span>
+                        </div>
+                    </div>
+                    <div class="dashboard-panel reporting-panel">
+                        <h4>🔍 Algorithmic Bias & Error Logs</h4>
+                        <div class="discrepancy-feed">
+                            <div class="alert-item alert-high">
+                                <strong>🚨 Logic Failure: Statutory Misinterpretation</strong>
+                                <p>Model applied Illinois probate timelines to an asset strictly bound by Florida estate code.</p>
+                            </div>
+                            <div class="alert-item alert-medium">
+                                <strong>⚠️ Ambiguity Exploitation Flag</strong>
+                                <p>Adversarial prompt injection caused model to systematically favor trustee over contingent beneficiaries.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Remote Work Readiness & Contact -->
     <section class="contact-section" id="contact">
