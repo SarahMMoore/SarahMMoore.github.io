@@ -9,25 +9,33 @@ body {
 } 
 
 /* Header Banner Layout */ 
+/* 1. Tighten the Header Container */ 
 .portfolio-header { 
   width: 100%; 
+  max-height: 180px;        /* Restricts the banner from getting too tall */
   overflow: hidden; 
   background-color: #0A0F1D; 
   border-bottom: 2px solid #1E293B; 
+  display: flex;            /* Enables crisp visual centering rules */
+  align-items: center;      /* Vertically aligns your graphic inside the bar */
 } 
 
+/* 2. Control the Asset Scale */
 .banner-img { 
   width: 100%; 
   height: auto; 
+  object-fit: cover;        /* Snaps the image cleanly to your maximum boundaries */
+  object-position: center;  /* Ensures the center of the mandala stays in frame */
   display: block; 
 } 
 
-/* Central Layout Container */ 
+/* 3. Pull Up Your Main Page Content */
 .portfolio-container { 
   max-width: 900px; 
-  margin: 50px auto; 
+  margin: 20px auto 50px auto; /* Reduces top margin from 50px to 20px */ 
   padding: 0 24px; 
-} 
+}
+
 
 /* Typographic Color Hierarchy */ 
 h1 { 
