@@ -3,224 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah M. Moore | Human-Centered AI Developer & Domain Expert</title>
-    <link rel="stylesheet" href="styles.css">
-
+    <title>Sarah Morrigan Moore | Full-Stack Developer & Technical Operations</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header / Navigation -->
-    <header>
-        <div class="nav-container">
-            <div class="logo">Sarah M. Moore</div>
-            <nav>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">AI Projects</a>
-                <a href="#contact" class="btn-sm">Contact</a>
-            </nav>
-        </div>
+    <!-- Professional Brand Header -->
+    <header class="portfolio-header">
+        <img src="https://github.com" alt="Sarah Morrigan Moore Banner" class="banner-img">
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="about">
-        <div class="container">
-            <span class="badge">ASU Ira A. Fulton Schools of Engineering</span>
-            <h1>Human-Centered AI Developer & Domain Expert</h1>
-            <p class="tagline">
-                Leveraging 15+ years of operational, financial, and legal expertise with full-stack development to build, audit, and optimize safe, compliant, and highly effective AI systems.
+    <main class="portfolio-container">
+        
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <h1>Hi, I'm Sarah Morrigan Moore 👋</h1>
+            <h2>Full-Stack Developer & Technical Operations</h2>
+            <p class="summary-text">
+                An analytical programmer specializing in full-stack engineering, combining deep roots in logic-based programming with a human-centered design approach. Leverages over 20 years of multifaceted professional experience in legal operations, corporate tax infrastructure, and complex database management to build secure, scalable, and highly optimized web applications.
             </p>
-            <p class="sub-tagline">
-                Specializing in LLM Evaluation, Explainable AI (XAI), and bridging the gap between complex algorithms and real-world enterprise utility.
-            </p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">View AI Projects</a>
-                <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+            <div class="contact-badges">
+                <a href="mailto:sarahmorrigan.si@gmail.com" class="badge-btn">📧 Email Me</a>
+                <a href="https://linkedin.com" target="_blank" class="badge-btn">💼 LinkedIn</a>
+                <a href="https://github.com" target="_blank" class="badge-btn">💻 GitHub</a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Matrix Grid -->
-    <section class="skills-section" id="skills">
-        <div class="container">
-            <h2 class="section-title">Technical & Operational Toolkit</h2>
-            <div class="skills-grid">
-                
-                <!-- Skill Category 1 -->
-                <div class="skill-card">
-                    <h3>🤖 AI & Prompt Engineering</h3>
-                    <ul>
-                        <li>LLM Training & Evaluation</li>
-                        <li>Prompt Optimization</li>
-                        <li>Explainable AI (XAI)</li>
-                        <li>Data Quality Auditing</li>
-                    </ul>
-                </div>
+        <hr class="section-divider">
 
-                <!-- Skill Category 2 -->
-                <div class="skill-card">
-                    <h3>💻 Software Engineering</h3>
-                    <ul>
-                        <li>Python & Java</li>
-                        <li>HTML5 & CSS3</li>
-                        <li>Full-Stack Architecture</li>
-                        <li>Version Control (Git)</li>
-                    </ul>
-                </div>
-
-                <!-- Skill Category 3 -->
-                <div class="skill-card">
-                    <h3>🎨 Design & Media</h3>
-                    <ul>
-                        <li>Adobe Creative Suite</li>
-                        <li>UI/UX Interface Design</li>
-                        <li>Media Content Creation</li>
-                        <li>Technical Writing</li>
-                    </ul>
-                </div>
-
-                <!-- Skill Category 4 -->
-                <div class="skill-card">
-                    <h3>💼 Enterprise Domain</h3>
-                    <ul>
-                        <li>Full-Cycle AP/AR</li>
-                        <li>Financial Compliance</li>
-                        <li>Legal Operations</li>
-                        <li>Asynchronous Work Flow</li>
-                    </ul>
-                </div>
-
+        <!-- Education & Academics -->
+        <section class="portfolio-section">
+            <h3>🎓 Academic Profile</h3>
+            <div class="education-block">
+                <h4>Arizona State University</h4>
+                <p class="degree-title">BS/MS Accelerated Program in Graphic Information Technology (Expected 2027)</p>
+                <p class="degree-details"><strong>Concentration:</strong> Full-Stack Web Development | <strong>GPA:</strong> 3.98 (Consecutive Dean's List Honors)</p>
             </div>
-        </div>
-    </section>
-
-    <!-- AI Projects Placeholders -->
-   <!-- Applied AI Case Studies Section -->
-<section class="projects-section" id="projects">
-    <div class="container">
-        <h2 class="section-title">Applied AI Case Studies</h2>
-        <div class="projects-grid">
-
-            <!-- PROJECT 1: Financial Document Intelligence Tool -->
-            <div class="project-card">
-                <div class="project-tags"><span>Python</span><span>OpenAI API</span><span>FinTech</span></div>
-                <h3>Financial Document Intelligence Tool</h3>
-                <p>An applied AI system utilizing Python data pipelines and structured schema validation (Pydantic) to automatically ingest, parse, and audit unstructured financial text for compliance anomalies.</p>
-                
-                <!-- Embedded Interface Dashboard Component -->
-                <div class="ai-dashboard-container">
-                    <div class="dashboard-panel text-input-panel">
-                        <h4>📄 Uploaded Ledger Text</h4>
-                        <div class="code-preview-box">
-                            <p><strong>INVOICE #98234-A</strong><br>
-                            From: Acme Corporate Consulting (Tax ID: Pending)<br>
-                            Line 2: Late Night Open Bar Catering ... $850.00<br>
-                            TOTAL DUE: $6,000.00</p>
-                        </div>
-                        <div class="status-indicator-badge status-rejected">SYSTEM STATUS: REJECTED</div>
-                    </div>
-                    <div class="dashboard-panel reporting-panel">
-                        <h4>🤖 AI Human-in-the-Loop Audit Logs</h4>
-                        <div class="discrepancy-feed">
-                            <div class="alert-item alert-high">
-                                <strong>🚨 High Risk: Policy Compliance Error</strong>
-                                <p>Alcohol charges coded under general consulting. Reallocate or reject.</p>
-                            </div>
-                            <div class="alert-item alert-high">
-                                <strong>🚨 High Risk: Missing Metadata</strong>
-                                <p>Tax ID listed as 'Pending'. Withhold payment until W-9 is submitted.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="education-block">
+                <h4>Illinois College</h4>
+                <p class="degree-title">Coursework in Computer Science & Strategic Communication</p>
+                <p class="degree-details">Honors: Dean's List (2023 - 2024)</p>
             </div>
-
-            <!-- PROJECT 2: Legal AI Logic & Bias Audit -->
-            <div class="project-card">
-                <div class="project-tags"><span>LLM Evaluation</span><span>Prompt Engineering</span><span>LegalTech</span></div>
-                <h3>Legal AI Logic & Bias Audit</h3>
-                <p>An adversarial stress-testing framework evaluating Large Language Model behavior against strict regulatory, ethical, and edge-case multi-jurisdictional estate planning criteria.</p>
-                
-                <!-- Embedded Interface Dashboard Component -->
-                <div class="ai-dashboard-container legal-dashboard">
-                    <div class="dashboard-panel text-input-panel">
-                        <h4>⚖️ Test Case: Estate Execution</h4>
-                        <div class="code-preview-box">
-                            <p><strong>SCENARIO EVALUATED:</strong> Multi-state trust asset distribution involving complex tax exemptions and contradictory local probate boundaries.</p>
-                        </div>
-                        <div class="bias-metric-score">
-                            <span class="metric-label">Model Alignment Score:</span>
-                            <span class="metric-value value-warn">84% Consistency</span>
-                        </div>
-                    </div>
-                    <div class="dashboard-panel reporting-panel">
-                        <h4>🔍 Algorithmic Bias & Error Logs</h4>
-                        <div class="discrepancy-feed">
-                            <div class="alert-item alert-high">
-                                <strong>🚨 Logic Failure: Statutory Misinterpretation</strong>
-                                <p>Model applied Illinois probate timelines to an asset strictly bound by Florida estate code.</p>
-                            </div>
-                            <div class="alert-item alert-medium">
-                                <strong>⚠️ Ambiguity Exploitation Flag</strong>
-                                <p>Adversarial prompt injection caused model to systematically favor trustee over contingent beneficiaries.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <div class="education-block">
+                <h4>Indian River State College</h4>
+                <p class="degree-title">Associate of Arts in Accounting</p>
+                <p class="degree-details">Honors: Summa Cum Laude | Coursework in Computer Science & C++</p>
             </div>
-            
-            <!-- PROJECT 3: Media Content Layout Automation -->
-            <div class="project-card">
-                <div class="project-tags"><span>LLM Text Generation</span><span>Typography</span><span>MediaTech</span></div>
-                <h3>Automated Media Semantic Layout Engine</h3>
-                <p>An automated text-processing interface that normalizes unstructured raw drafts into clean, accessible semantic markdown following strict typographic hierarchy guidelines.</p>
-                
-                <!-- Media Engineering Dashboard Component --> 
-                <div class="ai-dashboard-container media-dashboard"> 
-                    <!-- Left Column: Raw Markdown Text Input --> 
-                    <div class="dashboard-panel text-input-panel"> 
-                        <h4>📝 Raw Content Input (Cronkite Media Studio)</h4> 
-                        <div class="code-preview-box"> 
-                            <p>## LEADING TECH TRENDS<br> AI tools are expanding fast. content teams must adapt to dynamic systems immediately or face scaling bottlenecks.</p> 
-                        </div> 
-                        <div class="status-indicator-badge status-optimized">FORMATTER: ACTIVE</div> 
-                    </div> 
-                    <!-- Right Column: AI Formatted Output View --> 
-                    <div class="dashboard-panel reporting-panel"> 
-                        <h4>🎨 Automated Semantic Layout Engine</h4> 
-                        <div class="discrepancy-feed"> 
-                            <div class="alert-item alert-success"> 
-                                <strong>✨ Hierarchy Alignment Applied</strong> 
-                                <p>Converted flat lowercase header string into properly weighted Semantic Title: <code>"Leading Tech Trends"</code></p> 
-                            </div> 
-                            <div class="alert-item alert-success"> 
-                                <strong>✨ Typographic Hierarchy Fix</strong> 
-                                <p>Enforced sentence case, fixed missing whitespace, and applied high-contrast padding structures for web accessibility.</p> 
-                            </div> 
-                        </div> 
-                    </div> 
-                </div>
+        </section>
 
+        <hr class="section-divider">
+
+        <!-- Technical Toolkit Table -->
+        <section class="portfolio-section">
+            <h3>🛠️ Technical Toolkit</h3>
+            <div class="table-wrapper">
+                <table class="toolkit-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Technologies, Tools, & Frameworks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Languages & Scripting</strong></td>
+                            <td>Python, Java, SQL, HTML5, CSS3, C++, Visual Basic</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Development Environments</strong></td>
+                            <td>VS Code, GitHub Desktop, CodePen, WordPress, Anaconda, Spyder, Eclipse</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Database & Modeling</strong></td>
+                            <td>MS SQL, Dbdiagram.io, Draw.io, ERD Plus, Eraser AI, MS ODBC for SQL</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Design & Media Production</strong></td>
+                            <td>Photoshop, Illustrator, InDesign, Premiere Pro, Lightroom Classic, Acrobat Pro, Bridge</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Enterprise Data & Finance</strong></td>
+                            <td>Advanced MS Excel (VBA/Macros), Google Workspace, SharePoint, CCH Axcess, UltraTax CS</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+        </section>
 
-        </div>
-    </div>
-</section>
+        <hr class="section-divider">
 
+        <!-- Professional History Highlights -->
+        <section class="portfolio-section">
+            <h3>💼 Professional Operations Highlights</h3>
+            <ul class="highlights-list">
+                <li><strong>Data Scale Engineering:</strong> Architected a high-scale, automated utility billing management platform in Excel utilizing over 100 integrated, relational sheets to process complex accounts.</li>
+                <li><strong>System Compliance & Auditing:</strong> Over two decades managing digital records, finalized civil engineering audit reporting, and specialized database files under strict legal and financial frameworks (Marcum LLP, Forehand & Associates).</li>
+                <li><strong>Logistics Management:</strong> Successfully managed full-lifecycle mobile logistics, route planning, and cross-state operational infrastructure traveling across 25 states (2019 - 2025).</li>
+                <li><strong>Regional Commute Availability:</strong> Based in Carlinville, IL, steps from the regional train station, allowing for seamless hybrid Amtrak transit into Chicago or St. Louis office hubs.</li>
+            </ul>
+        </section>
 
-    <!-- Remote Work Readiness & Contact -->
-    <section class="contact-section" id="contact">
-        <div class="container contact-box">
-            <h2>Let's Build Something Reliable</h2>
-            <p>Based in Illinois and fully equipped for asynchronous, remote contracts and engineering roles. Bringing corporate maturity, technical skills, and high self-management to distributed global teams.</p>
-            <a href="mailto:sarahmorrigan.si@gmail.com" class="btn btn-primary">sarahmorrigan.si@gmail.com</a>
-        </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Sarah M. Moore. Built with clean code & human intent.</p>
+    <footer class="portfolio-footer">
+        <p>&copy; 2026 Sarah Morrigan Moore. All rights reserved.</p>
     </footer>
 
 </body>
