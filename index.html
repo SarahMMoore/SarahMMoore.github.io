@@ -134,30 +134,6 @@ all_tables = [<span class="code-string">'tbls_Beverage'</span>, <span class="cod
             <p class="project-description">
                 <strong>Single-Board Computer Physical Computing:</strong> Programmed low-latency automation scripts running on single-board computer hardware (Raspberry Pi) to manage physical circuit states. Configured native pin communication mapping registries, managed continuous logical execution sequences to cycle LED output arrays, and implemented structural safety listeners (`KeyboardInterrupt`) to execute global pin resource resets safely upon operator termination.
             </p>
-            <pre><code class="custom-code-box"><span class="code-comment"># Single-board computer hardware automation and pin manipulation logic</span>
-<span class="code-keyword">import</span> RPi.GPIO <span class="code-keyword">as</span> GPIO
-<span class="code-keyword">import</span> time
-
-<span class="code-comment"># Configure local board pin registration schemas</span>
-LED_PIN = <span class="code-number">18</span>
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(LED_PIN, GPIO.OUT)
-
-<span class="code-keyword">try</span>:
-    print(<span class="code-string">"[INFO] Initializing physical hardware control loop..."</span>)
-    <span class="code-comment"># Continuous loop execution manipulating external digital signals</span>
-    <span class="code-keyword">for</span> cycle <span class="code-keyword">in</span> range(<span class="code-number">5</span>):
-        print(<span class="code-string">"State: HIGH (ON) - Cycle "</span> + str(cycle + <span class="code-number">1</span>))
-        GPIO.output(LED_PIN, GPIO.HIGH)
-        time.sleep(<span class="code-number">1.0</span>)
-        
-        print(<span class="code-string">"State: LOW (OFF)"</span>)
-        GPIO.output(LED_PIN, GPIO.LOW)
-        time.sleep(<span class="code-number">1.0</span>)
-<span class="code-keyword">except</span> KeyboardInterrupt:
-    print(<span class="code-string">"[WARN] Hardware execution loop safely terminated by operator."</span>)
-<span class="code-keyword">finally</span>:
-    GPIO.cleanup() <span class="code-comment"># Clean reset of all single-board resource configurations</span></code></pre>
 
             <!-- Live Video Demonstration Playback Module - 4-Part Lab Series -->
             <div class="video-gallery-container">
