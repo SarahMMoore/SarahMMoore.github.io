@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarah Morrigan Moore | Full-Stack Developer & Technical Operations</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Lightweight code syntax highlighter theme (Matches your clean dark theme) -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
     <!-- Professional Brand Header -->
     <header class="portfolio-header">
-    <img src="images/banner.png" alt="Sarah Morrigan Moore Banner" class="banner-img">
+        <img src="images/banner.png" alt="Sarah Morrigan Moore Banner" class="banner-img">
     </header>
 
     <main class="portfolio-container">
-        
+
         <!-- Introduction Section -->
         <section class="intro-section">
             <h1>Hi, I'm Sarah Morrigan Moore 👋</h1>
@@ -48,6 +50,83 @@
                 <h4>Indian River State College</h4>
                 <p class="degree-title">Associate of Arts in Accounting</p>
                 <p class="degree-details">Honors: Summa Cum Laude | Coursework in Computer Science & Accounting</p>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Featured Engineering Projects -->
+        <section class="portfolio-section">
+            <h3>💻 Featured Engineering Projects</h3>
+            
+            <!-- SQL Project -->
+            <div class="project-block">
+                <h4>Relational Database Architecture | SQL</h4>
+                <p class="project-description">
+                    <strong>Pizza Ordering System & Relational Database Design:</strong> Built comprehensive Entity-Relationship Diagrams (ERDs) and physical relational database schemas implementing rigorous Primary Key/Foreign Key integrity constraints. Developed optimized multi-table JOIN queries and transaction-handling logic to simulate real-world enterprise infrastructure.
+                </p>
+                <pre><code class="language-sql">-- Example schema junction logic mapping complex relational dependencies
+SELECT orders.order_id, customers.customer_name, SUM(pizza.price * details.quantity) AS total_cost
+FROM customer_orders AS orders
+JOIN customers ON orders.customer_id = customers.customer_id
+JOIN order_details AS details ON orders.order_id = details.order_id
+JOIN menu_pizzas AS pizza ON details.pizza_id = pizza.pizza_id
+GROUP BY orders.order_id, customers.customer_name;</code></pre>
+                <div class="project-links">
+                    <a href="https://github.com" target="_blank" class="badge-btn btn-sm">💻 View SQL Repository</a>
+                </div>
+            </div>
+
+            <!-- Java Project -->
+            <div class="project-block">
+                <h4>Transactional Systems Engineering | Java</h4>
+                <p class="project-description">
+                    <strong>Object-Oriented Stock Portfolio Application:</strong> Engineered a modular architecture leveraging core Object-Oriented Programming (OOP) principles, including encapsulation, inheritance, and structured array collections. Developed secure transaction-logging workflows to calculate live cost-basis adjustments and verify account balances.
+                </p>
+                <pre><code class="language-java">// Modular asset calculation logic from your portfolio classes
+public class PortfolioManager {
+    private ArrayList&lt;Transaction&gt; history;
+
+    public double calculateCostBasis(String ticker) {
+        double totalCost = 0.0;
+        int totalShares = 0;
+        for (Transaction t : history) {
+            if (t.getTicker().equalsIgnoreCase(ticker)) {
+                totalCost += t.getSharePrice() * t.getQuantity();
+                totalShares += t.getQuantity();
+            }
+        }
+        return totalShares == 0 ? 0.0 : (totalCost / totalShares);
+    }
+}</code></pre>
+                <div class="project-links">
+                    <a href="https://github.com" target="_blank" class="badge-btn btn-sm">💻 View Java Repository</a>
+                </div>
+            </div>
+
+            <!-- Python Project -->
+            <div class="project-block">
+                <h4>Embedded IoT & Hardware Logic | Python</h4>
+                <p class="project-description">
+                    <strong>Low-Latency Hardware Automation Program:</strong> Authored a Python automation script interfacing directly with hardware controllers to manipulate LED physical states. Implemented continuous logical execution loops, robust state error handling, and terminal execution confirmations to track system shifts in real time.
+                </p>
+                <pre><code class="language-python"># Direct hardware state toggle simulation loop
+import time
+
+def toggle_system_state(pin_output, duration):
+    try:
+        print(f"[INFO] System Engaged. Activating output state on pin {pin_output}...")
+        # Simulating active high hardware pulse loop
+        for cycle in range(5):
+            print(f"State: HIGH (ON) - Cycle {cycle + 1}")
+            time.sleep(duration)
+            print("State: LOW (OFF)")
+            time.sleep(duration)
+    except KeyboardInterrupt:
+        print("[WARN] Hardware loop safely terminated by operator.")</code></pre>
+                <div class="project-links">
+                    <a href="https://github.com" target="_blank" class="badge-btn btn-sm">💻 View Python Repository</a>
+                </div>
             </div>
         </section>
 
@@ -105,9 +184,13 @@
 
     </main>
 
+    <!-- Site Footer Element -->
     <footer class="portfolio-footer">
         <p>&copy; 2026 Sarah Morrigan Moore. All rights reserved.</p>
     </footer>
 
+    <!-- Prism Syntax Highlighter Core JavaScript Execution -->
+    <script src="https://cloudflare.com"></script>
+    <script src="https://cloudflare.com"></script>
 </body>
 </html>
