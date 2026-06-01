@@ -1,187 +1,187 @@
-/* Core Canvas & Universal Typography */
-body {
-    background-color: #060b13; /* Deep obsidian background from your artwork */
-    color: #cbd5e1; /* Highly legible silver-gray body text */
-    font-family: 'Lucida Sans Typewriter', 'Lucida Console', 'Courier New', monospace;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
+/* Core Canvas & Universal Typography */ 
+body { 
+  background-color: #120E0D; /* Deep Espresso background */ 
+  color: #E6DFDA;            /* Soft Alabaster body text for low eye strain */ 
+  font-family: 'Lucida Sans Typewriter', 'Lucida Console', 'Courier New', monospace; 
+  margin: 0; 
+  padding: 0; 
+  line-height: 1.6; 
+} 
 
-/* Header Banner Layout */
-.portfolio-header {
-    width: 100%;
-    overflow: hidden;
-    background-color: #03060a;
-    border-bottom: 2px solid #202b44; /* Slate indigo border */
-}
+/* Header Banner Layout */ 
+.portfolio-header { 
+  width: 100%; 
+  overflow: hidden; 
+  background-color: #0A0807; /* Darker Espresso tone for header strip */ 
+  border-bottom: 2px solid #5A2A1E; /* Rich terracotta border line */ 
+} 
 
-.banner-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+.banner-img { 
+  width: 100%; 
+  height: auto; 
+  display: block; 
+} 
 
-/* Central Layout Container */
-.portfolio-container {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 0 24px;
-}
+/* Central Layout Container */ 
+.portfolio-container { 
+  max-width: 900px; 
+  margin: 50px auto; 
+  padding: 0 24px; 
+} 
 
-/* Typographic Color Hierarchy */
+/* Typographic Color Hierarchy */ 
 h1 { 
-    color: #ffffff; /* Crisp pure white primary heading */
-    font-size: 2.4rem; 
-    font-weight: bold;
-    margin-bottom: 6px; 
-}
+  color: #D95D39; /* Burnished Copper primary heading for crisp branding */ 
+  font-size: 2.4rem; 
+  font-weight: bold; 
+  margin-bottom: 6px; 
+} 
 
 h2 { 
-    color: #58b8f2; /* Vibrant ice blue subtitle from your art */
-    font-weight: normal; 
-    margin-top: 0; 
-    font-size: 1.35rem; 
-    letter-spacing: 0.02em;
-}
+  color: #9C8E87; /* Warm Taupe subtitle to balanced hierarchy */ 
+  font-weight: normal; 
+  margin-top: 0; 
+  font-size: 1.35rem; 
+  letter-spacing: 0.02em; 
+} 
 
 h3 { 
-    color: #8ccdf7; /* Light periwinkle section accent */
-    font-size: 1.25rem;
-    margin-top: 0;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-left: 4px solid #293855; /* Slate indigo indicator */
-    padding-left: 12px;
-}
+  color: #D95D39; /* Burnished Copper section title text */ 
+  font-size: 1.25rem; 
+  margin-top: 0; 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em; 
+  border-left: 4px solid #7A321E; /* Dark Terracotta indicator bar */ 
+  padding-left: 12px; 
+} 
 
 h4 { 
-    color: #ffffff; 
-    margin-bottom: 4px; 
-    font-size: 1.1rem; 
-}
+  color: #F4F1EE; /* Premium off-white header */ 
+  margin-bottom: 4px; 
+  font-size: 1.1rem; 
+} 
 
 .summary-text { 
-    color: #94a3b8; 
-    font-size: 0.98rem; 
-    text-align: justify; 
-    margin-bottom: 30px;
-}
+  color: #BCAFA7; /* Mid-tone taupe gray for readable summary block */ 
+  font-size: 0.98rem; 
+  text-align: justify; 
+  margin-bottom: 30px; 
+} 
 
-/* Dynamic Interactive Buttons */
+/* Dynamic Interactive Buttons */ 
 .contact-badges { 
-    margin: 30px 0; 
-}
+  margin: 30px 0; 
+} 
 
-.badge-btn {
-    display: inline-block;
-    background-color: #202b44; /* Rich slate indigo button fill */
-    color: #8ccdf7; /* Light periwinkle text */
-    padding: 10px 18px;
-    margin-right: 12px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    border: 1px solid #293855;
-    transition: all 0.25s ease-in-out;
-}
+.badge-btn { 
+  display: inline-block; 
+  background-color: #211614; /* Dark roasted espresso background for buttons */ 
+  color: #D95D39;            /* Burnished Copper text */ 
+  padding: 10px 18px; 
+  margin-right: 12px; 
+  border-radius: 6px; 
+  text-decoration: none; 
+  font-weight: bold; 
+  font-size: 0.9rem; 
+  border: 1px solid #5A2A1E; /* Terracotta border accent */ 
+  transition: all 0.25s ease-in-out; 
+} 
 
-.badge-btn:hover {
-    background-color: #58b8f2; /* Swaps to vibrant ice blue on hover */
-    color: #060b13; /* Swaps text to deep obsidian for ultra-contrast */
-    border-color: #58b8f2;
-    transform: translateY(-2px); /* Subtle interactive upward lift */
-}
+.badge-btn:hover { 
+  background-color: #7A321E; /* Fills with strong Terracotta Dust on hover */ 
+  color: #F4F1EE;            /* Flips text color to crisp off-white */ 
+  border-color: #D95D39;     /* Swaps border to bright copper */ 
+  transform: translateY(-2px); /* Retains subtle interactive upward lift */ 
+} 
 
-/* Structural Layout Rules */
+/* Structural Layout Rules */ 
 .section-divider { 
-    border: 0; 
-    height: 1px; 
-    background: linear-gradient(to right, #060b13, #293855, #060b13); 
-    margin: 45px 0; 
-}
+  border: 0; 
+  height: 1px; 
+  background: linear-gradient(to right, #120E0D, #5A2A1E, #120E0D); /* Gradient divider in copper tones */ 
+  margin: 45px 0; 
+} 
 
-.portfolio-section {
-    margin-bottom: 10px;
-}
+.portfolio-section { 
+  margin-bottom: 10px; 
+} 
 
 .education-block { 
-    margin-bottom: 24px; 
-    border-left: 2px solid #293855;
-    padding-left: 15px;
-}
+  margin-bottom: 24px; 
+  border-left: 2px solid #5A2A1E; /* Terracotta border side anchor */ 
+  padding-left: 15px; 
+} 
 
 .degree-title { 
-    margin: 4px 0; 
-    color: #f1f5f9; 
-    font-size: 1rem;
-}
+  margin: 4px 0; 
+  color: #F4F1EE; 
+  font-size: 1rem; 
+} 
 
 .degree-details { 
-    margin: 4px 0; 
-    color: #64748b; 
-    font-size: 0.88rem; 
-}
+  margin: 4px 0; 
+  color: #9C8E87; /* Warm Taupe meta details */ 
+  font-size: 0.88rem; 
+} 
 
-/* Technical Toolkit Relational Table */
+/* Technical Toolkit Relational Table */ 
 .table-wrapper { 
-    overflow-x: auto; 
-    margin-top: 25px; 
-    border-radius: 8px;
-    border: 1px solid #293855;
-}
+  overflow-x: auto; 
+  margin-top: 25px; 
+  border-radius: 8px; 
+  border: 1px solid #5A2A1E; 
+} 
 
-.toolkit-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #0b121f; /* Midnight navy interior */
-}
+.toolkit-table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  background-color: #1A1312; /* Rich brown-black interior */ 
+} 
 
-.toolkit-table th, .toolkit-table td {
-    padding: 14px 18px;
-    text-align: left;
-    border-bottom: 1px solid #293855;
-}
+.toolkit-table th, .toolkit-table td { 
+  padding: 14px 18px; 
+  text-align: left; 
+  border-bottom: 1px solid #33201C; /* Thin dark separator lines */ 
+} 
 
-.toolkit-table tr:last-child td {
-    border-bottom: none;
-}
+.toolkit-table tr:last-child td { 
+  border-bottom: none; 
+} 
 
 .toolkit-table th { 
-    background-color: #202b44; /* Slate indigo column header */
-    color: #ffffff; /* Crisp white headers */
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
+  background-color: #211614; /* Roasted espresso layout header block */ 
+  color: #D95D39;            /* Burnished Copper text headers */ 
+  font-size: 0.9rem; 
+  text-transform: uppercase; 
+  letter-spacing: 0.05em; 
+} 
 
 .toolkit-table td { 
-    color: #cbd5e1; 
-    font-size: 0.92rem; 
-}
+  color: #E6DFDA; 
+  font-size: 0.92rem; 
+} 
 
-/* Bulleted Highlights List */
-.highlights-list {
-    padding-left: 20px;
-}
+/* Bulleted Highlights List */ 
+.highlights-list { 
+  padding-left: 20px; 
+} 
 
 .highlights-list li { 
-    margin-bottom: 14px; 
-    color: #cbd5e1; 
-    font-size: 0.95rem;
-}
+  margin-bottom: 14px; 
+  color: #E6DFDA; 
+  font-size: 0.95rem; 
+} 
 
-.highlights-list strong {
-    color: #58b8f2; /* Direct link emphasis in crisp ice blue */
-}
+.highlights-list strong { 
+  color: #D95D39; /* Bold list highlights stand out crisp in Copper */ 
+} 
 
-/* Global Page Footer */
+/* Global Page Footer */ 
 .portfolio-footer { 
-    text-align: center; 
-    padding: 50px 0; 
-    color: #475569; 
-    font-size: 0.8rem; 
-    border-top: 1px solid #202b44;
-    background-color: #03060a;
+  text-align: center; 
+  padding: 50px 0; 
+  color: #70635C; /* Soft dark taupe text for secondary legal/footer elements */ 
+  font-size: 0.8rem; 
+  border-top: 1px solid #5A2A1E; 
+  background-color: #0A0807; 
 }
