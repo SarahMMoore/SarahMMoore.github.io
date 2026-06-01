@@ -81,31 +81,54 @@ GROUP BY orders.order_id, customers.customer_name;</code></pre>
             </div>
 
             <!-- Java Project -->
-            <div class="project-block">
-                <h4>Transactional Systems Engineering | Java</h4>
-                <p class="project-description">
-                    <strong>Object-Oriented Stock Portfolio Application:</strong> Engineered a modular architecture leveraging core Object-Oriented Programming (OOP) principles, including encapsulation, inheritance, and structured array collections. Developed secure transaction-logging workflows to calculate live cost-basis adjustments and verify account balances.
-                </p>
-                <pre><code class="language-java">// Modular asset calculation logic from your portfolio classes
+<div class="project-block">
+    <h4>Transactional Systems Engineering | Java</h4>
+    <p class="project-description">
+        <strong>Object-Oriented Stock Portfolio Application:</strong> Engineered a modular architecture leveraging core Object-Oriented Programming (OOP) principles, including encapsulation, inheritance, text-based interactive loops, and structured collections (`ArrayList` / `HashMap`). Developed secure data-validation workflows to manage cash positions, track shifting asset distributions dynamically, and verify order executions.
+    </p>
+    <pre><code class="language-java">// Logical engine loop and portfolio tracking functions
 public class PortfolioManager {
-    private ArrayList&lt;Transaction&gt; history;
+    private ArrayList&lt;TransactionHistory&gt; portfolioList = new ArrayList&lt;&gt;();
+    private double cashBalance = 0.0;
 
-    public double calculateCostBasis(String ticker) {
-        double totalCost = 0.0;
-        int totalShares = 0;
-        for (Transaction t : history) {
-            if (t.getTicker().equalsIgnoreCase(ticker)) {
-                totalCost += t.getSharePrice() * t.getQuantity();
-                totalShares += t.getQuantity();
+    // Direct trade execution validation mechanics (Buy Logic)
+    case 3:
+        System.out.print("Ticker: ");
+        String buyTicker = input.nextLine().toUpperCase();
+        System.out.print("Quantity to buy: ");
+        double buyQty = input.nextDouble();
+        System.out.print("Price per share: ");
+        double buyPrice = input.nextDouble();
+        
+        double totalCost = buyQty * buyPrice;
+        if (totalCost &gt; manager.cashBalance) {
+            System.out.println("Not enough cash!");
+        } else {
+            manager.cashBalance -= totalCost;
+            manager.record(buyTicker, "BUY", buyQty, buyPrice);
+            manager.record("CASH", "WITHDRAW", -totalCost, 1.0);
+        }
+        break;
+
+    // Helper validation loop tracking outstanding shared asset weights
+    private double getSharesOwned(String ticker) {
+        double total = 0.0;
+        for (TransactionHistory th : portfolioList) {
+            if (th.getTicker().equalsIgnoreCase(ticker)) {
+                if (th.getTransType().equals("SELL")) {
+                    total -= th.getQty();
+                } else {
+                    total += th.getQty();
+                }
             }
         }
-        return totalShares == 0 ? 0.0 : (totalCost / totalShares);
+        return total;
     }
 }</code></pre>
-                <div class="project-links">
-                    <a href="https://github.com/stockPortfolioApplication" target="_blank" class="badge-btn btn-sm">💻 View Java Repository</a>
-                </div>
-            </div>
+    <div class="project-links">
+        <a href="https://github.com" target="_blank" class="badge-btn btn-sm">💻 View Java Repository</a>
+    </div>
+</div>
 
             <!-- Python Project -->
             <div class="project-block">
