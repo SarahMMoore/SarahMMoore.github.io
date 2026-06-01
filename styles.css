@@ -1,7 +1,7 @@
 /* Core Canvas & Universal Typography */ 
 body { 
-  background-color: #0F1123; /* Deep Cosmic Navy */ 
-  color: #E2E8F0;            /* Crisp silver-white text */ 
+  background-color: #09090B; /* Near-Black Matte Obsidian */ 
+  color: #E4E4E7;            /* Zinc-tinted high-contrast text */ 
   font-family: 'Lucida Sans Typewriter', 'Lucida Console', 'Courier New', monospace; 
   margin: 0; 
   padding: 0; 
@@ -12,8 +12,8 @@ body {
 .portfolio-header { 
   width: 100%; 
   overflow: hidden; 
-  background-color: #080A16; /* Ultra-deep navy header bar */ 
-  border-bottom: 2px solid #1E1E38; 
+  background-color: #040405; 
+  border-bottom: 2px solid #27272A; 
 } 
 
 .banner-img { 
@@ -31,14 +31,14 @@ body {
 
 /* Typographic Color Hierarchy */ 
 h1 { 
-  color: #EA580C; /* Radiant Solar Orange primary heading */ 
+  color: #A855F7; /* Electric Ultraviolet primary heading */ 
   font-size: 2.4rem; 
   font-weight: bold; 
   margin-bottom: 6px; 
 } 
 
 h2 { 
-  color: #94A3B8; /* Muted Slate subtitle */ 
+  color: #71717A; /* Muted Zinc subtitle layer */ 
   font-weight: normal; 
   margin-top: 0; 
   font-size: 1.35rem; 
@@ -46,12 +46,12 @@ h2 {
 } 
 
 h3 { 
-  color: #EA580C; /* Solar Orange section headers */ 
+  color: #06B6D4; /* High-Gloss Cyber Cyan Section Accent */ 
   font-size: 1.25rem; 
   margin-top: 0; 
   text-transform: uppercase; 
   letter-spacing: 0.05em; 
-  border-left: 4px solid #7C3AED; /* High-contrast Electric Violet side bar */ 
+  border-left: 4px solid #A855F7; /* Ultraviolet indicator block */ 
   padding-left: 12px; 
 } 
 
@@ -62,7 +62,7 @@ h4 {
 } 
 
 .summary-text { 
-  color: #94A3B8; 
+  color: #71717A; 
   font-size: 0.98rem; 
   text-align: justify; 
   margin-bottom: 30px; 
@@ -75,22 +75,22 @@ h4 {
 
 .badge-btn { 
   display: inline-block; 
-  background-color: #1E1E38; /* Dark navy button fill */ 
-  color: #EA580C;            /* Solar Orange label text */ 
+  background-color: #18181B; /* Dark structured button background */ 
+  color: #06B6D4;            /* Cyan text labels */ 
   padding: 10px 18px; 
   margin-right: 12px; 
   border-radius: 6px; 
   text-decoration: none; 
   font-weight: bold; 
   font-size: 0.9rem; 
-  border: 1px solid #312E81; 
+  border: 1px solid #27272A; 
   transition: all 0.25s ease-in-out; 
 } 
 
 .badge-btn:hover { 
-  background-color: #7C3AED; /* Flashes into Violet on hover state */ 
-  color: #FFFFFF;            /* Snaps typography to pure white */ 
-  border-color: #EA580C; 
+  background-color: #A855F7; /* Fills bright purple on hover */ 
+  color: #000000;            /* Flips font label to ink black for maximum visibility */ 
+  border-color: #06B6D4; 
   transform: translateY(-2px); 
 } 
 
@@ -98,7 +98,7 @@ h4 {
 .section-divider { 
   border: 0; 
   height: 1px; 
-  background: linear-gradient(to right, #0F1123, #312E81, #0F1123); 
+  background: linear-gradient(to right, #09090B, #27272A, #09090B); 
   margin: 45px 0; 
 } 
 
@@ -108,19 +108,19 @@ h4 {
 
 .education-block { 
   margin-bottom: 24px; 
-  border-left: 2px solid #312E81; 
+  border-left: 2px solid #27272A; 
   padding-left: 15px; 
 } 
 
 .degree-title { 
   margin: 4px 0; 
-  color: #F1F5F9; 
+  color: #F4F4F5; 
   font-size: 1rem; 
 } 
 
 .degree-details { 
   margin: 4px 0; 
-  color: #64748B; 
+  color: #52525B; 
   font-size: 0.88rem; 
 } 
 
@@ -129,19 +129,19 @@ h4 {
   overflow-x: auto; 
   margin-top: 25px; 
   border-radius: 8px; 
-  border: 1px solid #312E81; 
+  border: 1px solid #27272A; 
 } 
 
 .toolkit-table { 
   width: 100%; 
   border-collapse: collapse; 
-  background-color: #151830; 
+  background-color: #111114; 
 } 
 
 .toolkit-table th, .toolkit-table td { 
   padding: 14px 18px; 
   text-align: left; 
-  border-bottom: 1px solid #1E1E38; 
+  border-bottom: 1px solid #18181B; 
 } 
 
 .toolkit-table tr:last-child td { 
@@ -149,15 +149,15 @@ h4 {
 } 
 
 .toolkit-table th { 
-  background-color: #1E1E38; 
-  color: #EA580C; 
+  background-color: #18181B; 
+  color: #06B6D4; 
   font-size: 0.9rem; 
   text-transform: uppercase; 
   letter-spacing: 0.05em; 
 } 
 
 .toolkit-table td { 
-  color: #E2E8F0; 
+  color: #E4E4E7; 
   font-size: 0.92rem; 
 } 
 
@@ -168,20 +168,20 @@ h4 {
 
 .highlights-list li { 
   margin-bottom: 14px; 
-  color: #E2E8F0; 
+  color: #E4E4E7; 
   font-size: 0.95rem; 
 } 
 
 .highlights-list strong { 
-  color: #EA580C; 
+  color: #06B6D4; 
 } 
 
 /* Global Page Footer */ 
 .portfolio-footer { 
   text-align: center; 
   padding: 50px 0; 
-  color: #475569; 
+  color: #52525B; 
   font-size: 0.8rem; 
-  border-top: 1px solid #1E1E38; 
-  background-color: #080A16; 
+  border-top: 1px solid #27272A; 
+  background-color: #040405; 
 }
