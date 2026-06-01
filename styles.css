@@ -193,3 +193,33 @@ h4 {
   border-top: 1px solid #1E293B; 
   background-color: #0A0F1D; 
 }
+/* ==========================================================================
+   Featured Engineering Projects Section
+   ========================================================================== */
+
+/* Spacing out each individual project block */
+.project-block {
+    margin-bottom: 35px;
+    border-left: 2px solid #334155; /* Matches your education-block borders */
+    padding-left: 15px;
+}
+
+/* Aligning project descriptions with your summary-text styling */
+.project-description {
+    color: #94A3B8; /* Muted slate gray */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 8px 0 15px 0;
+}
+
+/* Preserving your clean monospaced font within code snippets */
+code {
+    font-family: 'Lucida Sans Typewriter', 'Lucida Console', 'Courier New', monospace !important;
+}
+
+/* Small button overrides for individual project links */
+.badge-btn.btn-sm {
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    margin-top: 10px;
+}
