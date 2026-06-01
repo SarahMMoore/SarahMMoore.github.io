@@ -57,21 +57,44 @@
         <section class="portfolio-section">
             <h3>💻 Featured Engineering Projects</h3>
             
-            <!-- SQL Project -->
+             <!-- SQL Project -->
             <div class="project-block">
-                <h4>Relational Database Architecture | SQL</h4>
+                <h4>Relational Database Architecture | SQL & Python Integration</h4>
                 <p class="project-description">
-                    <strong>Pizza Ordering System & Relational Database Design:</strong> Built comprehensive Entity-Relationship Diagrams (ERDs) and physical relational database schemas implementing rigorous Primary Key/Foreign Key integrity constraints. Developed optimized multi-table JOIN queries and transaction-handling logic to simulate real-world enterprise infrastructure.
+                    <strong>Pizza Ordering System Database Engineering:</strong> Engineered a robust relational infrastructure connecting Python application layers to a SQL Server database via the `pyodbc` driver. Programmed transaction-handling logic to safely execute multi-table parameterized queries using strict constraint validation before manually forcing a database commit (`conn.commit()`). Developed an automated looping audit mechanism to dynamically scan and print shifting operational logs across all relational schemas.
                 </p>
-                <pre><code class="custom-code-box"><span class="code-comment">-- Example schema junction logic mapping complex relational dependencies</span>
-<span class="code-keyword">SELECT</span> orders.order_id, customers.customer_name, <span class="code-keyword">SUM</span>(pizza.price * details.quantity) <span class="code-keyword">AS</span> total_cost
-<span class="code-keyword">FROM</span> customer_orders <span class="code-keyword">AS</span> orders
-<span class="code-keyword">JOIN</span> customers <span class="code-keyword">ON</span> orders.customer_id = customers.customer_id
-<span class="code-keyword">JOIN</span> order_details <span class="code-keyword">AS</span> details <span class="code-keyword">ON</span> orders.order_id = details.order_id
-<span class="code-keyword">JOIN</span> menu_pizzas <span class="code-keyword">AS</span> pizza <span class="code-keyword">ON</span> details.pizza_id = pizza.pizza_id
-<span class="code-keyword">GROUP BY</span> orders.order_id, customers.customer_name;</code></pre>
+                <pre><code class="custom-code-box"><span class="code-comment"># Programmatic SQL Server connectivity and multi-table transactional inserts</span>
+<span class="code-keyword">import</span> pyodbc
+
+conn = pyodbc.connect(<span class="code-string">"Driver={ODBC Driver 17 for SQL Server};Server=TopConnor;Database=PizzaOrderingSystem;Trusted_Connection=yes;"</span>)
+cursor = conn.cursor()
+
+<span class="code-comment"># Define relational transaction data dynamically</span>
+cust_id = <span class="code-number">7</span>
+cust_address = <span class="code-string">'50 Lenn Road'</span>
+cust_phone = <span class="code-string">'5175155122'</span>
+cust_email = <span class="code-string">'willybee@hotmail.com'</span>
+indiv_name = <span class="code-string">'William Beebee'</span>
+
+<span class="code-comment"># Execute multi-table parameterized insert queries to handle database dependencies</span>
+cursor.execute(<span class="code-string">"INSERT INTO tbls_Customers (CustomerID, CustomerAddress, CustomerPhone, CustomerEmail) VALUES (?, ?, ?, ?)"</span>, (cust_id, cust_address, cust_phone, cust_email))
+cursor.execute(<span class="code-string">"INSERT INTO tblm_Individual (CustomerID, IndividualName) VALUES (?, ?)"</span>, (cust_id, indiv_name))
+
+<span class="code-comment"># Commit transactions and verify insertions with an optimized relational JOIN query</span>
+conn.commit()
+cursor.execute(<span class="code-string">"SELECT C.CustomerID, I.IndividualName, C.CustomerEmail FROM tbls_Customers C JOIN tblm_Individual I ON C.CustomerID = I.CustomerID WHERE C.CustomerID = ?"</span>, (cust_id))
+
+<span class="code-comment"># Global operational auditing iteration script mapping all system tables</span>
+all_tables = [<span class="code-string">'tbls_Beverage'</span>, <span class="code-string">'tbls_Newisltem'</span>, <span class="code-string">'tbls_Corporate'</span>, <span class="code-string">'tbls_CustomerOrders'</span>, <span class="code-string">'tbls_Customers'</span>, <span class="code-string">'tblm_FoodItem'</span>, <span class="code-string">'tbls_Individual'</span>, <span class="code-string">'tbls_OrderDetails'</span>, <span class="code-string">'tbls_PayCash'</span>, <span class="code-string">'tbls_PayCreditCard'</span>, <span class="code-string">'tblm_PaymentType'</span>, <span class="code-string">'tblm_Pizza'</span>]
+
+<span class="code-keyword">for</span> table <span class="code-keyword">in</span> all_tables:
+    print(<span class="code-string">"Table: "</span> + table)
+    cursor.execute(<span class="code-string">"SELECT * FROM "</span> + table)
+    rows = cursor.fetchall()
+    <span class="code-keyword">for</span> row <span class="code-keyword">in</span> rows:
+        print(row)</code></pre>
                 <div class="project-links">
-                    <a href="https://github.com/SarahMMoore" target="_blank" class="badge-btn btn-sm">💻 View SQL Repository</a>
+                    <span class="badge-btn btn-sm" style="background-color: #1E293B; color: #94A3B8; border-color: #334155; cursor: default;">💻 Local Workstation Deployment</span>
                 </div>
             </div>
 
