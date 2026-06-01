@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Lightweight code syntax highlighter theme (Matches your clean dark theme) -->
     <link rel="stylesheet" href="https://cloudflare.com">
-
 </head>
 <body>
 
@@ -58,7 +57,7 @@
 
         <!-- Featured Engineering Projects -->
         <section class="portfolio-section">
-            <h3>💻 Featured Engineering Projects<br>(CURRENT LISTED ITEMS ARE PLACEHOLDERS UPDATE IN PROGRESS)</h3>
+            <h3>💻 Featured Engineering Projects</h3>
             
             <!-- SQL Project -->
             <div class="project-block">
@@ -67,7 +66,10 @@
                     <strong>Pizza Ordering System & Relational Database Design:</strong> Built comprehensive Entity-Relationship Diagrams (ERDs) and physical relational database schemas implementing rigorous Primary Key/Foreign Key integrity constraints. Developed optimized multi-table JOIN queries and transaction-handling logic to simulate real-world enterprise infrastructure.
                 </p>
                 <pre><code class="language-sql">-- Example schema junction logic mapping complex relational dependencies
-SELECT orders.order_id, customers.customer_name, SUM(pizza.price * details.quantity) AS total_cost
+SELECT 
+    orders.order_id, 
+    customers.customer_name, 
+    SUM(pizza.price * details.quantity) AS total_cost
 FROM customer_orders AS orders
 JOIN customers ON orders.customer_id = customers.customer_id
 JOIN order_details AS details ON orders.order_id = details.order_id
@@ -85,26 +87,25 @@ GROUP BY orders.order_id, customers.customer_name;</code></pre>
                     <strong>Object-Oriented Stock Portfolio Application:</strong> Engineered a modular architecture leveraging core Object-Oriented Programming (OOP) principles, including encapsulation, inheritance, and structured array collections. Developed secure transaction-logging workflows to calculate live cost-basis adjustments and verify account balances.
                 </p>
                 <pre><code class="language-java">// Modular asset calculation logic from your portfolio classes
-            public class PortfolioManager {
-                private ArrayList&lt;Transaction&gt; history;
+public class PortfolioManager {
+    private ArrayList&lt;Transaction&gt; history;
 
-                public double calculateCostBasis(String ticker) {
-                    double totalCost = 0.0;
-                    int totalShares = 0;
-                    for (Transaction t : history) {
-                        if (t.getTicker().equalsIgnoreCase(ticker)) {
-                            totalCost += t.getSharePrice() * t.getQuantity();
-                            totalShares += t.getQuantity();
-                        }
-                    }
-                    return totalShares == 0 ? 0.0 : (totalCost / totalShares);
-                }
-            }</code></pre>
+    public double calculateCostBasis(String ticker) {
+        double totalCost = 0.0;
+        int totalShares = 0;
+        for (Transaction t : history) {
+            if (t.getTicker().equalsIgnoreCase(ticker)) {
+                totalCost += t.getSharePrice() * t.getQuantity();
+                totalShares += t.getQuantity();
+            }
+        }
+        return totalShares == 0 ? 0.0 : (totalCost / totalShares);
+    }
+}</code></pre>
                 <div class="project-links">
-                    <a href="https://github.com" target="_blank" class="badge-btn btn-sm">💻 View Java Repository</a>
+                    <a href="https://github.com/stockPortfolioApplication" target="_blank" class="badge-btn btn-sm">💻 View Java Repository</a>
                 </div>
             </div>
-
 
             <!-- Python Project -->
             <div class="project-block">
@@ -179,7 +180,7 @@ def toggle_system_state(pin_output, duration):
             <ul class="highlights-list">
                 <li><strong>Data Scale Engineering:</strong> Architected a high-scale, automated utility billing management platform in Excel utilizing over 100 integrated, relational sheets to process complex accounts.</li>
                 <li><strong>System Compliance & Auditing:</strong> Over two decades managing digital records, finalized civil engineering audit reporting, and specialized database files under strict legal and financial frameworks (Marcum LLP, Forehand & Associates).</li>
-                <li><strong>Logistics Management:</strong> Successfully managed full-lifecycle mobile logistics, route planning, and cross-state operational infrastructure traveling across 25 states (2019 - 2025).</li>
+                 <li><strong>Logistics Management:</strong> Successfully managed full-lifecycle mobile logistics, route planning, and cross-state operational infrastructure traveling across 25 states (2019 - 2025).</li>
                 <li><strong>Regional Commute Availability:</strong> Based in Carlinville, IL, steps from the regional train station, allowing for seamless hybrid Amtrak transit into Chicago or St. Louis office hubs.</li>
             </ul>
         </section>
@@ -191,9 +192,10 @@ def toggle_system_state(pin_output, duration):
         <p>&copy; 2026 Sarah Morrigan Moore. All rights reserved.</p>
     </footer>
 
-    <!-- 1. The main syntax engine -->
+    <!-- Prism Syntax Highlighter Complete Scripts -->
     <script src="https://cloudflare.com"></script>
-    <!-- 2. The explicit Java language pack (bypasses the local block) -->
+    <script src="https://cloudflare.com"></script>
+    <script src="https://cloudflare.com"></script>
     <script src="https://cloudflare.com"></script>
 </body>
 </html>
