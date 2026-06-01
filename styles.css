@@ -1,202 +1,201 @@
-/* Core Canvas & Universal Typography */ 
-body { 
-  background-color: #0F172A; /* Slate-Infused Dark Arctic Blue */ 
-  color: #E2E8F0;            /* Premium muted frost body copy */ 
-  font-family: 'Lucida Sans Typewriter', 'Lucida Console', 'Courier New', monospace; 
-  margin: 0; 
-  padding: 0; 
-  line-height: 1.6; 
-} 
+/* Core Canvas & Universal Typography */
+body {
+    background-color: #0F172A; /* Slate-Infused Dark Arctic Blue */
+    color: #E2E8F0; /* Premium muted frost body copy */
+    font-family: 'Lucida Sans Typewriter', 'Lucida Console', 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
 
-/* Header Banner Layout */ 
-/* 1. Tighten the Header Container */ 
-.portfolio-header { 
-  width: 100%; 
-  max-height: 180px;        /* Restricts the banner from getting too tall */
-  overflow: hidden; 
-  background-color: #0A0F1D; 
-  border-bottom: 2px solid #1E293B; 
-  display: flex;            /* Enables crisp visual centering rules */
-  align-items: center;      /* Vertically aligns your graphic inside the bar */
-} 
+/* Header Banner Layout */
+/* 1. Tighten the Header Container */
+.portfolio-header {
+    width: 100%;
+    max-height: 180px; /* Restricts the banner from getting too tall */
+    overflow: hidden;
+    background-color: #0A0F1D;
+    border-bottom: 2px solid #1E293B;
+    display: flex; /* Enables crisp visual centering rules */
+    align-items: center; /* Vertically aligns your graphic inside the bar */
+}
 
 /* 2. Control the Asset Scale */
-.banner-img { 
-  width: 100%; 
-  height: auto; 
-  object-fit: cover;        /* Snaps the image cleanly to your maximum boundaries */
-  object-position: center;  /* Ensures the center of the mandala stays in frame */
-  display: block; 
-} 
+.banner-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Snaps the image cleanly to your maximum boundaries */
+    object-position: center; /* Ensures the center of the mandala stays in frame */
+    display: block;
+}
 
 /* 3. Pull Up Your Main Page Content */
-.portfolio-container { 
-  max-width: 900px; 
-  margin: 20px auto 50px auto; /* Reduces top margin from 50px to 20px */ 
-  padding: 0 24px; 
+.portfolio-container {
+    max-width: 900px;
+    margin: 20px auto 50px auto; /* Reduces top margin from 50px to 20px */
+    padding: 0 24px;
 }
 
-
-/* Typographic Color Hierarchy */ 
-h1 { 
-  color: #F1F5F9; /* Cold Polar White main name header */ 
-  font-size: 2.4rem; 
-  font-weight: bold; 
-  margin-bottom: 6px; 
-} 
-
-h2 { 
-  color: #D97706; /* Champagne Gold subtitle layer */ 
-  font-weight: normal; 
-  margin-top: 0; 
-  font-size: 1.35rem; 
-  letter-spacing: 0.02em; 
-} 
-
-h3 { 
-  color: #F1F5F9; /* Polar White section headings */ 
-  font-size: 1.25rem; 
-  margin-top: 0; 
-  text-transform: uppercase; 
-  letter-spacing: 0.05em; 
-  border-left: 4px solid #D97706; /* Champagne Gold side rule accent */ 
-  padding-left: 12px; 
-} 
-
-h4 { 
-  color: #FFFFFF; 
-  margin-bottom: 4px; 
-  font-size: 1.1rem; 
-} 
-
-.summary-text { 
-  color: #94A3B8; 
-  font-size: 0.98rem; 
-  text-align: justify; 
-  margin-bottom: 30px; 
-} 
-
-/* Dynamic Interactive Buttons */ 
-.contact-badges { 
-  margin: 30px 0; 
-} 
-
-.badge-btn { 
-  display: inline-block; 
-  background-color: #1E293B; /* Crisp slate button outline track */ 
-  color: #F1F5F9;            /* White text labels */ 
-  padding: 10px 18px; 
-  margin-right: 12px; 
-  border-radius: 6px; 
-  text-decoration: none; 
-  font-weight: bold; 
-  font-size: 0.9rem; 
-  border: 1px solid #334155; 
-  transition: all 0.25s ease-in-out; 
-} 
-
-.badge-btn:hover { 
-  background-color: #D97706; /* Sweeps into solid Champagne Gold on hover state */ 
-  color: #0F172A;            /* Reverses font text directly into deep background shade */ 
-  border-color: #D97706; 
-  transform: translateY(-2px); 
-} 
-
-/* Structural Layout Rules */ 
-.section-divider { 
-  border: 0; 
-  height: 1px; 
-  background: linear-gradient(to right, #0F172A, #334155, #0F172A); 
-  margin: 45px 0; 
-} 
-
-.portfolio-section { 
-  margin-bottom: 10px; 
-} 
-
-.education-block { 
-  margin-bottom: 24px; 
-  border-left: 2px solid #334155; 
-  padding-left: 15px; 
-} 
-
-.degree-title { 
-  margin: 4px 0; 
-  color: #F8FAFC; 
-  font-size: 1rem; 
-} 
-
-.degree-details { 
-  margin: 4px 0; 
-  color: #64748B; 
-  font-size: 0.88rem; 
-} 
-
-/* Technical Toolkit Relational Table */ 
-.table-wrapper { 
-  overflow-x: auto; 
-  margin-top: 25px; 
-  border-radius: 8px; 
-  border: 1px solid #334155; 
-} 
-
-.toolkit-table { 
-  width: 100%; 
-  border-collapse: collapse; 
-  background-color: #131D31; 
-} 
-
-.toolkit-table th, .toolkit-table td { 
-  padding: 14px 18px; 
-  text-align: left; 
-  border-bottom: 1px solid #1E293B; 
-} 
-
-.toolkit-table tr:last-child td { 
-  border-bottom: none; 
-} 
-
-.toolkit-table th { 
-  background-color: #1E293B; 
-  color: #D97706; 
-  font-size: 0.9rem; 
-  text-transform: uppercase; 
-  letter-spacing: 0.05em; 
-} 
-
-.toolkit-table td { 
-  color: #E2E8F0; 
-  font-size: 0.92rem; 
-} 
-
-/* Bulleted Highlights List */ 
-.highlights-list { 
-  padding-left: 20px; 
-} 
-
-.highlights-list li { 
-  margin-bottom: 14px; 
-  color: #E2E8F0; 
-  font-size: 0.95rem; 
-} 
-
-.highlights-list strong { 
-  color: #D97706; 
-} 
-
-/* Global Page Footer */ 
-.portfolio-footer { 
-  text-align: center; 
-  padding: 50px 0; 
-  color: #475569; 
-  font-size: 0.8rem; 
-  border-top: 1px solid #1E293B; 
-  background-color: #0A0F1D; 
+/* Typographic Color Hierarchy */
+h1 {
+    color: #F1F5F9; /* Cold Polar White main name header */
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 6px;
 }
+
+h2 {
+    color: #D97706; /* Champagne Gold subtitle layer */
+    font-weight: normal;
+    margin-top: 0;
+    font-size: 1.35rem;
+    letter-spacing: 0.02em;
+}
+
+h3 {
+    color: #F1F5F9; /* Polar White section headings */
+    font-size: 1.25rem;
+    margin-top: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-left: 4px solid #D97706; /* Champagne Gold side rule accent */
+    padding-left: 12px;
+}
+
+h4 {
+    color: #FFFFFF;
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+}
+
+.summary-text {
+    color: #94A3B8;
+    font-size: 0.98rem;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+/* Dynamic Interactive Buttons */
+.contact-badges {
+    margin: 30px 0;
+}
+
+.badge-btn {
+    display: inline-block;
+    background-color: #1E293B; /* Crisp slate button outline track */
+    color: #F1F5F9; /* White text labels */
+    padding: 10px 18px;
+    margin-right: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 1px solid #334155;
+    transition: all 0.25s ease-in-out;
+}
+
+.badge-btn:hover {
+    background-color: #D97706; /* Sweeps into solid Champagne Gold on hover state */
+    color: #0F172A; /* Reverses font text directly into deep background shade */
+    border-color: #D97706;
+    transform: translateY(-2px);
+}
+
+/* Structural Layout Rules */
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, #0F172A, #334155, #0F172A);
+    margin: 45px 0;
+}
+
+.portfolio-section {
+    margin-bottom: 10px;
+}
+
+.education-block {
+    margin-bottom: 24px;
+    border-left: 2px solid #334155;
+    padding-left: 15px;
+}
+
+.degree-title {
+    margin: 4px 0;
+    color: #F8FAFC;
+    font-size: 1rem;
+}
+
+.degree-details {
+    margin: 4px 0;
+    color: #64748B;
+    font-size: 0.88rem;
+}
+
+/* Technical Toolkit Relational Table */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 25px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+.toolkit-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #131D31;
+}
+
+.toolkit-table th, .toolkit-table td {
+    padding: 14px 18px;
+    text-align: left;
+    border-bottom: 1px solid #1E293B;
+}
+
+.toolkit-table tr:last-child td {
+    border-bottom: none;
+}
+
+.toolkit-table th {
+    background-color: #1E293B;
+    color: #D97706;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.toolkit-table td {
+    color: #E2E8F0;
+    font-size: 0.92rem;
+}
+
+/* Bulleted Highlights List */
+.highlights-list {
+    padding-left: 20px;
+}
+
+.highlights-list li {
+    margin-bottom: 14px;
+    color: #E2E8F0;
+    font-size: 0.95rem;
+}
+
+.highlights-list strong {
+    color: #D97706;
+}
+
+/* Global Page Footer */
+.portfolio-footer {
+    text-align: center;
+    padding: 50px 0;
+    color: #475569;
+    font-size: 0.8rem;
+    border-top: 1px solid #1E293B;
+    background-color: #0A0F1D;
+}
+
 /* ==========================================================================
    Featured Engineering Projects Section
    ========================================================================== */
-
 /* Spacing out each individual project block */
 .project-block {
     margin-bottom: 35px;
@@ -225,28 +224,45 @@ code {
 }
 
 /* ==========================================================================
-   Code Block Container Custom Tuning & Mobile Optimization
+   Native Code Highlight Engine (Custom Color Syntax Mapping)
    ========================================================================== */
-
-/* Overwrite the default light theme container styles injected by Prism */
-pre[class*="language-"] {
-    background-color: #131D31 !important; /* Matches your toolkit table color */
-    border: 1px solid #334155 !important;   /* Matches your table borders */
-    border-radius: 8px !important;
-    padding: 16px 20px !important;
-    margin: 18px 0 !important;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+/* Main wrapping container block for custom styled panels */
+.custom-code-box {
+    display: block;
+    background-color: #131D31; /* Matches your Technical Toolkit table background */
+    border: 1px solid #334155;   /* Matches your table borders */
+    border-radius: 8px;
+    padding: 16px 20px;
+    overflow-x: auto;
+    color: #E2E8F0;             /* Clean polar white/frost text for default variables */
+    font-size: 0.9rem;
+    line-height: 1.5;
+    white-space: pre;           /* Preserves explicit code indent tab configurations */
 }
 
-/* Force standard monospace font stacking logic inside pre containers */
-pre[class*="language-"] code {
-    font-family: 'Lucida Sans Typewriter', 'Lucida Console', 'Courier New', monospace !important;
-    font-size: 0.9rem !important;
-    text-shadow: none !important;
-    line-height: 1.5 !important;
+/* Individual code token typography rules */
+.code-keyword { 
+    color: #D97706;            /* Champagne Gold for core structural keywords */
+    font-weight: bold; 
+} 
+.code-class { 
+    color: #F1F5F9;            /* Crisp Frost White for Object Class blueprint targets */
+    font-weight: bold; 
+} 
+.code-string { 
+    color: #10B981;            /* Emerald Green for explicit console logging text strings */
+} 
+.code-number { 
+    color: #38BDF8;            /* Arctic Sky Blue for numerical properties and assignments */
+} 
+.code-comment { 
+    color: #64748B;            /* Muted Deep Slate for explanatory code documentation */
+    font-style: italic; 
 }
 
-/* Responsive Breakpoint for Fluid Mobile Scaling */
+/* ==========================================================================
+   Responsive Breakpoint for Fluid Mobile Scaling
+   ========================================================================== */
 @media screen and (max-width: 640px) {
     h1 {
         font-size: 1.8rem;
@@ -270,8 +286,8 @@ pre[class*="language-"] code {
         display: inline-block;
         width: auto;
     }
-    pre[class*="language-"] {
-        padding: 12px 14px !important;
-        font-size: 0.82rem !important;
+    .custom-code-box {
+        padding: 12px 14px;
+        font-size: 0.82rem;
     }
 }
