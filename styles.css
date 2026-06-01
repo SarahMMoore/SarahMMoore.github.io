@@ -261,6 +261,44 @@ code {
 }
 
 /* ==========================================================================
+   Custom Responsive Video Playback Frame & Gallery Layout
+   ========================================================================== */
+.video-gallery-container {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Adds clear spacing between stacked video cards */
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #334155; /* Matches your table and code box borders */
+    overflow: hidden;
+    background-color: #0A0F1D;  /* Dark anchor framing background */
+}
+
+.video-label {
+    background-color: #1E293B; /* Crisp slate blue top title header track */
+    color: #D97706;            /* Accent Champagne Gold label font */
+    margin: 0;
+    padding: 10px 16px;
+    font-size: 0.88rem;
+    font-weight: bold;
+    border-bottom: 1px solid #334155;
+    letter-spacing: 0.02em;
+}
+
+.project-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 480px; /* Prevents vertical videos from taking up too much screen space */
+    object-fit: contain;
+}
+
+/* ==========================================================================
    Responsive Breakpoint for Fluid Mobile Scaling
    ========================================================================== */
 @media screen and (max-width: 640px) {
@@ -290,22 +328,8 @@ code {
         padding: 12px 14px;
         font-size: 0.82rem;
     }
-}
-/* Custom Responsive Video Playback Frame */
-.video-wrapper {
-    margin: 20px 0;
-    width: 100%;
-    max-width: 100%;
-    border-radius: 8px;
-    border: 1px solid #334155; /* Matches your table and code box borders */
-    overflow: hidden;
-    background-color: #0A0F1D;  /* Dark anchor framing background */
-}
-
-.project-video {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 480px; /* Prevents vertical videos from taking up too much screen space */
-    object-fit: contain;
+    .video-label {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
 }
