@@ -128,49 +128,83 @@ all_tables = [<span class="code-string">'tbls_Beverage'</span>, <span class="cod
                 </div>
             </div>
 
-                        <!-- Python Project -->
-            <div class="project-block">
-                <h4>Embedded IoT & Hardware Logic | Python (IFT 101 Lab)</h4>
-                <p class="project-description">
-                    <strong>Single-Board Computer Physical Computing:</strong> Programmed low-latency automation scripts running on single-board computer hardware (Raspberry Pi) to manage physical circuit states. Configured native pin communication mapping registries, managed continuous logical execution sequences to cycle LED output arrays, and implemented structural safety listeners (`KeyboardInterrupt`) to execute global pin resource resets safely upon operator termination.
-                </p>
-                <pre><code class="custom-code-box"><span class="code-comment"># Single-board computer hardware automation and pin manipulation logic</span>
-import RPi.GPIO as GPIO
-import time
+                               <!-- Python Project -->
+        <div class="project-block">
+            <h4>Embedded IoT & Hardware Logic | Python (IFT 101 Lab)</h4>
+            <p class="project-description">
+                <strong>Single-Board Computer Physical Computing:</strong> Programmed low-latency automation scripts running on single-board computer hardware (Raspberry Pi) to manage physical circuit states. Configured native pin communication mapping registries, managed continuous logical execution sequences to cycle LED output arrays, and implemented structural safety listeners (`KeyboardInterrupt`) to execute global pin resource resets safely upon operator termination.
+            </p>
+            <pre><code class="custom-code-box"><span class="code-comment"># Single-board computer hardware automation and pin manipulation logic</span>
+<span class="code-keyword">import</span> RPi.GPIO <span class="code-keyword">as</span> GPIO
+<span class="code-keyword">import</span> time
 
-# Configure local board pin registration schemas
-LED_PIN = 18
+<span class="code-comment"># Configure local board pin registration schemas</span>
+LED_PIN = <span class="code-number">18</span>
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(LED_PIN, GPIO.OUT)
 
-try:
-    print("[INFO] Initializing physical hardware control loop...")
-    # Continuous loop execution manipulating external digital signals
-    for cycle in range(5):
-        print("State: HIGH (ON) - Cycle " + str(cycle + 1))
+<span class="code-keyword">try</span>:
+    print(<span class="code-string">"[INFO] Initializing physical hardware control loop..."</span>)
+    <span class="code-comment"># Continuous loop execution manipulating external digital signals</span>
+    <span class="code-keyword">for</span> cycle <span class="code-keyword">in</span> range(<span class="code-number">5</span>):
+        print(<span class="code-string">"State: HIGH (ON) - Cycle "</span> + str(cycle + <span class="code-number">1</span>))
         GPIO.output(LED_PIN, GPIO.HIGH)
-        time.sleep(1.0)
+        time.sleep(<span class="code-number">1.0</span>)
         
-        print("State: LOW (OFF)")
+        print(<span class="code-string">"State: LOW (OFF)"</span>)
         GPIO.output(LED_PIN, GPIO.LOW)
-        time.sleep(1.0)
-except KeyboardInterrupt:
-    print("[WARN] Hardware execution loop safely terminated by operator.")
-finally:
-    GPIO.cleanup() # Clean reset of all single-board resource configurations</code></pre>
+        time.sleep(<span class="code-number">1.0</span>)
+<span class="code-keyword">except</span> KeyboardInterrupt:
+    print(<span class="code-string">"[WARN] Hardware execution loop safely terminated by operator."</span>)
+<span class="code-keyword">finally</span>:
+    GPIO.cleanup() <span class="code-comment"># Clean reset of all single-board resource configurations</span></code></pre>
+
+            <!-- Live Video Demonstration Playback Module - 4-Part Lab Series -->
+            <div class="video-gallery-container">
                 
-                <!-- Live Video Demonstration Playback Module -->
+                <!-- Video 1 -->
                 <div class="video-wrapper">
+                    <p class="video-label">▶️ Demonstration 1: System Initialization</p>
                     <video controls preload="metadata" poster="images/banner.png" class="project-video">
-                        <source src="videos/pizza-hardware-demo.mp4" type="video/mp4">
+                        <source src="video/PS7_P1_Sarah_Moore.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
 
-                <div class="project-links">
-                    <span class="badge-btn btn-sm" style="background-color: #1E293B; color: #94A3B8; border-color: #334155; cursor: default;">💻 Personal Hardware Lab Deployment</span>
+                <!-- Video 2 -->
+                <div class="video-wrapper">
+                    <p class="video-label">▶️ Demonstration 2: Sensor Input Calibration</p>
+                    <video controls preload="metadata" poster="images/banner.png" class="project-video">
+                        <source src="video/PS7_P2_Sarah_Moore.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
+
+                <!-- Video 3 -->
+                <div class="video-wrapper">
+                    <p class="video-label">▶️ Demonstration 3: Hardware State Execution</p>
+                    <video controls preload="metadata" poster="images/banner.png" class="project-video">
+                        <source src="video/PS7_P3_Sarah_Moore.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="video-wrapper">
+                    <p class="video-label">▶️ Demonstration 4: Safety Reset Validation</p>
+                    <video controls preload="metadata" poster="images/banner.png" class="project-video">
+                        <source src="video/PS7_P4_Sarah_Moore.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
             </div>
+
+            <div class="project-links">
+                <span class="badge-btn btn-sm" style="background-color: #1E293B; color: #94A3B8; border-color: #334155; cursor: default;">💻 Personal Hardware Lab Deployment</span>
+            </div>
+        </div>
+
 
 
         <hr class="section-divider">
