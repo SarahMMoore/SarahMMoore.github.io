@@ -128,31 +128,50 @@ all_tables = [<span class="code-string">'tbls_Beverage'</span>, <span class="cod
                 </div>
             </div>
 
-            <!-- Python Project -->
+                        <!-- Python Project -->
             <div class="project-block">
-                <h4>Embedded IoT & Hardware Logic | Python</h4>
+                <h4>Embedded IoT & Hardware Logic | Python (IFT 101 Lab)</h4>
                 <p class="project-description">
-                    <strong>Low-Latency Hardware Automation Program:</strong> Authored a Python automation script interfacing directly with hardware controllers to manipulate LED physical states. Implemented continuous logical execution loops, robust state error handling, and terminal execution confirmations to track system shifts in real time.
+                    <strong>Single-Board Computer Physical Computing:</strong> Programmed low-latency automation scripts running on single-board computer hardware (Raspberry Pi) to manage physical circuit states. Configured native pin communication mapping registries, managed continuous logical execution sequences to cycle LED output arrays, and implemented structural safety listeners (`KeyboardInterrupt`) to execute global pin resource resets safely upon operator termination.
                 </p>
-                <pre><code class="custom-code-box"><span class="code-comment"># Direct hardware state toggle simulation loop</span>
-<span class="code-keyword">import</span> time
+                <pre><code class="custom-code-box"><span class="code-comment"># Single-board computer hardware automation and pin manipulation logic</span>
+import RPi.GPIO as GPIO
+import time
 
-<span class="code-keyword">def</span> <span class="code-class">toggle_system_state</span>(pin_output, duration):
-    <span class="code-keyword">try</span>:
-        print(<span class="code-string">"[INFO] System Engaged. Activating output state on pin "</span> + str(pin_output) + <span class="code-string">"..."</span>)
-        <span class="code-comment"># Simulating active high hardware pulse loop</span>
-        <span class="code-keyword">for</span> cycle <span class="code-keyword">in</span> range(<span class="code-number">5</span>):
-            print(<span class="code-string">"State: HIGH (ON) - Cycle "</span> + str(cycle + <span class="code-number">1</span>))
-            time.sleep(duration)
-            print(<span class="code-string">"State: LOW (OFF)"</span>)
-            time.sleep(duration)
-    <span class="code-keyword">except</span> KeyboardInterrupt:
-        print(<span class="code-string">"[WARN] Hardware loop safely terminated by operator."</span>)</code></pre>
+# Configure local board pin registration schemas
+LED_PIN = 18
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(LED_PIN, GPIO.OUT)
+
+try:
+    print("[INFO] Initializing physical hardware control loop...")
+    # Continuous loop execution manipulating external digital signals
+    for cycle in range(5):
+        print("State: HIGH (ON) - Cycle " + str(cycle + 1))
+        GPIO.output(LED_PIN, GPIO.HIGH)
+        time.sleep(1.0)
+        
+        print("State: LOW (OFF)")
+        GPIO.output(LED_PIN, GPIO.LOW)
+        time.sleep(1.0)
+except KeyboardInterrupt:
+    print("[WARN] Hardware execution loop safely terminated by operator.")
+finally:
+    GPIO.cleanup() # Clean reset of all single-board resource configurations</code></pre>
+                
+                <!-- Live Video Demonstration Playback Module -->
+                <div class="video-wrapper">
+                    <video controls preload="metadata" poster="images/banner.png" class="project-video">
+                        <source src="videos/pizza-hardware-demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
                 <div class="project-links">
-                    <a href="https://github.com/SarahMMoore" target="_blank" class="badge-btn btn-sm">💻 View Python Repository</a>
+                    <span class="badge-btn btn-sm" style="background-color: #1E293B; color: #94A3B8; border-color: #334155; cursor: default;">💻 Personal Hardware Lab Deployment</span>
                 </div>
             </div>
-        </section>
+
 
         <hr class="section-divider">
 
