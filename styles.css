@@ -291,3 +291,21 @@ code {
         font-size: 0.82rem;
     }
 }
+/* Custom Responsive Video Playback Frame */
+.video-wrapper {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #334155; /* Matches your table and code box borders */
+    overflow: hidden;
+    background-color: #0A0F1D;  /* Dark anchor framing background */
+}
+
+.project-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 480px; /* Prevents vertical videos from taking up too much screen space */
+    object-fit: contain;
+}
