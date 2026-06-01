@@ -1,7 +1,7 @@
 /* Core Canvas & Universal Typography */ 
 body { 
-  background-color: #120E0D; /* Deep Espresso background */ 
-  color: #E6DFDA;            /* Soft Alabaster body text for low eye strain */ 
+  background-color: #12161A; /* Deep Slate background — grounds the blue tones of the artwork */ 
+  color: #E2E8F0;            /* Silver-gray body text for high readability */ 
   font-family: 'Lucida Sans Typewriter', 'Lucida Console', 'Courier New', monospace; 
   margin: 0; 
   padding: 0; 
@@ -12,8 +12,8 @@ body {
 .portfolio-header { 
   width: 100%; 
   overflow: hidden; 
-  background-color: #0A0807; /* Darker Espresso tone for header strip */ 
-  border-bottom: 2px solid #5A2A1E; /* Rich terracotta border line */ 
+  background-color: #0B0E11; /* Ultra-dark slate header strip */ 
+  border-bottom: 2px solid #2A3540; /* Mid-slate accent border line */ 
 } 
 
 .banner-img { 
@@ -31,14 +31,14 @@ body {
 
 /* Typographic Color Hierarchy */ 
 h1 { 
-  color: #D95D39; /* Burnished Copper primary heading for crisp branding */ 
+  color: #D97706; /* Crisp Amber Gold for primary name branding */ 
   font-size: 2.4rem; 
   font-weight: bold; 
   margin-bottom: 6px; 
 } 
 
 h2 { 
-  color: #9C8E87; /* Warm Taupe subtitle to balanced hierarchy */ 
+  color: #94A3B8; /* Cool Muted Slate subtitle to balance visual hierarchy */ 
   font-weight: normal; 
   margin-top: 0; 
   font-size: 1.35rem; 
@@ -46,23 +46,23 @@ h2 {
 } 
 
 h3 { 
-  color: #D95D39; /* Burnished Copper section title text */ 
+  color: #D97706; /* Amber Gold section headers */ 
   font-size: 1.25rem; 
   margin-top: 0; 
   text-transform: uppercase; 
   letter-spacing: 0.05em; 
-  border-left: 4px solid #7A321E; /* Dark Terracotta indicator bar */ 
+  border-left: 4px solid #78350F; /* Muted Bronze left indicator line */ 
   padding-left: 12px; 
 } 
 
 h4 { 
-  color: #F4F1EE; /* Premium off-white header */ 
+  color: #FFFFFF; /* True white for lower-level item headings */ 
   margin-bottom: 4px; 
   font-size: 1.1rem; 
 } 
 
 .summary-text { 
-  color: #BCAFA7; /* Mid-tone taupe gray for readable summary block */ 
+  color: #94A3B8; /* Secondary slate-gray for long-form summary block */ 
   font-size: 0.98rem; 
   text-align: justify; 
   margin-bottom: 30px; 
@@ -75,22 +75,22 @@ h4 {
 
 .badge-btn { 
   display: inline-block; 
-  background-color: #211614; /* Dark roasted espresso background for buttons */ 
-  color: #D95D39;            /* Burnished Copper text */ 
+  background-color: #1E252B; /* Dark slate button fill */ 
+  color: #D97706;            /* Amber Gold text labels */ 
   padding: 10px 18px; 
   margin-right: 12px; 
   border-radius: 6px; 
   text-decoration: none; 
   font-weight: bold; 
   font-size: 0.9rem; 
-  border: 1px solid #5A2A1E; /* Terracotta border accent */ 
+  border: 1px solid #2A3540; /* Mid-slate frame */ 
   transition: all 0.25s ease-in-out; 
 } 
 
 .badge-btn:hover { 
-  background-color: #7A321E; /* Fills with strong Terracotta Dust on hover */ 
-  color: #F4F1EE;            /* Flips text color to crisp off-white */ 
-  border-color: #D95D39;     /* Swaps border to bright copper */ 
+  background-color: #78350F; /* Swaps to Muted Bronze on hover state */ 
+  color: #FFFFFF;            /* Switches text to pure white for crisp readability */ 
+  border-color: #D97706;     /* Brightens border line to Amber Gold */ 
   transform: translateY(-2px); /* Retains subtle interactive upward lift */ 
 } 
 
@@ -98,7 +98,7 @@ h4 {
 .section-divider { 
   border: 0; 
   height: 1px; 
-  background: linear-gradient(to right, #120E0D, #5A2A1E, #120E0D); /* Gradient divider in copper tones */ 
+  background: linear-gradient(to right, #12161A, #2A3540, #12161A); /* Sleek slate-gradient divider */ 
   margin: 45px 0; 
 } 
 
@@ -108,19 +108,19 @@ h4 {
 
 .education-block { 
   margin-bottom: 24px; 
-  border-left: 2px solid #5A2A1E; /* Terracotta border side anchor */ 
+  border-left: 2px solid #2A3540; /* Clean vertical structural anchor */ 
   padding-left: 15px; 
 } 
 
 .degree-title { 
   margin: 4px 0; 
-  color: #F4F1EE; 
+  color: #F1F5F9; 
   font-size: 1rem; 
 } 
 
 .degree-details { 
   margin: 4px 0; 
-  color: #9C8E87; /* Warm Taupe meta details */ 
+  color: #64748B; /* Darker tech slate details */ 
   font-size: 0.88rem; 
 } 
 
@@ -129,19 +129,19 @@ h4 {
   overflow-x: auto; 
   margin-top: 25px; 
   border-radius: 8px; 
-  border: 1px solid #5A2A1E; 
+  border: 1px solid #2A3540; 
 } 
 
 .toolkit-table { 
   width: 100%; 
   border-collapse: collapse; 
-  background-color: #1A1312; /* Rich brown-black interior */ 
+  background-color: #181E23; /* Darker slate-gray interior fill */ 
 } 
 
 .toolkit-table th, .toolkit-table td { 
   padding: 14px 18px; 
   text-align: left; 
-  border-bottom: 1px solid #33201C; /* Thin dark separator lines */ 
+  border-bottom: 1px solid #2A3540; 
 } 
 
 .toolkit-table tr:last-child td { 
@@ -149,15 +149,15 @@ h4 {
 } 
 
 .toolkit-table th { 
-  background-color: #211614; /* Roasted espresso layout header block */ 
-  color: #D95D39;            /* Burnished Copper text headers */ 
+  background-color: #1E252B; /* Structured column header track */ 
+  color: #D97706;            /* Amber Gold column title accents */ 
   font-size: 0.9rem; 
   text-transform: uppercase; 
   letter-spacing: 0.05em; 
 } 
 
 .toolkit-table td { 
-  color: #E6DFDA; 
+  color: #E2E8F0; 
   font-size: 0.92rem; 
 } 
 
@@ -168,20 +168,20 @@ h4 {
 
 .highlights-list li { 
   margin-bottom: 14px; 
-  color: #E6DFDA; 
+  color: #E2E8F0; 
   font-size: 0.95rem; 
 } 
 
 .highlights-list strong { 
-  color: #D95D39; /* Bold list highlights stand out crisp in Copper */ 
+  color: #D97706; /* Emphasized words pull forward in sharp Amber */ 
 } 
 
 /* Global Page Footer */ 
 .portfolio-footer { 
   text-align: center; 
   padding: 50px 0; 
-  color: #70635C; /* Soft dark taupe text for secondary legal/footer elements */ 
+  color: #475569; /* Soft tech gray footer strings */ 
   font-size: 0.8rem; 
-  border-top: 1px solid #5A2A1E; 
-  background-color: #0A0807; 
+  border-top: 1px solid #2A3540; 
+  background-color: #0B0E11; 
 }
