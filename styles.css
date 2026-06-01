@@ -1,7 +1,7 @@
 /* Core Canvas & Universal Typography */ 
 body { 
-  background-color: #12161A; /* Deep Slate background — grounds the blue tones of the artwork */ 
-  color: #E2E8F0;            /* Silver-gray body text for high readability */ 
+  background-color: #0F1123; /* Deep Cosmic Navy */ 
+  color: #E2E8F0;            /* Crisp silver-white text */ 
   font-family: 'Lucida Sans Typewriter', 'Lucida Console', 'Courier New', monospace; 
   margin: 0; 
   padding: 0; 
@@ -12,8 +12,8 @@ body {
 .portfolio-header { 
   width: 100%; 
   overflow: hidden; 
-  background-color: #0B0E11; /* Ultra-dark slate header strip */ 
-  border-bottom: 2px solid #2A3540; /* Mid-slate accent border line */ 
+  background-color: #080A16; /* Ultra-deep navy header bar */ 
+  border-bottom: 2px solid #1E1E38; 
 } 
 
 .banner-img { 
@@ -31,14 +31,14 @@ body {
 
 /* Typographic Color Hierarchy */ 
 h1 { 
-  color: #D97706; /* Crisp Amber Gold for primary name branding */ 
+  color: #EA580C; /* Radiant Solar Orange primary heading */ 
   font-size: 2.4rem; 
   font-weight: bold; 
   margin-bottom: 6px; 
 } 
 
 h2 { 
-  color: #94A3B8; /* Cool Muted Slate subtitle to balance visual hierarchy */ 
+  color: #94A3B8; /* Muted Slate subtitle */ 
   font-weight: normal; 
   margin-top: 0; 
   font-size: 1.35rem; 
@@ -46,23 +46,23 @@ h2 {
 } 
 
 h3 { 
-  color: #D97706; /* Amber Gold section headers */ 
+  color: #EA580C; /* Solar Orange section headers */ 
   font-size: 1.25rem; 
   margin-top: 0; 
   text-transform: uppercase; 
   letter-spacing: 0.05em; 
-  border-left: 4px solid #78350F; /* Muted Bronze left indicator line */ 
+  border-left: 4px solid #7C3AED; /* High-contrast Electric Violet side bar */ 
   padding-left: 12px; 
 } 
 
 h4 { 
-  color: #FFFFFF; /* True white for lower-level item headings */ 
+  color: #FFFFFF; 
   margin-bottom: 4px; 
   font-size: 1.1rem; 
 } 
 
 .summary-text { 
-  color: #94A3B8; /* Secondary slate-gray for long-form summary block */ 
+  color: #94A3B8; 
   font-size: 0.98rem; 
   text-align: justify; 
   margin-bottom: 30px; 
@@ -75,30 +75,30 @@ h4 {
 
 .badge-btn { 
   display: inline-block; 
-  background-color: #1E252B; /* Dark slate button fill */ 
-  color: #D97706;            /* Amber Gold text labels */ 
+  background-color: #1E1E38; /* Dark navy button fill */ 
+  color: #EA580C;            /* Solar Orange label text */ 
   padding: 10px 18px; 
   margin-right: 12px; 
   border-radius: 6px; 
   text-decoration: none; 
   font-weight: bold; 
   font-size: 0.9rem; 
-  border: 1px solid #2A3540; /* Mid-slate frame */ 
+  border: 1px solid #312E81; 
   transition: all 0.25s ease-in-out; 
 } 
 
 .badge-btn:hover { 
-  background-color: #78350F; /* Swaps to Muted Bronze on hover state */ 
-  color: #FFFFFF;            /* Switches text to pure white for crisp readability */ 
-  border-color: #D97706;     /* Brightens border line to Amber Gold */ 
-  transform: translateY(-2px); /* Retains subtle interactive upward lift */ 
+  background-color: #7C3AED; /* Flashes into Violet on hover state */ 
+  color: #FFFFFF;            /* Snaps typography to pure white */ 
+  border-color: #EA580C; 
+  transform: translateY(-2px); 
 } 
 
 /* Structural Layout Rules */ 
 .section-divider { 
   border: 0; 
   height: 1px; 
-  background: linear-gradient(to right, #12161A, #2A3540, #12161A); /* Sleek slate-gradient divider */ 
+  background: linear-gradient(to right, #0F1123, #312E81, #0F1123); 
   margin: 45px 0; 
 } 
 
@@ -108,7 +108,7 @@ h4 {
 
 .education-block { 
   margin-bottom: 24px; 
-  border-left: 2px solid #2A3540; /* Clean vertical structural anchor */ 
+  border-left: 2px solid #312E81; 
   padding-left: 15px; 
 } 
 
@@ -120,7 +120,7 @@ h4 {
 
 .degree-details { 
   margin: 4px 0; 
-  color: #64748B; /* Darker tech slate details */ 
+  color: #64748B; 
   font-size: 0.88rem; 
 } 
 
@@ -129,19 +129,19 @@ h4 {
   overflow-x: auto; 
   margin-top: 25px; 
   border-radius: 8px; 
-  border: 1px solid #2A3540; 
+  border: 1px solid #312E81; 
 } 
 
 .toolkit-table { 
   width: 100%; 
   border-collapse: collapse; 
-  background-color: #181E23; /* Darker slate-gray interior fill */ 
+  background-color: #151830; 
 } 
 
 .toolkit-table th, .toolkit-table td { 
   padding: 14px 18px; 
   text-align: left; 
-  border-bottom: 1px solid #2A3540; 
+  border-bottom: 1px solid #1E1E38; 
 } 
 
 .toolkit-table tr:last-child td { 
@@ -149,8 +149,8 @@ h4 {
 } 
 
 .toolkit-table th { 
-  background-color: #1E252B; /* Structured column header track */ 
-  color: #D97706;            /* Amber Gold column title accents */ 
+  background-color: #1E1E38; 
+  color: #EA580C; 
   font-size: 0.9rem; 
   text-transform: uppercase; 
   letter-spacing: 0.05em; 
@@ -173,15 +173,15 @@ h4 {
 } 
 
 .highlights-list strong { 
-  color: #D97706; /* Emphasized words pull forward in sharp Amber */ 
+  color: #EA580C; 
 } 
 
 /* Global Page Footer */ 
 .portfolio-footer { 
   text-align: center; 
   padding: 50px 0; 
-  color: #475569; /* Soft tech gray footer strings */ 
+  color: #475569; 
   font-size: 0.8rem; 
-  border-top: 1px solid #2A3540; 
-  background-color: #0B0E11; 
+  border-top: 1px solid #1E1E38; 
+  background-color: #080A16; 
 }
