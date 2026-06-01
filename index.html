@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarah Morrigan Moore | Full-Stack Developer & Technical Operations</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Lightweight code syntax highlighter theme (Matches your clean dark theme) -->
-    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
@@ -65,16 +63,13 @@
                 <p class="project-description">
                     <strong>Pizza Ordering System & Relational Database Design:</strong> Built comprehensive Entity-Relationship Diagrams (ERDs) and physical relational database schemas implementing rigorous Primary Key/Foreign Key integrity constraints. Developed optimized multi-table JOIN queries and transaction-handling logic to simulate real-world enterprise infrastructure.
                 </p>
-                <pre><code class="language-sql">-- Example schema junction logic mapping complex relational dependencies
-SELECT 
-    orders.order_id, 
-    customers.customer_name, 
-    SUM(pizza.price * details.quantity) AS total_cost
-FROM customer_orders AS orders
-JOIN customers ON orders.customer_id = customers.customer_id
-JOIN order_details AS details ON orders.order_id = details.order_id
-JOIN menu_pizzas AS pizza ON details.pizza_id = pizza.pizza_id
-GROUP BY orders.order_id, customers.customer_name;</code></pre>
+                <pre><code class="custom-code-box"><span class="code-comment">-- Example schema junction logic mapping complex relational dependencies</span>
+<span class="code-keyword">SELECT</span> orders.order_id, customers.customer_name, <span class="code-keyword">SUM</span>(pizza.price * details.quantity) <span class="code-keyword">AS</span> total_cost
+<span class="code-keyword">FROM</span> customer_orders <span class="code-keyword">AS</span> orders
+<span class="code-keyword">JOIN</span> customers <span class="code-keyword">ON</span> orders.customer_id = customers.customer_id
+<span class="code-keyword">JOIN</span> order_details <span class="code-keyword">AS</span> details <span class="code-keyword">ON</span> orders.order_id = details.order_id
+<span class="code-keyword">JOIN</span> menu_pizzas <span class="code-keyword">AS</span> pizza <span class="code-keyword">ON</span> details.pizza_id = pizza.pizza_id
+<span class="code-keyword">GROUP BY</span> orders.order_id, customers.customer_name;</code></pre>
                 <div class="project-links">
                     <a href="https://github.com/SarahMMoore" target="_blank" class="badge-btn btn-sm">💻 View SQL Repository</a>
                 </div>
@@ -86,49 +81,29 @@ GROUP BY orders.order_id, customers.customer_name;</code></pre>
                 <p class="project-description">
                     <strong>Object-Oriented Stock Portfolio Application:</strong> Engineered a modular architecture leveraging core Object-Oriented Programming (OOP) principles, including encapsulation, inheritance, text-based interactive loops, and structured collections (`ArrayList` / `HashMap`). Developed secure data-validation workflows to manage cash positions, track shifting asset distributions dynamically, and verify order executions.
                 </p>
-                <pre><code class="language-java">// Logical engine loop and portfolio tracking functions
-public class PortfolioManager {
-    private ArrayList&lt;TransactionHistory&gt; portfolioList = new ArrayList&lt;&gt;();
-    private double cashBalance = 0.0;
+                <pre><code class="custom-code-box"><span class="code-keyword">public class</span> <span class="code-class">PortfolioManager</span> {
+    <span class="code-keyword">private</span> ArrayList&lt;TransactionHistory&gt; portfolioList = <span class="code-keyword">new</span> ArrayList&lt;&gt;();
+    <span class="code-keyword">private double</span> cashBalance = <span class="code-number">0.0</span>;
 
-    // Direct trade execution validation mechanics (Buy Logic)
-    case 3:
-        System.out.print("Ticker: ");
+    <span class="code-comment">// Direct trade execution validation mechanics (Buy Logic)</span>
+    <span class="code-keyword">case</span> <span class="code-number">3</span>:
+        System.out.print(<span class="code-string">"Ticker: "</span>);
         String buyTicker = input.nextLine().toUpperCase();
-        System.out.print("Quantity to buy: ");
-        double buyQty = input.nextDouble();
-        System.out.print("Price per share: ");
-        double buyPrice = input.nextDouble();
-        
-        double totalCost = buyQty * buyPrice;
-        if (totalCost &gt; manager.cashBalance) {
-            System.out.println("Not enough cash!");
-        } else {
+        System.out.print(<span class="code-string">"Quantity to buy: "</span>);
+        <span class="code-keyword">double</span> buyQty = input.nextDouble();
+        <span class="code-keyword">double</span> totalCost = buyQty * buyPrice;
+        <span class="code-keyword">if</span> (totalCost &gt; manager.cashBalance) {
+            System.out.println(<span class="code-string">"Not enough cash!"</span>);
+        } <span class="code-keyword">else</span> {
             manager.cashBalance -= totalCost;
-            manager.record(buyTicker, "BUY", buyQty, buyPrice);
-            manager.record("CASH", "WITHDRAW", -totalCost, 1.0);
+            manager.record(buyTicker, <span class="code-string">"BUY"</span>, buyQty, buyPrice);
         }
-        break;
-
-    // Helper validation loop tracking outstanding shared asset weights
-    private double getSharesOwned(String ticker) {
-        double total = 0.0;
-        for (TransactionHistory th : portfolioList) {
-            if (th.getTicker().equalsIgnoreCase(ticker)) {
-                if (th.getTransType().equals("SELL")) {
-                    total -= th.getQty();
-                } else {
-                    total += th.getQty();
-                }
-            }
-        }
-        return total;
-    }
+        <span class="code-keyword">break</span>;
 }</code></pre>
-    <div class="project-links">
-        <a href="https://github.com/SarahMMoore/stockPortfolioApplication" target="_blank" class="badge-btn btn-sm">💻 View Java Repository</a>
-    </div>
-</div>
+                <div class="project-links">
+                    <a href="https://github.com/SarahMMoore/stockPortfolioApplication" target="_blank" class="badge-btn btn-sm">💻 View Java Repository</a>
+                </div>
+            </div>
 
             <!-- Python Project -->
             <div class="project-block">
@@ -136,20 +111,20 @@ public class PortfolioManager {
                 <p class="project-description">
                     <strong>Low-Latency Hardware Automation Program:</strong> Authored a Python automation script interfacing directly with hardware controllers to manipulate LED physical states. Implemented continuous logical execution loops, robust state error handling, and terminal execution confirmations to track system shifts in real time.
                 </p>
-                <pre><code class="language-python"># Direct hardware state toggle simulation loop
-import time
+                <pre><code class="custom-code-box"><span class="code-comment"># Direct hardware state toggle simulation loop</span>
+<span class="code-keyword">import</span> time
 
-def toggle_system_state(pin_output, duration):
-    try:
-        print(f"[INFO] System Engaged. Activating output state on pin {pin_output}...")
-        # Simulating active high hardware pulse loop
-        for cycle in range(5):
-            print(f"State: HIGH (ON) - Cycle {cycle + 1}")
+<span class="code-keyword">def</span> <span class="code-class">toggle_system_state</span>(pin_output, duration):
+    <span class="code-keyword">try</span>:
+        print(<span class="code-string">"[INFO] System Engaged. Activating output state on pin "</span> + str(pin_output) + <span class="code-string">"..."</span>)
+        <span class="code-comment"># Simulating active high hardware pulse loop</span>
+        <span class="code-keyword">for</span> cycle <span class="code-keyword">in</span> range(<span class="code-number">5</span>):
+            print(<span class="code-string">"State: HIGH (ON) - Cycle "</span> + str(cycle + <span class="code-number">1</span>))
             time.sleep(duration)
-            print("State: LOW (OFF)")
+            print(<span class="code-string">"State: LOW (OFF)"</span>)
             time.sleep(duration)
-    except KeyboardInterrupt:
-        print("[WARN] Hardware loop safely terminated by operator.")</code></pre>
+    <span class="code-keyword">except</span> KeyboardInterrupt:
+        print(<span class="code-string">"[WARN] Hardware loop safely terminated by operator."</span>)</code></pre>
                 <div class="project-links">
                     <a href="https://github.com/SarahMMoore" target="_blank" class="badge-btn btn-sm">💻 View Python Repository</a>
                 </div>
@@ -158,7 +133,7 @@ def toggle_system_state(pin_output, duration):
 
         <hr class="section-divider">
 
-        <!-- Technical Toolkit Table -->
+                <!-- Technical Toolkit Table -->
         <section class="portfolio-section">
             <h3>🛠️ Technical Toolkit</h3>
             <div class="table-wrapper">
@@ -214,11 +189,5 @@ def toggle_system_state(pin_output, duration):
     <footer class="portfolio-footer">
         <p>&copy; 2026 Sarah Morrigan Moore. All rights reserved.</p>
     </footer>
-
-    <!-- Prism Syntax Highlighter Complete Scripts -->
-    <script src="https://cloudflare.com"></script>
-    <script src="https://cloudflare.com"></script>
-    <script src="https://cloudflare.com"></script>
-    <script src="https://cloudflare.com"></script>
 </body>
 </html>
