@@ -3,209 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah Morrigan Moore | Full-Stack Developer & Technical Operations</title>
+    <title>Sarah Morrigan Moore - Resume</title>
+    <!-- Google Fonts Connection -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Professional Brand Header -->
-    <header class="portfolio-header">
-        <img src="images/banner.png" alt="Sarah Morrigan Moore Banner" class="banner-img">
-    </header>
+    <div class="resume-container">
+        
+        <!-- ASYMMETRIC LEFT SIDEBAR (Creative/Technical Data) -->
+        <aside class="resume-sidebar">
+            <div class="sidebar-sticky-wrapper">
+                
+                <!-- LOGO AND BRANDING HEADER BLOCK -->
+                <div class="sidebar-brand-block">
+                    <a href="https://thecamperaguidetorvliving.com" target="_blank" class="logo-link" aria-label="Visit The Camper: A Guide to RV Living">
+                        <!-- Drop your logo.svg file inside your images folder -->
+                        <img src="images/logo.svg" alt="The Camper: A Guide to RV Living Logo" class="sidebar-logo">
+                    </a>
+                    <h1 class="sidebar-name">Sarah M. Moore</h1>
+                    <p class="sidebar-title">Web Development & GIT</p>
+                </div>
 
-    <main class="portfolio-container">
+                <!-- CONTACT INFO BLOCK -->
+                <div class="sidebar-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-links">
+                        <li>Carlinville, IL</li>
+                        <li>561-517-1278</li>
+                        <li><a href="mailto:sarahmorrigan.sl@gmail.com">Email Profile</a></li>
+                        <li><a href="#" target="_blank">LinkedIn</a></li>
+                        <li><a href="#" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
 
-        <!-- Introduction Section -->
-        <section class="intro-section">
-            <h1>Hi, I'm Sarah Morrigan Moore 👋</h1>
-            <h2>Full-Stack Developer & Technical Operations</h2>
-            <p class="summary-text">
-                An analytical programmer specializing in full-stack engineering, combining deep roots in logic-based programming with a human-centered design approach. Leverages over 20 years of multifaceted professional experience in legal operations, corporate tax infrastructure, and complex database management to build secure, scalable, and highly optimized web applications.
-            </p>
-            <div class="contact-badges">
-                <a href="mailto:sarahmorrigan.si@gmail.com" class="badge-btn">📧 Email Me</a>
-                <a href="https://linkedin.com" target="_blank" class="badge-btn">💼 LinkedIn</a>
-                <a href="https://github.com" target="_blank" class="badge-btn">💻 GitHub</a>
+                <!-- TECHNICAL SKILLS -->
+                <div class="sidebar-section">
+                    <h3>Technical Skills</h3>
+                    <ul class="skills-list">
+                        <li><strong>Programming:</strong> Python, Java, SQL, HTML, CSS, C++, Visual Basic</li>
+                        <li><strong>Creative Suites:</strong> Adobe Creative Cloud (Photoshop, Illustrator, InDesign, Premiere Pro, Lightroom), Canva</li>
+                        <li><strong>Platforms:</strong> GitHub, VS Code, WordPress, CodePen</li>
+                        <li><strong>Business Infrastructure:</strong> MS Office, SharePoint, Google Workspace, CCH Axcess, ProSystem fx, GoSystem, LexisNexis</li>
+                    </ul>
+                </div>
+
+                <!-- EDUCATION -->
+                <div class="sidebar-section">
+                    <h3>Education</h3>
+                    <div class="edu-entry">
+                        <h4>Arizona State University</h4>
+                        <p class="edu-sub">BS in Graphic Info Tech</p>
+                        <span class="edu-meta">2024 &ndash; Present | GPA: 3.98</span>
+                    </div>
+                    <div class="edu-entry">
+                        <h4>Illinois College</h4>
+                        <p class="edu-sub">Computer Science Core</p>
+                        <span class="edu-meta">2023 &ndash; 2024 (Transferred)</span>
+                    </div>
+                    <div class="edu-entry">
+                        <h4>Indian River State</h4>
+                        <p class="edu-sub">AA in Accounting</p>
+                        <span class="edu-meta">Graduated 2014 | Summa Cum</span>
+                    </div>
+                </div>
             </div>
-        </section>
+        </aside>
 
-        <hr class="section-divider">
-
-        <!-- Education & Academics -->
-        <section class="portfolio-section">
-            <h3>🎓 Academic Profile</h3>
-            <div class="education-block">
-                <h4>Arizona State University</h4>
-                <p class="degree-title">BS Program in Graphic Information Technology (Expected 2027)</p>
-                <p class="degree-details"><strong>Concentration:</strong> Full-Stack Web Development | Minor: Media Content Creation | <strong>GPA:</strong> 3.98 | Honors: Dean's List | Family First Scholarship Candidate</p>
-            </div>
-            <div class="education-block">
-                <h4>Illinois College (Transferred to ASU)</h4>
-                <p class="degree-title">Coursework in Computer Science, Organizational & Strategic Communication, Art & Design and Accounting</p>
-                <p class="degree-details">Honors: Dean's List (2023 - 2024)</p>
-            </div>
-            <div class="education-block">
-                <h4>Indian River State College</h4>
-                <p class="degree-title">Associate of Arts in Accounting | 2014</p>
-                <p class="degree-details">Honors: Summa Cum Laude | Coursework in Computer Science & Accounting</p>
-            </div>
-        </section>
-
-        <hr class="section-divider">
-
-        <!-- Featured Engineering Projects -->
-        <section class="portfolio-section">
-            <h3>💻 Featured Engineering Projects</h3>
+        <!-- WIDE MAIN CONTENT PANEL (Professional Chronology) -->
+        <main class="resume-main-panel">
             
-             <!-- SQL Project -->
-            <div class="project-block">
-                <h4>Relational Database Architecture | SQL & Python Integration</h4>
-                <p class="project-description">
-                    <strong>Pizza Ordering System Database Engineering:</strong> Engineered a robust relational infrastructure connecting Python application layers to a SQL Server database via the `pyodbc` driver. Programmed transaction-handling logic to safely execute multi-table parameterized queries using strict constraint validation before manually forcing a database commit (`conn.commit()`). Developed an automated looping audit mechanism to dynamically scan and print shifting operational logs across all relational schemas.
-                </p>
-                <pre><code class="custom-code-box"><span class="code-comment"># Programmatic SQL Server connectivity and multi-table transactional inserts</span>
-<span class="code-keyword">import</span> pyodbc
+            <!-- PROFESSIONAL SUMMARY -->
+            <section class="main-section">
+                <h2>Professional Summary</h2>
+                <p class="summary-paragraph">High-achieving Graphic Information Technology student at Arizona State University with a 3.98 cumulative GPA. A lifelong programmer with foundational roots in Python, now specializing in full stack web development. Combines over 20 years of multifaceted professional experience in legal operations and corporate tax and auditing with an extensive background in complex database modeling and technical infrastructure.</p>
+            </section>
 
-conn = pyodbc.connect(<span class="code-string">"Driver={ODBC Driver 17 for SQL Server};Server=TopConnor;Database=PizzaOrderingSystem;Trusted_Connection=yes;"</span>)
-cursor = conn.cursor()
+            <!-- PROFESSIONAL EXPERIENCE -->
+            <section class="main-section">
+                <h2>Professional Experience</h2>
 
-<span class="code-comment"># Define relational transaction data dynamically</span>
-cust_id = <span class="code-number">7</span>
-cust_address = <span class="code-string">'50 Lenn Road'</span>
-cust_phone = <span class="code-string">'5175155122'</span>
-cust_email = <span class="code-string">'willybee@hotmail.com'</span>
-indiv_name = <span class="code-string">'William Beebee'</span>
+                <!-- TRAVEL GAP ENTRY -->
+                <div class="job-entry">
+                    <div class="job-row">
+                        <h3 class="job-company">Full-time Travel Sabbatical</h3>
+                        <span class="job-date">2019 &ndash; 2025</span>
+                    </div>
+                    <div class="job-row sub-row">
+                        <span class="job-title">Independent Travel & Exploration</span>
+                        <span class="job-location">Western United States</span>
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Traveled across the western United States in an RV, visiting more than 20 states.</li>
+                        <li>Managed complex long-term travel logistics, micro-budgeting, resource tracking, and operational planning.</li>
+                    </ul>
 
-<span class="code-comment"># Execute multi-table parameterized insert queries to handle database dependencies</span>
-cursor.execute(<span class="code-string">"INSERT INTO tbls_Customers (CustomerID, CustomerAddress, CustomerPhone, CustomerEmail) VALUES (?, ?, ?, ?)"</span>, (cust_id, cust_address, cust_phone, cust_email))
-cursor.execute(<span class="code-string">"INSERT INTO tblm_Individual (CustomerID, IndividualName) VALUES (?, ?)"</span>, (cust_id, indiv_name))
-
-<span class="code-comment"># Commit transactions and verify insertions with an optimized relational JOIN query</span>
-conn.commit()
-cursor.execute(<span class="code-string">"SELECT C.CustomerID, I.IndividualName, C.CustomerEmail FROM tbls_Customers C JOIN tblm_Individual I ON C.CustomerID = I.CustomerID WHERE C.CustomerID = ?"</span>, (cust_id))
-
-<span class="code-comment"># Global operational auditing iteration script mapping all system tables</span>
-all_tables = [<span class="code-string">'tbls_Beverage'</span>, <span class="code-string">'tbls_Newisltem'</span>, <span class="code-string">'tbls_Corporate'</span>, <span class="code-string">'tbls_CustomerOrders'</span>, <span class="code-string">'tbls_Customers'</span>, <span class="code-string">'tblm_FoodItem'</span>, <span class="code-string">'tbls_Individual'</span>, <span class="code-string">'tbls_OrderDetails'</span>, <span class="code-string">'tbls_PayCash'</span>, <span class="code-string">'tbls_PayCreditCard'</span>, <span class="code-string">'tblm_PaymentType'</span>, <span class="code-string">'tblm_Pizza'</span>]
-
-<span class="code-keyword">for</span> table <span class="code-keyword">in</span> all_tables:
-    print(<span class="code-string">"Table: "</span> + table)
-    cursor.execute(<span class="code-string">"SELECT * FROM "</span> + table)
-    rows = cursor.fetchall()
-    <span class="code-keyword">for</span> row <span class="code-keyword">in</span> rows:
-        print(row)</code></pre>
-                <div class="project-links">
-                    <span class="badge-btn btn-sm" style="background-color: #1E293B; color: #94A3B8; border-color: #334155; cursor: default;">💻 Local Workstation Deployment</span>
+                    <!-- TRAVEL SNAPSHOTS GRID -->
+                    <div class="travel-gallery">
+                        <div class="gallery-card"><img src="images/travel-photo1.jpg" alt="Mountain Landscape"></div>
+                        <div class="gallery-card"><img src="images/travel-photo2.jpg" alt="Road Exploration"></div>
+                        <div class="gallery-card"><img src="images/travel-photo3.jpg" alt="Scenic Horizon"></div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Java Project -->
-            <div class="project-block">
-                <h4>Transactional Systems Engineering | Java</h4>
-                <p class="project-description">
-                    <strong>Object-Oriented Stock Portfolio Application:</strong> Engineered a modular architecture leveraging core Object-Oriented Programming (OOP) principles, including encapsulation, inheritance, text-based interactive loops, and structured collections (`ArrayList` / `HashMap`). Developed secure data-validation workflows to manage cash positions, track shifting asset distributions dynamically, and verify order executions.
-                </p>
-                <pre><code class="custom-code-box"><span class="code-keyword">public class</span> <span class="code-class">PortfolioManager</span> {
-    <span class="code-keyword">private</span> ArrayList&lt;TransactionHistory&gt; portfolioList = <span class="code-keyword">new</span> ArrayList&lt;&gt;();
-    <span class="code-keyword">private double</span> cashBalance = <span class="code-number">0.0</span>;
-
-    <span class="code-comment">// Direct trade execution validation mechanics (Buy Logic)</span>
-    <span class="code-keyword">case</span> <span class="code-number">3</span>:
-        System.out.print(<span class="code-string">"Ticker: "</span>);
-        String buyTicker = input.nextLine().toUpperCase();
-        System.out.print(<span class="code-string">"Quantity to buy: "</span>);
-        <span class="code-keyword">double</span> buyQty = input.nextDouble();
-        <span class="code-keyword">double</span> totalCost = buyQty * buyPrice;
-        <span class="code-keyword">if</span> (totalCost &gt; manager.cashBalance) {
-            System.out.println(<span class="code-string">"Not enough cash!"</span>);
-        } <span class="code-keyword">else</span> {
-            manager.cashBalance -= totalCost;
-            manager.record(buyTicker, <span class="code-string">"BUY"</span>, buyQty, buyPrice);
-        }
-        <span class="code-keyword">break</span>;
-}</code></pre>
-                <div class="project-links">
-                    <a href="https://github.com/SarahMMoore/stockPortfolioApplication" target="_blank" class="badge-btn btn-sm">💻 View Java Repository</a>
+                <!-- CORPORATE EXPERIENCE -->
+                <div class="job-entry">
+                    <div class="job-row">
+                        <h3 class="job-company">Forehand & Associates / Marcum, LLP / Ingram, P.A.</h3>
+                        <span class="job-date">2006 &ndash; 2019</span>
+                    </div>
+                    <div class="job-row sub-row">
+                        <span class="job-title">Corporate Auditing & Tax Operations</span>
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Managed complex data entry and finalized audited financial statements for major civil construction firms.</li>
+                        <li>Engineered a high-scale utility billing program in Excel featuring over 100 integrated sheets for automated calculation and reporting.</li>
+                        <li>Performed technical database and file maintenance using Lacerte, Sage Timeslips, and TaxAct professional software.</li>
+                    </ul>
                 </div>
-            </div>
 
-                               <!-- Python Project -->
-            <div class="project-block">
-    <h4>Target Practice (In Development) | Python & Turtle Graphics</h4>
-    <p class="project-description">
-        <strong>TargetPractice Game:</strong> An interactive desktop game featuring custom core game loops and physics logic built using Python's Turtle canvas. <em style="color: #ff8c00;">This project is currently in active development!</em>
-    </p>
-    
-    <div style="margin-top: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-        <!-- This button automatically packages and downloads your latest code as a .ZIP file -->
-       <a href="https://github.com/SarahMMoore/TargetPractice/archive/refs/heads/main.zip" class="badge-btn btn-sm">Download Current Build (.ZIP)</a>
-        
-        <!-- This button links directly to your repository page so visitors can see your files -->
-        <a href="https://github.com/SarahMMoore/TargetPractice" target="_blank" class="badge-btn btn-sm">View Source Repository</a>
+                <!-- LEGAL EXPERIENCE -->
+                <div class="job-entry">
+                    <div class="job-row">
+                        <h3 class="job-company">Cohen, Copeland, P.A. / Blaney, P.A. / Florida Park Service</h3>
+                        <span class="job-date">2000 &ndash; 2006</span>
+                    </div>
+                    <div class="job-row sub-row">
+                        <span class="job-title">Legal & Government Administration</span>
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Prepared Chapter 7 Bankruptcy filings and specialized documents for Wills, Trusts, & Estates.</li>
+                        <li>Utilized LexisNexis for specialized legal and financial database research.</li>
+                        <li>Managed guest database entries for the Florida State Park Service using MS Office Systems.</li>
+                    </ul>
+                </div>
+            </section>
 
+            <!-- FEATURED WEB PROJECTS SECTION -->
+            <section class="main-section">
+                <h2>Featured Web Production</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <a href="https://thecamperaguidetorvliving.com" target="_blank" style="text-decoration: none; color: inherit;">
+                            <img src="images/travel-photo2.jpg" alt="The Camper Web Platform Preview">
+                            <div class="item-details">
+                                <h3>The Camper: A Guide to RV Living</h3>
+                                <p>Designed a live travel publication originally initiated as a core digital project for EN380 at Illinois College. Authored an 11-article content library while managing layout designs and digital assets.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
     </div>
-</div>
 
-        
-
-
-
-        <hr class="section-divider">
-
-                <!-- Technical Toolkit Table -->
-        <section class="portfolio-section">
-            <h3>🛠️ Technical Toolkit</h3>
-            <div class="table-wrapper">
-                <table class="toolkit-table">
-                    <thead>
-                        <tr>
-                            <th>Category</th>
-                            <th>Technologies, Tools, & Frameworks</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Languages & Scripting</strong></td>
-                            <td>Python, Java, SQL, HTML5, CSS3, C++, Visual Basic</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Development Environments</strong></td>
-                            <td>VS Code, GitHub Desktop, CodePen, WordPress, Anaconda, Spyder, Eclipse</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Database & Modeling</strong></td>
-                            <td>MS SQL, Dbdiagram.io, Draw.io, ERD Plus, Eraser AI, MS ODBC for SQL</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Design & Media Production</strong></td>
-                            <td>Photoshop, Illustrator, InDesign, Premiere Pro, Lightroom Classic, Acrobat Pro, Bridge</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Enterprise Data & Finance</strong></td>
-                            <td>Advanced MS Excel (VBA/Macros), Google Workspace, SharePoint, CCH Axcess, UltraTax CS</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <hr class="section-divider">
-
-        <!-- Professional History Highlights -->
-        <section class="portfolio-section">
-            <h3>💼 Professional Operations Highlights</h3>
-            <ul class="highlights-list">
-                <li><strong>Data Scale Engineering:</strong> Architected a high-scale, automated utility billing management platform in Excel utilizing over 100 integrated, relational sheets to process complex accounts.</li>
-                <li><strong>System Compliance & Auditing:</strong> Over two decades managing digital records, finalized civil engineering audit reporting, and specialized database files under strict legal and financial frameworks (Marcum LLP, Forehand & Associates).</li>
-                <li><strong>Logistics Management:</strong> Successfully managed full-lifecycle mobile logistics, route planning, and cross-state operational infrastructure traveling across 25 states (2019 - 2025).</li>
-                <li><strong>Regional Commute Availability:</strong> Based in Carlinville, IL, steps from the regional train station, allowing for seamless hybrid Amtrak transit into Chicago or St. Louis office hubs.</li>
-            </ul>
-        </section>
-
-    </main>
-
-    <!-- Site Footer Element -->
-    <footer class="portfolio-footer">
-        <p>&copy; 2026 Sarah Morrigan Moore. All rights reserved.</p>
-    </footer>
 </body>
 </html>
