@@ -1,20 +1,20 @@
 /* ==========================================================================
-   1. DESIGN TOKENS & SYSTEM VARIABLES (Mountain Blue Balance)
+   1. DESIGN TOKENS & SYSTEM VARIABLES (True Brand Extraction)
    ========================================================================== */
 :root {
-    --bg-main: #0c1524;        /* Deep Midnight Sapphire (Your current background) */
-    --bg-card: #162235;        /* Dark Slate Blue Panel */
-    --bg-sidebar: #0f1a2b;     /* Darker Sidebar Panel */
-    --text-primary: #f0f5fa;   /* Bright Cloud White */
-    --text-secondary: #90a4be; /* Muted Atmospheric Sky Grey */
-    --accent-color: #d97706;   /* Warm Shield Amber Gold (Sampled from your logo) */
-    --border-line: #22344e;    /* Deep Horizon Divider */
+    --bg-main: #070d19;        /* True Dark Navy Shadow (Website backdrop) */
+    --bg-card: #0d1726;        /* Dark Slate Blue Panel Content */
+    --bg-sidebar: #0a111c;     /* Dark Navy Sidebar Panel */
+    --text-primary: #f8fafc;   /* Pure White Headers */
+    --text-secondary: #94a3b8; /* Cool Grey Body Copy */
+    --accent-color: #e28723;   /* Warm Brand Amber (Extracted from your logo shield) */
+    --border-line: #1e293b;    /* Clean Dark Divider Line */
     --font-main: 'Inter', sans-serif;
     --font-code: 'JetBrains Mono', monospace;
 }
 
 /* ==========================================================================
-   2. GLOBAL BODY & APP BOUND RESETS
+   2. CORE RESET & APP CONTAINER BOUNDS
    ========================================================================== */
 body {
     font-family: var(--font-main);
@@ -25,21 +25,20 @@ body {
     padding: 40px 20px;
 }
 
-/* Flex Container Splitting Layout into Business/Creative Sides */
 .resume-container {
     width: 100%;
-    max-width: 960px; /* Slightly wider layout base for side-by-side reading ratio */
+    max-width: 960px;
     margin: 0 auto;
     background-color: var(--bg-card);
     display: flex;
-    box-shadow: 0 12px 40px rgba(4, 7, 13, 0.5);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
     border-radius: 8px;
     overflow: hidden;
     box-sizing: border-box;
 }
 
 /* ==========================================================================
-   3. LEFT SIDEBAR PANEL (Creative Data Hub)
+   3. LEFT SIDEBAR PANEL (Clean Brand Scaling)
    ========================================================================== */
 .resume-sidebar {
     width: 32%;
@@ -49,35 +48,35 @@ body {
     box-sizing: border-box;
 }
 
-/* Logo & Branding Top Container Block */
 .sidebar-brand-block {
     margin-bottom: 35px;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     border-bottom: 1px dashed var(--border-line);
     text-align: left;
 }
 
+/* Fixes the oversized scaling bug */
 .logo-link {
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    text-decoration: none !important; /* Forces layout lines to clear away */
     background: transparent;
 }
 
 .sidebar-logo {
     width: 100%;
-    max-width: 120px;       /* Keeps shield badge proportional */
+    max-width: 130px;       /* Explicit constraint fixes oversized shield rendering */
     height: auto;
     display: block;
-    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* Fluid animation curve */
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Interactive scale pop when hovering the link container */
 .logo-link:hover .sidebar-logo {
     transform: scale(1.04) translateY(-2px);
 }
 
 .sidebar-name {
-    font-size: 20px;
+    font-size: 22px;
     color: var(--text-primary);
     font-weight: 700;
     margin: 0 0 4px 0;
@@ -94,6 +93,9 @@ body {
     margin: 0;
 }
 
+/* ==========================================================================
+   4. NAVIGATION LINKS & HIERARCHY TYPOGRAPHY
+   ========================================================================== */
 .sidebar-section {
     margin-bottom: 28px;
 }
@@ -103,26 +105,28 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--text-primary);
-    border-bottom: 1px solid var(--border-line);
+    border-bottom: 2px solid var(--accent-color); /* Matches your brand amber */
     padding-bottom: 4px;
     margin: 0 0 12px 0;
 }
 
-/* Left Sidebar Typography Links & Lists */
+/* Strips out body bullets from lists */
 .contact-links, .skills-list {
     margin: 0;
     padding: 0;
-    list-style: none;
+    list-style: none !important; /* Removes standard browser dots */
     font-size: 12px;
 }
 
 .contact-links li {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+    color: var(--text-secondary);
 }
 
 .contact-links a {
     color: var(--accent-color);
     text-decoration: none;
+    font-weight: 500;
 }
 
 .contact-links a:hover {
@@ -130,9 +134,9 @@ body {
 }
 
 .skills-list li {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     font-size: 11.5px;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .skills-list strong {
@@ -140,12 +144,12 @@ body {
     color: var(--text-primary);
     font-size: 10.5px;
     display: block;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 
-/* Education entries spacing block */
+/* Education Layout blocks */
 .edu-entry {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .edu-entry h4 {
@@ -157,6 +161,7 @@ body {
 .edu-sub {
     font-size: 11.5px;
     margin: 0;
+    color: var(--text-secondary);
 }
 
 .edu-meta {
@@ -164,10 +169,11 @@ body {
     font-size: 9.5px;
     color: var(--accent-color);
     display: block;
+    margin-top: 2px;
 }
 
 /* ==========================================================================
-   4. RIGHT MAIN PANEL (Chronological Corporate Experience)
+   5. RIGHT MAIN PANEL (Chronological Content)
    ========================================================================== */
 .resume-main-panel {
     width: 68%;
@@ -197,7 +203,6 @@ body {
     line-height: 1.6;
 }
 
-/* Job Timelines Formatting */
 .job-entry {
     margin-bottom: 24px;
 }
@@ -238,6 +243,7 @@ body {
     margin: 0;
     padding-left: 15px;
     font-size: 12px;
+    color: var(--text-secondary);
 }
 
 .bullet-list li {
@@ -246,7 +252,7 @@ body {
 }
 
 /* ==========================================================================
-   5. FEATURED PHOTOGRAPHY & PORTFOLIO GRID
+   6. PHOTOGRAPHY GALLERIES & PREVIEWS
    ========================================================================== */
 .portfolio-grid {
     display: grid;
@@ -265,7 +271,7 @@ body {
 
 .portfolio-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .portfolio-item img {
@@ -294,9 +300,6 @@ body {
     line-height: 1.4;
 }
 
-/* ==========================================================================
-   6. UNIFIED TRAVEL PICTURE GALLERY
-   ========================================================================== */
 .travel-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -318,14 +321,13 @@ body {
 }
 
 /* ==========================================================================
-   7. RESPONSIVE CELLULAR VIEWPORTS BREAKDOWN
+   7. MOBILE LAYOUT RESPONSIVE BREAKDOWN
    ========================================================================== */
 @media screen and (max-width: 768px) {
     body {
         padding: 0;
     }
 
-    /* Convert container configurations into singular full-width column rules */
     .resume-container {
         flex-direction: column;
         border-radius: 0;
@@ -355,11 +357,11 @@ body {
 
     .sidebar-logo {
         margin: 0 auto;
-        max-width: 100px; /* Scales down slightly on narrow mobile views */
+        max-width: 110px;
     }
 
     .travel-gallery {
-        grid-template-columns: 1fr; /* Collapses picture strip vertically */
+        grid-template-columns: 1fr;
     }
 
     .job-row {
@@ -374,7 +376,7 @@ body {
 }
 
 /* ==========================================================================
-   8. STABLE ARCHIVAL PRINT FORMATTING
+   8. ARCHIVAL PRINT OPTIMIZATION
    ========================================================================== */
 @media print {
     body {
@@ -400,6 +402,6 @@ body {
     }
 
     .travel-gallery, .portfolio-grid {
-        display: none !important; /* Strips asset photography lists on card printing */
+        display: none !important;
     }
 }
