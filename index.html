@@ -1,165 +1,407 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah Morrigan Moore - Resume</title>
-    <!-- Google Fonts Connection -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+/* ==========================================================================
+   1. DESIGN TOKENS & SYSTEM VARIABLES (True Brand Extraction)
+   ========================================================================== */
+:root {
+    --bg-main: #070d19;        /* True Dark Navy Shadow (Website backdrop) */
+    --bg-card: #0d1726;        /* Dark Slate Blue Panel Content */
+    --bg-sidebar: #0a111c;     /* Dark Navy Sidebar Panel */
+    --text-primary: #f8fafc;   /* Pure White Headers */
+    --text-secondary: #94a3b8; /* Cool Grey Body Copy */
+    --accent-color: #e28723;   /* Warm Brand Amber (Extracted from your logo shield) */
+    --border-line: #1e293b;    /* Clean Dark Divider Line */
+    --font-main: 'Inter', sans-serif;
+    --font-code: 'JetBrains Mono', monospace;
+}
 
-    <div class="resume-container">
-        
-        <!-- ASYMMETRIC LEFT SIDEBAR (Creative/Technical Data) -->
-        <aside class="resume-sidebar">
-            <div class="sidebar-sticky-wrapper">
-                
-                <!-- LOGO AND BRANDING HEADER BLOCK -->
-                <div class="sidebar-brand-block">
-                    <a href="https://thecamperaguidetorvliving.com" target="_blank" class="logo-link" aria-label="Visit The Camper: A Guide to RV Living">
-                        <!-- Drop your logo.svg file inside your images folder -->
-                        <img src="images/logo.svg" alt="The Camper: A Guide to RV Living Logo" class="sidebar-logo">
-                    </a>
-                    <h1 class="sidebar-name">Sarah M. Moore</h1>
-                    <p class="sidebar-title">Web Development & GIT</p>
-                </div>
+/* ==========================================================================
+   2. CORE RESET & APP CONTAINER BOUNDS
+   ========================================================================== */
+body {
+    font-family: var(--font-main);
+    color: var(--text-secondary);
+    background-color: var(--bg-main);
+    line-height: 1.5;
+    margin: 0;
+    padding: 40px 20px;
+}
 
-                <!-- CONTACT INFO BLOCK -->
-                <div class="sidebar-section">
-                    <h3>Contact</h3>
-                    <ul class="contact-links">
-                        <li>Carlinville, IL</li>
-                        <li>561-517-1278</li>
-                        <li><a href="mailto:sarahmorrigan.sl@gmail.com">Email Profile</a></li>
-                        <li><a href="#" target="_blank">LinkedIn</a></li>
-                        <li><a href="#" target="_blank">GitHub</a></li>
-                    </ul>
-                </div>
+.resume-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    background-color: var(--bg-card);
+    display: flex;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
 
-                <!-- TECHNICAL SKILLS -->
-                <div class="sidebar-section">
-                    <h3>Technical Skills</h3>
-                    <ul class="skills-list">
-                        <li><strong>Programming:</strong> Python, Java, SQL, HTML, CSS, C++, Visual Basic</li>
-                        <li><strong>Creative Suites:</strong> Adobe Creative Cloud (Photoshop, Illustrator, InDesign, Premiere Pro, Lightroom), Canva</li>
-                        <li><strong>Platforms:</strong> GitHub, VS Code, WordPress, CodePen</li>
-                        <li><strong>Business Infrastructure:</strong> MS Office, SharePoint, Google Workspace, CCH Axcess, ProSystem fx, GoSystem, LexisNexis</li>
-                    </ul>
-                </div>
+/* ==========================================================================
+   3. LEFT SIDEBAR PANEL (Clean Brand Scaling)
+   ========================================================================== */
+.resume-sidebar {
+    width: 32%;
+    background-color: var(--bg-sidebar);
+    border-right: 1px solid var(--border-line);
+    padding: 40px 25px;
+    box-sizing: border-box;
+}
 
-                <!-- EDUCATION -->
-                <div class="sidebar-section">
-                    <h3>Education</h3>
-                    <div class="edu-entry">
-                        <h4>Arizona State University</h4>
-                        <p class="edu-sub">BS in Graphic Info Tech</p>
-                        <span class="edu-meta">2024 &ndash; Present | GPA: 3.98</span>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Illinois College</h4>
-                        <p class="edu-sub">Computer Science Core</p>
-                        <span class="edu-meta">2023 &ndash; 2024 (Transferred)</span>
-                    </div>
-                    <div class="edu-entry">
-                        <h4>Indian River State</h4>
-                        <p class="edu-sub">AA in Accounting</p>
-                        <span class="edu-meta">Graduated 2014 | Summa Cum</span>
-                    </div>
-                </div>
-            </div>
-        </aside>
+.sidebar-brand-block {
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px dashed var(--border-line);
+    text-align: left;
+}
 
-        <!-- WIDE MAIN CONTENT PANEL (Professional Chronology) -->
-        <main class="resume-main-panel">
-            
-            <!-- PROFESSIONAL SUMMARY -->
-            <section class="main-section">
-                <h2>Professional Summary</h2>
-                <p class="summary-paragraph">High-achieving Graphic Information Technology student at Arizona State University with a 3.98 cumulative GPA. A lifelong programmer with foundational roots in Python, now specializing in full stack web development. Combines over 20 years of multifaceted professional experience in legal operations and corporate tax and auditing with an extensive background in complex database modeling and technical infrastructure.</p>
-            </section>
+/* Fixes the oversized scaling bug */
+.logo-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none !important; /* Forces layout lines to clear away */
+    background: transparent;
+}
 
-            <!-- PROFESSIONAL EXPERIENCE -->
-            <section class="main-section">
-                <h2>Professional Experience</h2>
+.sidebar-logo {
+    width: 100%;
+    max-width: 130px;       /* Explicit constraint fixes oversized shield rendering */
+    height: auto;
+    display: block;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-                <!-- TRAVEL GAP ENTRY -->
-                <div class="job-entry">
-                    <div class="job-row">
-                        <h3 class="job-company">Full-time Travel Sabbatical</h3>
-                        <span class="job-date">2019 &ndash; 2025</span>
-                    </div>
-                    <div class="job-row sub-row">
-                        <span class="job-title">Independent Travel & Exploration</span>
-                        <span class="job-location">Western United States</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Traveled across the western United States in an RV, visiting more than 20 states.</li>
-                        <li>Managed complex long-term travel logistics, micro-budgeting, resource tracking, and operational planning.</li>
-                    </ul>
+.logo-link:hover .sidebar-logo {
+    transform: scale(1.04) translateY(-2px);
+}
 
-                    <!-- TRAVEL SNAPSHOTS GRID -->
-                    <div class="travel-gallery">
-                        <div class="gallery-card"><img src="images/travel-photo1.jpg" alt="Mountain Landscape"></div>
-                        <div class="gallery-card"><img src="images/travel-photo2.jpg" alt="Road Exploration"></div>
-                        <div class="gallery-card"><img src="images/travel-photo3.jpg" alt="Scenic Horizon"></div>
-                    </div>
-                </div>
+.sidebar-name {
+    font-size: 22px;
+    color: var(--text-primary);
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+    letter-spacing: -0.3px;
+}
 
-                <!-- CORPORATE EXPERIENCE -->
-                <div class="job-entry">
-                    <div class="job-row">
-                        <h3 class="job-company">Forehand & Associates / Marcum, LLP / Ingram, P.A.</h3>
-                        <span class="job-date">2006 &ndash; 2019</span>
-                    </div>
-                    <div class="job-row sub-row">
-                        <span class="job-title">Corporate Auditing & Tax Operations</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Managed complex data entry and finalized audited financial statements for major civil construction firms.</li>
-                        <li>Engineered a high-scale utility billing program in Excel featuring over 100 integrated sheets for automated calculation and reporting.</li>
-                        <li>Performed technical database and file maintenance using Lacerte, Sage Timeslips, and TaxAct professional software.</li>
-                    </ul>
-                </div>
+.sidebar-title {
+    font-family: var(--font-code);
+    font-size: 11px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+}
 
-                <!-- LEGAL EXPERIENCE -->
-                <div class="job-entry">
-                    <div class="job-row">
-                        <h3 class="job-company">Cohen, Copeland, P.A. / Blaney, P.A. / Florida Park Service</h3>
-                        <span class="job-date">2000 &ndash; 2006</span>
-                    </div>
-                    <div class="job-row sub-row">
-                        <span class="job-title">Legal & Government Administration</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Prepared Chapter 7 Bankruptcy filings and specialized documents for Wills, Trusts, & Estates.</li>
-                        <li>Utilized LexisNexis for specialized legal and financial database research.</li>
-                        <li>Managed guest database entries for the Florida State Park Service using MS Office Systems.</li>
-                    </ul>
-                </div>
-            </section>
+/* ==========================================================================
+   4. NAVIGATION LINKS & HIERARCHY TYPOGRAPHY
+   ========================================================================== */
+.sidebar-section {
+    margin-bottom: 28px;
+}
 
-            <!-- FEATURED WEB PROJECTS SECTION -->
-            <section class="main-section">
-                <h2>Featured Web Production</h2>
-                <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <a href="https://thecamperaguidetorvliving.com" target="_blank" style="text-decoration: none; color: inherit;">
-                            <img src="images/travel-photo2.jpg" alt="The Camper Web Platform Preview">
-                            <div class="item-details">
-                                <h3>The Camper: A Guide to RV Living</h3>
-                                <p>Designed a live travel publication originally initiated as a core digital project for EN380 at Illinois College. Authored an 11-article content library while managing layout designs and digital assets.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section>
+.sidebar-section h3 {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--accent-color); /* Matches your brand amber */
+    padding-bottom: 4px;
+    margin: 0 0 12px 0;
+}
 
-        </main>
-    </div>
+/* Strips out body bullets from lists */
+.contact-links, .skills-list {
+    margin: 0;
+    padding: 0;
+    list-style: none !important; /* Removes standard browser dots */
+    font-size: 12px;
+}
 
-</body>
-</html>
+.contact-links li {
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+.contact-links a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+.skills-list li {
+    margin-bottom: 12px;
+    font-size: 11.5px;
+    line-height: 1.5;
+}
+
+.skills-list strong {
+    font-family: var(--font-code);
+    color: var(--text-primary);
+    font-size: 10.5px;
+    display: block;
+    margin-bottom: 3px;
+}
+
+/* Education Layout blocks */
+.edu-entry {
+    margin-bottom: 14px;
+}
+
+.edu-entry h4 {
+    font-size: 12px;
+    color: var(--text-primary);
+    margin: 0 0 2px 0;
+}
+
+.edu-sub {
+    font-size: 11.5px;
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.edu-meta {
+    font-family: var(--font-code);
+    font-size: 9.5px;
+    color: var(--accent-color);
+    display: block;
+    margin-top: 2px;
+}
+
+/* ==========================================================================
+   5. RIGHT MAIN PANEL (Chronological Content)
+   ========================================================================== */
+.resume-main-panel {
+    width: 68%;
+    padding: 40px 35px;
+    box-sizing: border-box;
+}
+
+.main-section {
+    margin-bottom: 30px;
+}
+
+.main-section h2 {
+    font-size: 13px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 4px;
+    margin: 0 0 16px 0;
+    letter-spacing: 0.75px;
+}
+
+.summary-paragraph {
+    font-size: 12.5px;
+    margin: 0;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.job-entry {
+    margin-bottom: 24px;
+}
+
+.job-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.job-company {
+    font-size: 13.5px;
+    color: var(--text-primary);
+    font-weight: 700;
+    margin: 0;
+}
+
+.job-date, .job-location {
+    font-family: var(--font-code);
+    font-size: 10.5px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.sub-row {
+    margin-bottom: 6px;
+    margin-top: 2px;
+}
+
+.job-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.bullet-list {
+    margin: 0;
+    padding-left: 15px;
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.bullet-list li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   6. PHOTOGRAPHY GALLERIES & PREVIEWS
+   ========================================================================== */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 15px;
+}
+
+.portfolio-item {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-line);
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid var(--border-line);
+}
+
+.item-details {
+    padding: 12px;
+}
+
+.item-details h3 {
+    font-size: 12px;
+    color: var(--text-primary);
+    margin: 0 0 4px 0;
+    font-weight: 700;
+}
+
+.item-details p {
+    font-size: 11px;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.travel-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.gallery-card {
+    border: 1px solid var(--border-line);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================================================
+   7. MOBILE LAYOUT RESPONSIVE BREAKDOWN
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .resume-container {
+        flex-direction: column;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .resume-sidebar, .resume-main-panel {
+        width: 100%;
+        padding: 24px 20px;
+    }
+
+    .resume-sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--border-line);
+        text-align: center;
+    }
+
+    .sidebar-brand-block {
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    .logo-link {
+        margin: 0 auto 12px auto;
+        display: block;
+    }
+
+    .sidebar-logo {
+        margin: 0 auto;
+        max-width: 110px;
+    }
+
+    .travel-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .job-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .job-date {
+        margin-bottom: 2px;
+        font-style: italic;
+    }
+}
+
+/* ==========================================================================
+   8. ARCHIVAL PRINT OPTIMIZATION
+   ========================================================================== */
+@media print {
+    body {
+        background-color: transparent !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+
+    .resume-container {
+        box-shadow: none !important;
+        max-width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+    }
+    
+    .resume-sidebar {
+        width: 30% !important;
+        background: transparent !important;
+    }
+    
+    .resume-main-panel {
+        width: 70% !important;
+    }
+
+    .travel-gallery, .portfolio-grid {
+        display: none !important;
+    }
+}
