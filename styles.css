@@ -48,6 +48,14 @@ body {
     box-sizing: border-box;
 }
 
+/* Employs hardware-accelerated CSS viewport tracking stickiness */
+.sidebar-sticky-wrapper {
+    position: -webkit-sticky; /* Full Safari rendering compliance */
+    position: sticky;
+    top: 40px;                /* Keeps a uniform 40px gap from the top of the browser screen */
+    align-self: flex-start;   /* Crucial: Prevents the inner flex child from stretching to full height */
+}
+
 .sidebar-brand-block {
     margin-bottom: 35px;
     padding-bottom: 25px;
