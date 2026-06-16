@@ -1,14 +1,14 @@
 /* ==========================================================================
-   1. DESIGN TOKENS & SYSTEM VARIABLES (True Brand Extraction)
-   ====================================E====================================== */
+   1. DESIGN TOKENS & SYSTEM VARIABLES
+   ========================================================================== */
 :root {
-  --bg-main: #070d19; /* True Dark Navy Shadow (Website backdrop) */
-  --bg-card: #0d1726; /* Dark Slate Blue Panel Content */
-  --bg-sidebar: #0a111c; /* Dark Navy Sidebar Panel */
-  --text-primary: #f8fafc; /* Pure White Headers */
-  --text-secondary: #94a3b8; /* Cool Grey Body Copy */
-  --accent-color: #e28723; /* Warm Brand Amber (Extracted from your logo shield) */
-  --border-line: #1e293b; /* Clean Dark Divider Line */
+  --bg-main: #070d19;
+  --bg-card: #0d1726;
+  --bg-sidebar: #0a111c;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-color: #e28723;
+  --border-line: #1e293b;
   --font-main: "Inter", sans-serif;
   --font-code: "JetBrains Mono", monospace;
 }
@@ -24,6 +24,7 @@ body {
   margin: 0;
   padding: 40px 20px;
 }
+
 .resume-container {
   width: 100%;
   max-width: 960px;
@@ -36,8 +37,13 @@ body {
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 /* ==========================================================================
-   3. LEFT SIDEBAR PANEL (Clean Brand Scaling)
+   3. LEFT SIDEBAR PANEL
    ========================================================================== */
 .resume-sidebar {
   width: 32%;
@@ -49,6 +55,13 @@ body {
 
 .sidebar-brand-block {
   margin-bottom: 35px;
+}
+
+.sidebar-brand-block img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  margin-top: 15px;
 }
 
 .sidebar-name {
@@ -68,13 +81,7 @@ body {
   font-weight: 700;
   margin: 0;
 }
-img {
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-  display: block;
-  margin-top: 15px;
-}
+
 /* ==========================================================================
    4. NAVIGATION LINKS & HIERARCHY TYPOGRAPHY
    ========================================================================== */
@@ -87,17 +94,16 @@ img {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--text-primary);
-  border-bottom: 2px solid var(--accent-color); /* Matches your brand amber */
+  border-bottom: 2px solid var(--accent-color);
   padding-bottom: 4px;
   margin: 0 0 12px 0;
 }
 
-/* Strips out body bullets from lists */
 .contact-links,
 .skills-list {
   margin: 0;
   padding: 0;
-  list-style: none !important; /* Removes standard browser dots */
+  list-style: none;
   font-size: 12px;
 }
 
@@ -130,7 +136,6 @@ img {
   margin-bottom: 3px;
 }
 
-/* Education Layout blocks */
 .edu-entry {
   margin-bottom: 14px;
 }
@@ -156,7 +161,7 @@ img {
 }
 
 /* ==========================================================================
-   5. RIGHT MAIN PANEL (Chronological Content)
+   5. RIGHT MAIN PANEL
    ========================================================================== */
 .resume-main-panel {
   width: 68%;
@@ -236,16 +241,30 @@ img {
 }
 
 /* ==========================================================================
-   6. PHOTOGRAPHY GALLERIES & PREVIEWS
+   6. FEATURED PROJECTS
    ========================================================================== */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: 1fr;
+  gap: 28px;
   margin-top: 15px;
 }
 
+.portfolio-category {
+  width: 100%;
+}
+
+.portfolio-category > h3 {
+  color: var(--text-secondary);
+  font-size: 20px;
+  line-height: 1.35;
+  margin: 0 0 14px 0;
+}
+
 .portfolio-item {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
   background-color: var(--bg-main);
   border: 1px solid var(--border-line);
   border-radius: 6px;
@@ -258,16 +277,34 @@ img {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
+.portfolio-item a {
+  flex: 0 0 220px;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .portfolio-item img {
   width: 100%;
-  height: 130px;
+  height: 100%;
+  min-height: 170px;
   object-fit: cover;
-  display: block;
-  border-bottom: 1px solid var(--border-line);
+  margin: 0;
 }
 
 .item-details {
-  padding: 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px;
+}
+
+.item-details .project-logo {
+  width: 140px;
+  height: auto;
+  align-self: flex-start;
+  margin: 0 0 10px 0;
 }
 
 .item-details h3 {
@@ -282,26 +319,6 @@ img {
   color: var(--text-secondary);
   margin: 0;
   line-height: 1.4;
-}
-
-.travel-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin-top: 14px;
-}
-
-.gallery-card {
-  border: 1px solid var(--border-line);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.gallery-card img {
-  width: 100%;
-  height: 110px;
-  object-fit: cover;
-  display: block;
 }
 
 /* ==========================================================================
@@ -360,6 +377,21 @@ img {
   }
 }
 
+@media screen and (max-width: 640px) {
+  .portfolio-item {
+    flex-direction: column;
+  }
+
+  .portfolio-item a {
+    flex-basis: auto;
+  }
+
+  .portfolio-item img {
+    height: auto;
+    min-height: 0;
+  }
+}
+
 /* ==========================================================================
    8. ARCHIVAL PRINT OPTIMIZATION
    ========================================================================== */
@@ -389,5 +421,273 @@ img {
   .travel-gallery,
   .portfolio-grid {
     display: none !important;
+  }
+}
+/* ==========================================================================
+   1. DESIGN TOKENS & SYSTEM VARIABLES
+   ========================================================================== */
+:root {
+  --bg-main: #070d19;
+  --bg-card: #0d1726;
+  --bg-sidebar: #0a111c;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent-color: #e28723;
+  --border-line: #1e293b;
+  --font-main: "Inter", sans-serif;
+  --font-code: "JetBrains Mono", monospace;
+}
+
+/* ==========================================================================
+   2. CORE PAGE LAYOUT
+   ========================================================================== */
+body {
+  font-family: var(--font-main);
+  color: var(--text-secondary);
+  background-color: var(--bg-main);
+  line-height: 1.5;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.case-study-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: var(--bg-card);
+  display: flex;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ==========================================================================
+   3. LEFT SIDEBAR
+   ========================================================================== */
+.case-study-sidebar {
+  width: 34%;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-line);
+  padding: 40px 25px;
+  box-sizing: border-box;
+}
+
+.sidebar-sticky-wrapper {
+  position: sticky;
+  top: 24px;
+}
+
+.sidebar-brand-block {
+  margin-bottom: 35px;
+}
+
+.sidebar-name {
+  font-size: 24px;
+  color: var(--text-primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  line-height: 1.12;
+  margin: 0 0 10px 0;
+}
+
+.sidebar-title {
+  font-family: var(--font-code);
+  font-size: 11px;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.sidebar-section {
+  margin-bottom: 28px;
+}
+
+.sidebar-section h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 4px;
+  margin: 0 0 12px 0;
+}
+
+.case-study-summary-paragraph {
+  font-size: 12px;
+  line-height: 1.58;
+  margin: 0 0 13px 0;
+}
+
+.case-study-summary-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   4. MAIN CASE STUDY PANEL
+   ========================================================================== */
+.case-study-main-panel {
+  width: 66%;
+  padding: 40px 35px;
+  box-sizing: border-box;
+}
+
+.case-study-main-section {
+  margin-bottom: 32px;
+}
+
+.case-study-main-section h2 {
+  font-size: 13px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 4px;
+  margin: 0 0 16px 0;
+  letter-spacing: 0.75px;
+}
+
+.case-study-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 12.5px;
+  color: var(--text-secondary);
+}
+
+.case-study-list li {
+  margin-bottom: 10px;
+  line-height: 1.55;
+}
+
+.case-study-list strong {
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   5. SKILL TAGS
+   ========================================================================== */
+.tag-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-family: var(--font-code);
+  font-size: 10px;
+  color: var(--text-primary);
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-line);
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+/* ==========================================================================
+   6. DESIGN SYSTEM GALLERY
+   ========================================================================== */
+.display-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.display-card {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-line);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.display-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  background-color: #f8fafc;
+}
+
+.display-card p {
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0;
+  padding: 12px;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE LAYOUT
+   ========================================================================== */
+@media screen and (max-width: 860px) {
+  body {
+    padding: 0;
+  }
+
+  .case-study-container {
+    flex-direction: column;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .case-study-sidebar,
+  .case-study-main-panel {
+    width: 100%;
+    padding: 24px 20px;
+  }
+
+  .case-study-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border-line);
+  }
+
+  .sidebar-sticky-wrapper {
+    position: static;
+  }
+
+  .sidebar-name {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .display-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .display-card img {
+    height: auto;
+  }
+}
+
+/* ==========================================================================
+   8. PRINT OPTIMIZATION
+   ========================================================================== */
+@media print {
+  body {
+    background-color: transparent !important;
+    background: none !important;
+    padding: 0 !important;
+  }
+
+  .case-study-container {
+    box-shadow: none !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: row !important;
+  }
+
+  .case-study-sidebar {
+    width: 34% !important;
+    background: transparent !important;
+  }
+
+  .case-study-main-panel {
+    width: 66% !important;
   }
 }
