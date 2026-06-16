@@ -56,24 +56,7 @@ body {
 }
 
 /* Fixes the oversized scaling bug */
-.logo-link {
-  display: inline-block;
-  margin-bottom: 20px;
-  text-decoration: none !important; /* Forces layout lines to clear away */
-  background: transparent;
-}
 
-.sidebar-logo {
-  width: 100%;
-  max-width: 130px; /* Explicit constraint fixes oversized shield rendering */
-  height: auto;
-  display: block;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.logo-link:hover .sidebar-logo {
-  transform: scale(1.04) translateY(-2px);
-}
 
 .sidebar-name {
   font-size: 22px;
