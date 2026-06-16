@@ -255,8 +255,8 @@ img {
 }
 
 .portfolio-category > h3 {
-  color: var(--text-secondary);
-  font-size: 20px;
+  color: var(--text-primary);
+  font-size: 13.5px;
   line-height: 1.35;
   margin: 0 0 14px 0;
 }
