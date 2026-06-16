@@ -240,86 +240,93 @@ img {
   line-height: 1.5;
 }
 
-/* ==========================================================================
-   6. FEATURED PROJECTS
-   ========================================================================== */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 28px;
-  margin-top: 15px;
-}
+/* ========================================================================== 
+   6. FEATURED PROJECTS 
+   ========================================================================== */ 
 
-.portfolio-category {
-  width: 100%;
-}
+.portfolio-grid { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 28px; 
+  margin-top: 15px; 
+} 
 
-.portfolio-category > h3 {
-  color: var(--text-secondary);
-  font-size: 20px;
-  line-height: 1.35;
-  margin: 0 0 14px 0;
-}
+.portfolio-category { 
+  width: 100%; 
+} 
 
-.portfolio-item {
-  width: 100%;
+.portfolio-category > h3 { 
+  color: var(--text-secondary); 
+  font-size: 20px; 
+  line-height: 1.35; 
+  margin: 0 0 14px 0; 
+} 
+
+/* Parent Card Setup */
+.portfolio-item { 
+  width: 100%; 
+  background-color: var(--bg-main); 
+  border: 1px solid var(--border-line); 
+  border-radius: 6px; 
+  overflow: hidden; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+} 
+
+.portfolio-item:hover { 
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); 
+} 
+
+/* Flex Wrapper link to hold image and content side-by-side */
+.portfolio-item .portfolio-link { 
   display: flex;
-  align-items: stretch;
-  background-color: var(--bg-main);
-  border: 1px solid var(--border-line);
-  border-radius: 6px;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+  align-items: stretch; 
+  text-decoration: none; 
+  color: inherit; 
+  width: 100%;
+} 
 
-.portfolio-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-}
-
-.portfolio-item a {
-  flex: 0 0 220px;
+/* Target ONLY the big side image card thumbnail */
+.portfolio-item .project-side-img { 
+  flex: 0 0 240px;          /* Locked perfect visual width for your left picture */
+  object-fit: cover; 
   display: block;
-  text-decoration: none;
-  color: inherit;
+  margin: 0; 
+} 
+
+/* Right Side Content Compartment */
+.item-details { 
+  flex: 1; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  padding: 18px 24px;       /* Enhanced padding ratio */
+} 
+
+/* Fixed: Targeted class specificity so it ignores global img modifications */
+.item-details .project-logo { 
+  width: 140px !important; 
+  height: auto !important; 
+  min-height: unset !important; /* Overrides previous breaking rule */
+  align-self: flex-start; 
+  margin: 0 0 14px 0; 
+  object-fit: contain;
+} 
+
+.item-details h3 { 
+  font-size: 14px;          /* Adjusted slightly up for standard typography hierarchy */
+  color: var(--text-primary); 
+  margin: 0 0 6px 0; 
+  font-weight: 700; 
+} 
+
+.item-details p { 
+  font-size: 12px;          /* Optimized for clean paragraph readability */
+  color: var(--text-secondary); 
+  margin: 0; 
+  line-height: 1.4; 
 }
 
-.portfolio-item img {
-  width: 100%;
-  height: 100%;
-  min-height: 170px;
-  object-fit: cover;
-  margin: 0;
-}
-
-.item-details {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 18px;
-}
-
-.item-details .project-logo {
-  width: 140px;
-  height: auto;
-  align-self: flex-start;
-  margin: 10px;
-}
-
-.item-details h3 {
-  font-size: 12px;
-  color: var(--text-primary);
-  margin: 0 0 4px 0;
-  font-weight: 700;
-}
-
-.item-details p {
-  font-size: 11px;
-  color: var(--text-secondary);
-  margin: 0;
-  line-height: 1.4;
-}
 
 /* ==========================================================================
    7. MOBILE LAYOUT RESPONSIVE BREAKDOWN
