@@ -1,56 +1,55 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Sarah M. Moore - Portfolio & Resume</title> 
-    <link rel="stylesheet" href="style.css"> 
-    <script src="theme.js" defer></script> 
-</head> 
-<body> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah M. Moore - Portfolio & Resume</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+    <!-- Global Navigation Bar -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="#" class="top-nav-arrow" aria-label="Scroll to top">⬆ Top</a></li>
+            <li><a href="#summary">Summary</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li>
+                <span class="tooltip-wrapper">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓 Theme</button>
+                    <span class="tooltip-text">Click to switch color contrast profiles</span>
+                </span>
+            </li>
+        </ul>
+    </nav>
 
-    <!-- Global Navigation Bar --> 
-    <nav class="sticky-nav"> 
-        <ul> 
-            <li><a href="#" class="top-nav-arrow" aria-label="Scroll to top">⬆ Top</a></li> 
-            <li><a href="#summary">Summary</a></li> 
-            <li><a href="#skills">Skills</a></li> 
-            <li><a href="#education">Education</a></li> 
-            <li><a href="#projects">Projects</a></li> 
-            <li><a href="#experience">Experience</a></li> 
-            <li> 
-                <span class="tooltip-wrapper"> 
-                    <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓 Theme</button> 
-                    <span class="tooltip-text">Click to switch color contrast profiles</span> 
-                </span> 
-            </li> 
-        </ul> 
-    </nav> 
-
-    <!-- Main Hero Brand Area --> 
-    <header class="hero-header"> 
-        <section id="contact" class="hero-content"> 
-            <h1>Sarah Morrigan Moore</h1> 
-            <p>Carlinville, IL | 561-517-1278 | <a href="mailto:sarahmorrigan.si@gmail.com" class="accent-link">sarahmorrigan.si@gmail.com</a></p> 
-            <p class="social-links"> 
+    <!-- Main Hero Brand Area -->
+    <header class="hero-header">
+        <section id="contact" class="hero-content">
+            <h1>Sarah Morrigan Moore</h1>
+            <p>Carlinville, IL | 561-517-1278 | <a href="mailto:sarahmorrigan.si@gmail.com" class="accent-link">sarahmorrigan.si@gmail.com</a></p>
+            <p class="social-links">
                 <a href="https://morriganpowers.com" target="_blank" class="btn-link">morriganpowers.com</a> | 
                 <a href="https://thecamperaguidetorvliving.com" target="_blank" class="btn-link">thecamperaguidetorvliving.com</a> | 
                 <a href="https://linkedin.com" target="_blank" class="btn-link">LinkedIn</a> | 
-                <a href="https://github.com" target="_blank" class="btn-link">GitHub</a> 
-            </p> 
-        </section> 
-    </header> 
+                <a href="https://github.com" target="_blank" class="btn-link">GitHub</a>
+            </p>
+        </section>
+    </header>
 
     <main class="portfolio-container">
-        <!-- Summary of Qualifications --> 
-        <section id="summary" class="portfolio-section"> 
-            <h2 class="section-title">Summary of Qualifications</h2> 
-            <p class="summary-text">Versatile professional combining a strong foundation in administration and document processing with advanced training in full-stack web development and graphic information technology. Proven track record of managing precise data formatting, streamlining business workflows, and implementing technical design solutions.</p> 
-        </section> 
+        <!-- Summary of Qualifications -->
+        <section id="summary" class="portfolio-section">
+            <h2 class="section-title">Summary of Qualifications</h2>
+            <p class="summary-text">Versatile professional combining a strong foundation in administration and document processing with advanced training in full-stack web development and graphic information technology. Proven track record of managing precise data formatting, streamlining business workflows, and implementing technical design solutions.</p>
+        </section>
 
-        <!-- Technical & Professional Skills --> 
-        <section id="skills" class="portfolio-section"> 
-            <h2 class="section-title">Technical & Professional Skills</h2> 
+        <!-- Technical & Professional Skills -->
+        <section id="skills" class="portfolio-section">
+            <h2 class="section-title">Technical & Professional Skills</h2>
             <div class="skills-grid">
                 <div class="skills-category">
                     <h3>Software & Tools</h3>
@@ -86,141 +85,138 @@
                     </div>
                 </div>
             </div>
-        </section> 
+        </section>
 
-        <!-- Education Architecture --> 
-        <section id="education" class="portfolio-section"> 
-            <h2 class="section-title">Education</h2> 
+        <!-- Education Architecture -->
+        <section id="education" class="portfolio-section">
+            <h2 class="section-title">Education</h2>
+            <div class="split-row">
+                <div class="meta-side">
+                    <h3>Arizona State University</h3>
+                    <p class="meta-location">Online</p>
+                    <span class="date-badge">2025 - Present</span>
+                </div>
+                <div class="content-side">
+                    <h4>Bachelor of Science in Graphic Information Technology (Focus: Full-Stack Web Development)</h4>
+                    <p class="specialization">Minor: Media Content Creation</p>
+                </div>
+            </div>
+            <div class="split-row">
+                <div class="meta-side">
+                    <h3>Illinois College</h3>
+                    <p class="meta-location">Jacksonville, IL</p>
+                    <span class="date-badge">2023 - 2024</span>
+                </div>
+                <div class="content-side">
+                    <h4>Undergraduate Coursework</h4>
+                    <p class="specialization">Undergraduate Coursework in Accounting, Computer Science, Organizational & Strategic Communication</p>
+                </div>
+            </div>
+            <div class="split-row">
+                <div class="meta-side">
+                    <h3>Indian River State College</h3>
+                    <p class="meta-location">Ft. Pierce, FL</p>
+                    <span class="date-badge">2008 - 2015</span>
+                </div>
+                <div class="content-side">
+                    <h4>Associate in Arts, Accounting (Summa Cum Laude, 2014)</h4>
+                    <p class="specialization">Extensive coursework in Computer Science, Engineering, and Accounting.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Technical Projects Showcase -->
+        <section id="projects" class="portfolio-section">
+            <h2 class="section-title">Technical & Creative Projects</h2>
+            <div class="skills-grid">
+                <!-- Category 1: Backend -->
+                <div class="split-row project-hub-row">
+                    <div class="meta-side">
+                        <h3>Backend Engineering</h3>
+                        <span class="date-badge">Data Systems</span>
+                    </div>
+                    <div class="content-side">
+                        <p>Object-oriented systems, data validation engines, and relational SQL database configurations built to process complex transaction logic structures.</p>
+                        <p><a href="backend.html" class="explore-link">Explore Backend Case Studies & Code →</a></p>
+                    </div>
+                </div>
+                <!-- Category 2: Web Dev -->
+                <div class="split-row project-hub-row">
+                    <div class="meta-side">
+                        <h3>Web Development</h3>
+                        <span class="date-badge">Front-End UX</span>
+                    </div>
+                    <div class="content-side">
+                        <p>Semantic web applications, production deployments, and responsive platform builds linking version-controlled servers to client-facing products.</p>
+                        <p><a href="web-development.html" class="explore-link">Explore Web Development Case Studies →</a></p>
+                    </div>
+                </div>
+                <!-- Category 3: Adobe Creative -->
+                <div class="split-row project-hub-row last-row">
+                    <div class="meta-side">
+                        <h3>Adobe Creative Suite</h3>
+                        <span class="date-badge">Media Production</span>
+                    </div>
+                    <div class="content-side">
+                        <p>Scalable vector brand asset generation, typography layouts, RAW image color grading, and multi-track narrative video sequence editing.</p>
+                        <p><a href="creative-suite.html" class="explore-link">Explore Design & Video Portfolios →</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Professional Experience Section -->
+        <section id="experience" class="portfolio-section">
+            <h2 class="section-title">Professional Experience</h2>
             
-            <div class="split-row"> 
-                <div class="meta-side"> 
-                    <h3>Arizona State University</h3> 
-                    <p class="meta-location">Online</p> 
-                    <span class="date-badge">2025 - Present</span> 
-                </div> 
-                <div class="content-side"> 
-                    <h4>Bachelor of Science in Graphic Information Technology (Focus: Full-Stack Web Development)</h4> 
-                    <p class="specialization">Minor: Media Content Creation</p> 
-                </div> 
-            </div> 
+            <!-- Sabbatical -->
+            <div class="split-row">
+                <div class="meta-side">
+                    <h3>Sabbatical / Continuing Education</h3>
+                    <p class="meta-location">National</p>
+                    <span class="date-badge">2019 - 2025</span>
+                </div>
+                <div class="content-side">
+                    <h4>Full-Time Multi-Disciplinary Growth</h4>
+                    <ul class="impact-list">
+                        <li>Completed full-time RV travel across the United States.</li>
+                        <li>Attended Illinois College and Arizona State University (Accounting, CS, GIT coursework).</li>
+                    </ul>
+                </div>
+            </div>
 
-            <div class="split-row"> 
-                <div class="meta-side"> 
-                    <h3>Illinois College</h3> 
-                    <p class="meta-location">Jacksonville, IL</p> 
-                    <span class="date-badge">2023 - 2024</span> 
-                </div> 
-                <div class="content-side"> 
-                    <h4>Undergraduate Coursework</h4> 
-                    <p class="specialization">Undergraduate Coursework in Accounting, Computer Science, Organizational & Strategic Communication</p> 
-                </div> 
-            </div> 
+            <!-- Forehand & Associates -->
+            <div class="split-row">
+                <div class="meta-side">
+                    <h3>Forehand & Associates, P.A. (Marcum, LLP)</h3>
+                    <p class="meta-location">Orlando, FL</p>
+                    <span class="date-badge">2015 - 2019</span>
+                </div>
+                <div class="content-side">
+                    <h4>Office Administrator</h4>
+                    <ul class="impact-list">
+                        <li>Managed high-volume, complex audit document processing and quality control.</li>
+                        <li>Prepared and compiled digital/physical documentation for regional civil construction clients.</li>
+                        <li>Maintained strict data integrity for corporate reports and legal financial disclosures.</li>
+                    </ul>
+                </div>
+            </div>
 
-            <div class="split-row"> 
-                <div class="meta-side"> 
-                    <h3>Indian River State College</h3> 
-                    <p class="meta-location">Ft. Pierce, FL</p> 
-                    <span class="date-badge">2008 - 2015</span> 
-                </div> 
-                <div class="content-side"> 
-                    <h4>Associate in Arts, Accounting (Summa Cum Laude, 2014)</h4> 
-                    <p class="specialization">Extensive coursework in Computer Science, Engineering, and Accounting.</p> 
-                </div> 
-            </div> 
-        </section> 
-
-        <!-- Technical Projects Showcase --> 
-        <section id="projects" class="portfolio-section"> 
-            <h2 class="section-title">Technical Projects</h2> 
-            
-            <div class="split-row project-card"> 
-                <div class="meta-side"> 
-                    <h3>The Camper: A Guide to RV Living</h3> 
-                    <p class="meta-location">Web Designer & Developer</p>
-                    <span class="date-badge">2024 - Present</span> 
-                    <p><a href="https://thecamperaguidetorvliving.com" target="_blank" class="action-btn">thecamperaguidetorvliving.com</a></p>
-                </div> 
-                <div class="content-side"> 
-                    <ul class="impact-list"> 
-                        <li>Designed and developed a fully functional, mobile-responsive self-hosted WordPress website dedicated to the full-time RV community.</li> 
-                        <li>Created original vector brand assets, including the primary website logo and site favicon, ensuring consistent visual identity.</li> 
-                        <li>Formatted, scheduled, and published digital articles and layout galleries focusing on lifestyle logistics, gear, and travel planning.</li> 
-                        <li>Managed system backend layouts, plugin integrations, domain mapping, and theme customizations to optimize user interface and site performance.</li> 
-                    </ul> 
-                </div> 
-            </div> 
-
-            <div class="split-row project-card"> 
-                <div class="meta-side"> 
-                    <h3>Sarah Morrigan Moore</h3> 
-                    <p class="meta-location">Web Designer & Full-Stack Developer</p>
-                    <span class="date-badge">2024 - Present</span> 
-                    <p><a href="https://morriganpowers.com" target="_blank" class="action-btn">morriganpowers.com</a></p>
-                </div> 
-                <div class="content-side"> 
-                    <ul class="impact-list"> 
-                        <li>Engineered a semantic, responsive portfolio application using native HTML5 markup, CSS3 Custom Properties, and vanilla JavaScript theme switching modules.</li> 
-                        <li>Established a decoupled continuous deployment (CI/CD) infrastructure by serving production source code directly from custom GitHub repositories via GitHub Pages.</li> 
-                        <li>Configured base-level Domain Name System (DNS) configurations, including CNAME and root apex routing rules, to seamlessly bridge domain registrars with cloud servers.</li> 
-                    </ul> 
-                </div> 
-            </div> 
-        </section> 
-
-        <!-- Professional Experience Section --> 
-        <section id="experience" class="portfolio-section"> 
-            <h2 class="section-title">Professional Experience</h2> 
-            
-            <div class="split-row"> 
-                <div class="meta-side"> 
-                    <h3>Sabbatical / Continuing Education</h3> 
-                    <p class="meta-location">National</p> 
-                    <span class="date-badge">2019 - 2025</span> 
-                </div> 
-                <div class="content-side"> 
-                    <h4>Full-Time Multi-Disciplinary Growth</h4> 
-                    <ul class="impact-list"> 
-                        <li>Completed full-time RV travel across the United States.</li> 
-                        <li>Attended Illinois College and Arizona State University to pursue undergraduate coursework in Accounting, Computer Science, and Graphic Information Technology.</li> 
-                    </ul> 
-                </div> 
-            </div> 
-
-            <div class="split-row"> 
-                <div class="meta-side"> 
-                    <h3>Forehand & Associates, P.A. (Marcum, LLP)</h3> 
-                    <p class="meta-location">Orlando, FL</p> 
-                    <span class="date-badge">2015 - 2019</span> 
-                </div> 
-                <div class="content-side"> 
-                    <h4>Office Administrator</h4> 
-                    <ul class="impact-list"> 
-                        <li>Managed high-volume document processing, formatting, and quality control for complex audited financial statements.</li> 
-                        <li>Prepared, finalized, and compiled physical and digital documentation for civil construction clients across the Southeast United States.</li> 
-                        <li>Maintained strict formatting standards and data integrity across complex corporate reports and legal financial disclosures.</li> 
-                        <li>Oversaw daily office administrative operations, client communication workflows, and digital file management systems.</li> 
-                    </ul> 
-                </div> 
-            </div> 
-
-            <div class="split-row"> 
-                <div class="meta-side"> 
-                    <h3>William T. Ingram, Jr., P.A.</h3> 
-                    <p class="meta-location">Hobe Sound, FL</p> 
-                    <span class="date-badge">2005 - 2015</span> 
-                </div> 
-                <div class="content-side"> 
-                    <h4>Office Manager</h4> 
-                    <ul class="impact-list"> 
-                        <li>Directed comprehensive office administration, document filing systems, and front-desk workflows.</li> 
-                        <li>Provided seasonal support during tax periods by processing data entry, coding, and posting transactions.</li> 
-                        <li>Prepared accurate transactional journal entries to assist with accounting and tax preparation workflows.</li> 
-                        <li>Assisted with occasional bookkeeping tasks and basic account management for standard small-business clients.</li> 
-                    </ul> 
-                </div> 
-            </div> 
-        </section> 
+            <!-- William T. Ingram, Jr., P.A. -->
+            <div class="split-row">
+                <div class="meta-side">
+                    <h3>William T. Ingram, Jr., P.A.</h3>
+                    <p class="meta-location">Hobe Sound, FL</p>
+                    <span class="date-badge">2005 - 2015</span>
+                </div>
+                <div class="content-side">
+                    <h4>Office Manager</h4>
+                    <ul class="impact-list">
+                        <li>Directed comprehensive office administration and front-desk workflows.</li>
+                        <li>Provided tax-season support, including data entry and journal entry preparation.</li>
+                        <li>Assisted with bookkeeping and account management for small-business clients.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </main>
-
-</body> 
+</body>
 </html>
