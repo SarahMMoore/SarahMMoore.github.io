@@ -1,120 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Child's Summer Routine Design System | Sarah Morrigan Moore</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=JetBrains+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pediatric Routine Design System Case Study - Sarah M. Moore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
 </head>
 <body>
-  <div class="case-study-container">
-    <aside class="case-study-sidebar">
-      <div class="sidebar-sticky-wrapper">
-			
- <a href="index.html" style="text-decoration: none; color: inherit; font-weight: bold; display: inline-block; margin-bottom: 15px;"> &larr; Return to portfolio</a>
+    <!-- Context-Specific Subpage Navigation Bar -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="creative-suite.html" class="back-link">← Back to Media & Content</a></li>
+            <li>
+                <span class="tooltip-wrapper">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">     Theme</button>
+                    <span class="tooltip-text">Click to switch color contrast profiles</span>
+                </span>
+            </li>
+        </ul>
+    </nav>
 
-        <div class="sidebar-brand-block">
-          <h1 class="sidebar-name">Summer Routine Design System</h1>
-          <p class="sidebar-title">Solo UI/UX &amp; Asset Production Designer | GIT Case Study Portfolio Piece</p>
-        </div>
+    <main class="portfolio-container">
+        <!-- Case Study Header Context -->
+        <header class="section-header">
+            <h1>Pediatric Routine Design System</h1>
+            <p class="subtitle">A human-centered visual communication layout framework designed to assist transitions, track daily routines, and support sensory schedules.</p>
+        </header>
 
-        <section class="sidebar-section">
-          <h3>The Problem</h3>
-          <p class="case-study-summary-paragraph">Children navigating Levels 1 and 2 Autism often experience heightened transition anxiety when daily expectations are abstract, overwhelming, or unpredictable. Traditional visual schedules frequently fail because they pull from mismatched, visually noisy stock illustration packs.</p>
-          <p class="case-study-summary-paragraph">This structural and stylistic inconsistency forces a neurodivergent child to constantly decode entirely new visual rules for every single task. The resulting cognitive friction increases sensory overload, undermines routine comprehension, and hinders successful behavioral transitions.</p>
+        <!-- Project Overview & Methodology -->
+                <!-- Project Overview & Methodology -->
+        <section class="project-card">
+            <h2>UX Problem & System Overview</h2>
+            <p>Everyday routines require clear, unambiguous signaling, especially when managing pediatric sensory support. Standard commercial scheduling tools often fail to balance specific household workflows with consistent visual markers. This project treats daily routine management for a five-year-old child as an accessible user experience problem: converting complex daily workflows into high-contrast, easily scannable, and color-coded print layouts.</p>
+            
+            <p>The system relies on a consistent visual grid, matching vector iconography, and specific color theory rules to separate daily shifts (Teal for Morning, Green for Mid-Day, Blue for Evening) paired with tangible token reinforcement mechanics tailored for early childhood development.</p>
         </section>
 
-        <section class="sidebar-section">
-          <h3>The Solution</h3>
-          <p class="case-study-summary-paragraph">The Child's Summer Routine Design System resolves this friction by establishing a highly structured, single-brand design ecosystem. By programmatically stripping background noise and engineering a unified Character DNA across all assets, the design system drastically minimizes cognitive load.</p>
-          <p class="case-study-summary-paragraph">It scales seamlessly across linear daily schedules, milestone tracking games, and loose token economies. The final physical-digital system utilizes a rigid horizontal layout grid and a calming, circadian color taxonomy to give the child a highly accessible, predictable roadmap for their day.</p>
+
+        <!-- Dynamic Layout Grid for All 8 Assets (Re-ordered) -->
+        <h2 style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; font-size: 1.25rem; margin: 30px 0 15px 0;">Visual Asset Breakdown & Architecture</h2>
+        
+        <section class="project-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+            
+            <!-- Card 1: Morning -->
+            <article class="project-card" style="margin: 0;">
+                <img src="images/VisualSchedule_Morning.jpg" alt="Morning Schedule" style="width: 100%; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>1. Morning Track</h3>
+                <p style="font-size: 0.9rem;">High-contrast layout detailing time constraints, morning medicine checklists, and step-by-step preparation blocks using a calming teal interface structure.</p>
+            </article>
+
+            <!-- Card 2: Mid-Day -->
+            <article class="project-card" style="margin: 0;">
+                <img src="images/VisualSchedule_Mid%20Day.jpg" alt="Mid-Day Schedule" style="width: 100%; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>2. Mid-Day Track</h3>
+                <p style="font-size: 0.9rem;">Configured with standard reading times, structural learning windows, and activity blocks utilizing a focused bright green brand profile.</p>
+            </article>
+
+            <!-- Card 3: Evening -->
+            <article class="project-card" style="margin: 0;">
+                <img src="images/VisualSchedule_Evening.jpg" alt="Evening Schedule" style="width: 100%; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>3. Evening Track</h3>
+                <p style="font-size: 0.9rem;">Manages wind-down routines, clean-up times, and explicit bedroom transition workflows built within a deep blue palette.</p>
+            </article>
+
+            <!-- Card 4: Stay in Bed -->
+            <article class="project-card" style="margin: 0;">
+                <img src="images/VisualSchedule_Stay%20in%20bed.jpg" alt="Stay in Bed Chart" style="width: 100%; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>4. Sleep Routine Chart</h3>
+                <p style="font-size: 0.9rem;">A star-focused token grid designed to establish overnight targets and validate tracking goals through visual verification indicators.</p>
+            </article>
+
+            <!-- Card 5: Star Tokens -->
+            <article class="project-card" style="margin: 0;">
+                <img src="images/VisualSchedule_Token.jpg" alt="Star Tokens" style="width: 100%; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>5. Sleep Token System</h3>
+                <p style="font-size: 0.9rem;">Print-ready component layout sheet containing uniform, matching vector star items configured to scale perfectly across chart slots.</p>
+            </article>
+
+            <!-- Card 6: Bedtime Pass -->
+            <article class="project-card" style="margin: 0;">
+                <img src="images/VisualSchedule_Bedtime%20Pass.jpg" alt="Bedtime Pass" style="width: 100%; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>6. Conditional Bedtime Pass</h3>
+                <p style="font-size: 0.9rem;">A singular, physical interface component designed to limit anxiety during bedtime adjustments through strict token validation logic.</p>
+            </article>
+
+            <!-- Card 7: Potty Path -->
+            <article class="project-card" style="margin: 0;">
+                <img src="images/VisualSchedule_Potty%20Game.jpg" alt="Potty Path Game" style="width: 100%; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>7. Potty Path Tracking</h3>
+                <p style="font-size: 0.9rem;">Gamified sequential progress layout map using interactive step nodes (1-10) to celebrate and visually track milestone goals.</p>
+            </article>
+
+            <!-- Card 8: Potty Tokens -->
+            <article class="project-card" style="margin: 0;">
+                <img src="images/VisualSchedule_Potty%20Token.jpg" alt="Potty Tokens" style="width: 100%; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>8. Path Progress Tokens</h3>
+                <p style="font-size: 0.9rem;">Companion print sheet featuring uniform, circular tokens designed to slot cleanly into the progressive step nodes along the tracking path.</p>
+            </article>
+
         </section>
-      </div>
-    </aside>
-
-    <main class="case-study-main-panel">
-
-		<section class="case-study-main-section">
-        <h2>Design System Vector Gallery</h2>
-        <div class="display-grid">
-          <div class="display-card">
-            <img src="images/VisualSchedule_Morning.jpg" alt="Morning Routine Schedule Preview">
-            <p>Morning Routine Schedule</p>
-          </div>
-          <div class="display-card">
-            <img src="images/VisualSchedule_Mid Day.jpg" alt="Mid-Day Routine Schedule Preview">
-            <p>Mid-Day Routine Schedule</p>
-          </div>
-          <div class="display-card">
-            <img src="images/VisualSchedule_Evening.jpg" alt="Evening Routine Schedule Preview">
-            <p>Evening Routine Schedule</p>
-          </div>
-          <div class="display-card">
-            <img src="images/VisualSchedule_Potty Game.jpg" alt="Potty Path Milestone Game Preview">
-            <p>Potty Path Milestone Game</p>
-          </div>
-          <div class="display-card">
-            <img src="images/VisualSchedule_Stay in bed.jpg" alt="Stay in Bed Milestone Game Preview">
-            <p>Stay in Bed Milestone Game</p>
-          </div>
-          <div class="display-card">
-            <img src="images/VisualSchedule_Bedtime Pass.jpg" alt="Bedtime Pass Full Bleed Pattern Preview">
-            <p>Bedtime Pass Full-Bleed Pattern</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="case-study-main-section">
-        <h2>Technical Execution &amp; UI Metrics</h2>
-        <ul class="case-study-list">
-          <li><strong>Tri-Band Color Taxonomy:</strong> Applied a contextual color shift to regulate circadian expectations: Teal-Cyan for Morning routines, Fresh Green for Mid-Day activities, and Cobalt Blue for Evening/Bedtime assets.</li>
-          <li><strong>Rigid Grid System:</strong> Engineered a universal horizontal grid framework across all core columns. Every routine card shares a standard dimensional layout and white-box padding to isolate the focus task.</li>
-          <li><strong>Typographic Hierarchy:</strong> Consolidated the entire project into a maximum of two sans-serif typefaces. Implemented strict Title Case styling and wide-tracked, uppercase header formatting to establish alignment and modern, clean text blocks.</li>
-        </ul>
-      </section>
-
-      <section class="case-study-main-section">
-        <h2>Technical Asset Optimization</h2>
-        <ul class="case-study-list">
-          <li><strong>Stylistic Harmonization:</strong> Programmatically deconstructed multiple mismatched Adobe Stock vector files to isolate primary subjects. Background clutter was entirely stripped to eliminate sensory distractions.</li>
-          <li><strong>Character DNA Engineering:</strong> Extracted a single child asset to build a master character template layer. Using a precise mechanical workflow, the child's face and distinct eye shapes were extracted, duplicated, and scaled across different bodies and family vignette graphics to create total visual continuity.</li>
-          <li><strong>Advanced Illustrator Workflows:</strong> Leveraged asset-building tools, scaling, object transformation axes, and duplicating functions to cleanly blend anchor paths at complex limb and neck intersections. Thickened thin outline weights to enforce a single line-art standard across all artboards.</li>
-          <li><strong>Dynamic Background Composition:</strong> Executed an intentional full-bleed pattern layer on the Bedtime Pass asset, utilizing a vector clipping mask to cleanly crop runaway shapes at the artboard boundaries for a sharp, production-ready edge.</li>
-        </ul>
-      </section>
-
-      <section class="case-study-main-section">
-        <h2>Scalability &amp; Token Economies</h2>
-        <ul class="case-study-list">
-          <li><strong>The Potty Path Loop:</strong> Scaled the core components into a linear milestone tracking game. Re-engineered the path using a fluid S-curve vector flow, uniform connecting lines, and clean number graphics to keep the tracking experience highly accessible.</li>
-          <li><strong>Constellation Tracking &amp; Interaction:</strong> Designed an open, scatter-style token economy sheet (Stay in Bed) alongside interactive, printable cutout token sheets (Potty Tokens and Star Tokens), maintaining identical grid math, outline weights, and object scales.</li>
-        </ul>
-      </section>
-
-      <section class="case-study-main-section">
-        <h2>Technical Core Skills Featured</h2>
-        <div class="tag-box">
-          <span class="tag">UI/UX Design</span>
-          <span class="tag">Accessibility Standards</span>
-          <span class="tag">Human-Centered Design</span>
-          <span class="tag">Information Architecture</span>
-          <span class="tag">Cognitive Load Reduction</span>
-          <span class="tag">Branding &amp; Identity Systems</span>
-          <span class="tag">Color Taxonomy</span>
-          <span class="tag">Typographic Tracking &amp; Leading</span>
-          <span class="tag">Grid Alignment Systems</span>
-          <span class="tag">Print Production Design (Bleeds)</span>
-          <span class="tag">Vector Asset Layout Modification</span>
-          <span class="tag">Layer Hierarchy Management</span>
-          <span class="tag">Path Merging &amp; Pathfinding</span>
-        </div>
-      </section>
-
-      
     </main>
-  </div>
 </body>
 </html>
