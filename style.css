@@ -522,6 +522,23 @@ header {
   font-weight: 700;
 }
 
+.brand-logo {
+  height: auto !important;
+  max-height: 32px !important; /* Forces it to remain headline-sized */
+  width: auto !important;
+  object-fit: contain !important;
+  display: inline-block;
+}
+
+.split-row {
+  overflow: hidden;
+}
+
+.edu-asu .brand-logo {
+  max-height: 43px !important; /* Increases the crest size for structural balance */
+  margin-bottom: 2px;
+}
+
 /* --- Illinois College Theme --- */
 .edu-ic h3 {
   font-family: 'Times New Roman', Times, serif;
@@ -531,6 +548,12 @@ header {
 .edu-ic .date-badge {
   background-color: #004B87 !important;
   color: #FFFFFF !important;
+}
+
+/* --- Fine-Tuning Logo Visual Weights --- */
+.edu-ic .brand-logo {
+  max-height: 95px !important; /* Increases the crest size for structural balance */
+  margin-bottom: 2px;
 }
 
 /* --- Indian River State College Theme --- */
@@ -546,4 +569,9 @@ header {
 
 .edu-irsc .honors-text {
   color: #003DA5 !important;
+}
+
+.edu-irsc .brand-logo {
+  max-height: 70px !important; /* Increases the crest size for structural balance */
+  margin-bottom: 2px;
 }

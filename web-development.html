@@ -1,74 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Development Projects - Sarah M. Moore</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="theme.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphic Information Technology Projects - Sarah M. Moore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
 </head>
 <body>
+    <!-- Context-Specific Subpage Navigation Bar -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="index.html" class="back-link">← Back to Home</a></li>
+            <li>
+                <span class="tooltip-wrapper">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓 Theme</button>
+                    <span class="tooltip-text">Click to switch color contrast profiles</span>
+                </span>
+            </li>
+        </ul>
+    </nav>
 
-  <!-- Context-Specific Subpage Navigation Bar -->
-  <nav class="sticky-nav">
-    <ul>
-      <li><a href="index.html" class="back-link">← Back to Home</a></li>
-      <li>
-        <span class="tooltip-wrapper">
-          <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓 Theme</button>
-          <span class="tooltip-text">Click to switch color contrast profiles</span>
-        </span>
-      </li>
-    </ul>
-  </nav>
+    <main class="portfolio-container">
+        <!-- Subpage Header Context -->
+        <header class="section-header">
+            <h1>Graphic Information Technology</h1>
+            <p class="subtitle">Semantic, responsive web layouts engineered using modern HTML5 and CSS custom properties, optimized for fluid mobile viewports and clean user experiences.</p>
+        </header>
 
-  <main class="portfolio-container">
-    <!-- Subpage Header Context -->
-    <header class="section-header">
-      <h1>Web Development</h1>
-      <p class="subtitle">Semantic web applications, production deployments, and 
-      responsive platform builds linking version-controlled servers to client-facing products.</p>
-    </header>
+        <!-- Project Deployment List -->
+        <section class="project-list">
+            
+            <!-- Project 1: Portfolio Site -->
+            <article class="project-card">
+                <h2>Responsive Portfolio Architecture</h2>
+                <div class="badge-container">
+                    <span class="tech-badge">HTML5</span>
+                    <span class="tech-badge">CSS Variables</span>
+                    <span class="tech-badge">Vanilla JS</span>
+                    <span class="tech-badge">GitHub Pages</span>
+                </div>
+                <p>Engineered a custom, responsive personal portfolio website from scratch. Bypassed cookie-cutter templates to write clean, semantic markup and UI components in VS Code. Managed source control using GitHub Desktop and configured automated continuous deployment to a custom domain.</p>
+                <div class="project-links">
+                    <a href="https://github.com/SarahMMoore/SarahMMoore.github.io" target="_blank" rel="noopener noreferrer" class="cta-link">View Portfolio Repository →</a>
+                </div>
+            </article>
 
-    <!-- Project Deployment List -->
-    <section class="project-list">
+            <!-- Project 2: WordPress Core Implementation -->
+            <article class="project-card">
+                <h2>The Camper: A Guide to RV Living</h2>
+                <div class="badge-container">
+                    <span class="tech-badge">WordPress</span>
+                    <span class="tech-badge">Domain Mapping</span>
+                    <span class="tech-badge">UI Optimization</span>
+                    <span class="tech-badge">Content Strategy</span>
+                </div>
+                <p>Executed full-lifecycle development for a digital RV guide. Designed the visual brand assets, customized the UI layout for clear mobile rendering, configured secure custom domain mapping, and authored original articles focused on travel, maintenance, and logistics.</p>
+                <div class="project-links">
+                    <a href="https://github.com/SarahMMoore/SarahMMoore.github.io" target="_blank" rel="noopener noreferrer" class="cta-link">The Camper: A Guide To RV Living | Live Production Link →</a>
+                </div>
+            </article>
 
-      <!-- Project 1: Portfolio Site -->
-      <article class="project-card">
-        <h2>Responsive Portfolio Architecture</h2>
-        <div class="badge-container">
-          <span class="tech-badge">HTML5</span>
-          <span class="tech-badge">CSS Variables</span>
-          <span class="tech-badge">Vanilla JS</span>
-          <span class="tech-badge">GitHub Pages</span>
-        </div>
-        <p>Engineered a custom, responsive portfolio website from scratch 
-        using semantic HTML5, CSS variables, and Vanilla JS in VS Code. 
-        Bypassed generic templates to build a tailored UI, managing version 
-        control via GitHub Desktop and deploying directly to a custom domain 
-        through GitHub Pages.</p>
-        <div class="project-links">
-          <a href="https://github.com/SarahMMoore/SarahMMoore.github.io" target="_blank" class="cta-link">View Portfolio Repository →</a>
-        </div>
-      </article>
-
-      <!-- Project 2: WordPress Core Implementation -->
-      <article class="project-card">
-        <h2>Digital Platform</h2>
-        <div class="badge-container">
-          <span class="tech-badge">WordPress Core</span>
-          <span class="tech-badge">Domain Mapping</span>
-          <span class="tech-badge">UI Optimization</span>
-        </div>
-        <p>Designed the brand identity, including custom logo, favicon, typography, 
-        and color palettes. Customized the WordPress template for mobile viewports, 
-        integrated backend plugins, and authored original articles for the digital platform.</p>
-        <div class="project-links">
-          <a href="https://thecamperaguidetorvliving.com" target="_blank" class="cta-link">The Camper: A Guide To RV Living | Live Production Link →</a>
-        </div>
-      </article>
-
-    </section>
-  </main>
+        </section>
+    </main>
 </body>
 </html>

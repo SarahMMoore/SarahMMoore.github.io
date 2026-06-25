@@ -1,65 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Creative Portfolio - Sarah M. Moore</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="theme.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media & Content Creation Projects - Sarah M. Moore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
 </head>
 <body>
+    <!-- Context-Specific Subpage Navigation Bar -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="index.html" class="back-link">← Back to Home</a></li>
+            <li>
+                <span class="tooltip-wrapper">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓 Theme</button>
+                    <span class="tooltip-text">Click to switch color contrast profiles</span>
+                </span>
+            </li>
+        </ul>
+    </nav>
 
-  <!-- Subpage Navigation Bar -->
-  <nav class="sticky-nav">
-    <ul>
-      <li>
-        <a href="index.html" class="back-link">← Back to Home</a>
-      </li>
-      <li>
-        <span class="tooltip-wrapper">
-          <button id="theme-toggle" aria-label="Toggle dark/light mode">🌗 Theme</button>
-          <span class="tooltip-text">Click to switch color contrast profiles</span>
-        </span>
-      </li>
-    </ul>
-  </nav>
+    <main class="portfolio-container">
+        <!-- Subpage Header Context -->
+        <header class="section-header">
+            <h1>Media & Content Creation</h1>
+            <p class="subtitle">Original visual assets, typography systems, vector branding, layout designs, and narrative video sequences created using Adobe Creative Cloud.</p>
+        </header>
 
-  <!-- Main Layout Wrapper for Subpages -->
-  <main class="portfolio-container">
+        <!-- Media Asset Project Listings -->
+        <section class="project-list">
+            
+            
+            <article class="project-card">
+                <h2>Vector Identity & Brand Asset Generation</h2>
+                <div class="badge-container">
+                    <span class="tech-badge">Illustrator</span>
+                    <span class="tech-badge">Photoshop</span>
+                    <span class="tech-badge">Branding</span>
+                </div>
+                <p>Designed the complete visual identity for a digital platform, including the custom site logo, matching favicon, typography hierarchy, and a structured color palette. Optimized all assets as vector layers to scale sharply across varying viewport layouts.</p>
+                <div class="project-links">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="cta-link">View Live Brand Deployment →</a>
+                </div>
+            </article>
 
-    <!-- Subpage Header Context -->
-    <header class="section-header">
-      <h1>Adobe Creative Suite</h1>
-      <p class="subtitle">Scalable vector brand asset generation, typography layouts, 
-      RAW image color grading, and multi-track narrative video sequence editing.</p>
-      <p>In Process - Compiled examples coming soon...</p>
-    </header>
+            <!-- Project 2: Print Layout Design -->
+            <article class="project-card">
+                <h2>Visual Schedule & Print Layout System</h2>
+                <div class="badge-container">
+                    <span class="tech-badge">InDesign</span>
+                    <span class="tech-badge">Typography</span>
+                    <span class="tech-badge">Print Production</span>
+                </div>
+                <p>Designed and produced a custom, high-clarity printed visual schedule tailored for family use. Focused heavily on high-contrast iconography, intuitive spatial layout grouping, and color-coded routines to create an accessible and supportive everyday tool.</p>
+            </article>
 
-    <!-- Media Asset Project Listings -->
-    <section class="project-list">
+            <!-- Project 3: Video Production -->
+            <article class="project-card">
+                <h2>Narrative Video Sequence & Motion Editing</h2>
+                <div class="badge-container">
+                    <span class="tech-badge">Premiere Pro</span>
+                    <span class="tech-badge">Multi-Track Editing</span>
+                    <span class="tech-badge">Media Production</span>
+                </div>
+                <p>Compiled, sequenced, and edited multi-track video projects featuring seamless transitions, structural audio mixing, and narrative pacing assignments completed for academic coursework.</p>
+            </article>
 
-      <!-- Project 1: Media Branding System -->
-      <article class="project-card">
-        <h2>Vector Identity & Brand Asset Generation</h2>
-        
-        <!-- Tech Pill Badges -->
-        <div class="badge-container">
-          <span class="tech-badge">Illustrator</span>
-          <span class="tech-badge">Photoshop</span>
-          <span class="tech-badge">Asset Architecture</span>
-        </div>
-        
-        <p>Generated core vector frameworks, high-resolution media badges, custom logotypes, 
-        and targeted site system icons. Structured layouts for crisp responsive display scaling.</p>
-        
-        <!-- Interactive Project Links -->
-        <div class="project-links">
-          <a href="https://thecamperaguidetorvliving.com" target="_blank" class="cta-link">View Live Brand Deployment at The Camper: A Guide to RV Living →</a>
-        </div>
-      </article>
+            <!-- Project 4: Digital Photography -->
+            <article class="project-card">
+                <h2>Digital Photography & Image Development</h2>
+                <div class="badge-container">
+                    <span class="tech-badge">Lightroom Classic</span>
+                    <span class="tech-badge">Color Grading</span>
+                    <span class="tech-badge">Asset Optimization</span>
+                </div>
+                <p>Photographed and processed custom imagery for digital publication. Developed RAW photos in Lightroom Classic to calibrate exposure, apply cohesive color tuning, and compress file sizes for efficient loading speeds on active web pages.</p>
+            </article>
 
-    </section>
-  </main>
-
+        </section>
+    </main>
 </body>
 </html>

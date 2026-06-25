@@ -1,94 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Backend Engineering Projects - Sarah M. Moore</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="theme.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Stack Web Development Projects - Sarah M. Moore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
 </head>
 <body>
+    <!-- Context-Specific Subpage Navigation Bar -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="index.html" class="back-link">← Back to Home</a></li>
+            <li>
+                <span class="tooltip-wrapper">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">         Theme</button>
+                    <span class="tooltip-text">Click to switch color contrast profiles</span>
+                </span>
+            </li>
+        </ul>
+    </nav>
 
-  <!-- Context-Specific Subpage Navigation Bar -->
-  <nav class="sticky-nav">
-    <ul>
-      <li><a href="index.html" class="back-link">← Back to Home</a></li>
-      <li>
-        <span class="tooltip-wrapper">
-          <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓 Theme</button>
-          <span class="tooltip-text">Click to switch color contrast profiles</span>
-        </span>
-      </li>
-    </ul>
-  </nav>
+    <main class="portfolio-container">
+        <!-- Subpage Header Context -->
+        <header class="section-header">
+            <h1>Full-Stack Web Development</h1>
+            <p class="subtitle">Custom-coded applications featuring object-oriented programming, dynamic application logic, and relational database engineering built in VS Code and Eclipse.</p>
+        </header>
 
-  <main class="portfolio-container">
-    <!-- Subpage Header Context -->
-    <header class="section-header">
-      <h1>Backend Engineering</h1>
-      <p class="subtitle">Object-oriented systems, data validation engines, and 
-      relational SQL database configurations built to process complex transaction 
-      logic structures.</p>
-    </header>
+        <!-- Project Deployment List -->
+        <section class="project-list">
+            
+            <!-- Project 1: Stock Portfolio App -->
+            <article class="project-card">
+                <h2>Stock Portfolio Application</h2>
+                <div class="badge-container">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">Object-Oriented Design</span>
+                    <span class="tech-badge">Application Logic</span>
+                </div>
+                <p>A desktop application simulating brokerage account systems. Features modular functions handling data tracking for cash deposits, withdrawals, real-time stock purchases, and sales, backed by an automated transactional tracking history.</p>
+                <div class="project-links">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="cta-link">View GitHub Repository →</a>
+                </div>
+            </article>
 
-    <!-- Project Deployment List -->
-    <section class="project-list">
+            <!-- Project 2: Pizza Ordering System -->
+            <article class="project-card">
+                <h2>Pizza Ordering System - Relational Database Architecture</h2>
+                <div class="badge-container">
+                    <span class="tech-badge">SQL</span>
+                    <span class="tech-badge">MS SQL Server</span>
+                    <span class="tech-badge">Database Design</span>
+                    <span class="tech-badge">ERD Mapping</span>
+                </div>
+                <p>Designed and deployed a structural relational database system from the ground up. Engineered complete Entity-Relationship Diagrams (ERDs) and schema models, mapping strict primary/foreign key data relationships. Developed raw SQL deployment scripts to create tables, handle relational data constraints, and execute multi-table structural queries.</p>
+                <div class="project-links">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="cta-link">View GitHub Profile for Description →</a>
+                </div>
+            </article>
 
-      <!-- Project 1: Stock Portfolio App -->
-      <article class="project-card">
-        <h2>Stock Portfolio Application</h2>
-        <div class="badge-container">
-          <span class="tech-badge">Java</span>
-          <span class="tech-badge">Object-Oriented Design</span>
-          <span class="tech-badge">Data Flow Logic</span>
-        </div>
-        <p>An application featuring object-oriented code, data structure validation engines, 
-        and customized transactional configurations engineered to parse complex execution pathways.</p>
-        <div class="project-links">
-          <a href="https://github.com/SarahMMoore/stockPortfolioApplication" target="_blank" rel="noopener noreferrer" class="cta-link">View GitHub Repository →</a>
-        </div>
-      </article>
+            <!-- Project 3: Target Practice Game -->
+            <article class="project-card">
+                <h2>Target Practice Game</h2>
+                <div class="badge-container">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Game Logic</span>
+                    <span class="tech-badge">Event Handling</span>
+                </div>
+                <p>Developed an interactive, graphical hit-the-target game while enrolled at Illinois College. Adapted, scaled, and optimized application components from a foundational ZyBooks assignment, introducing custom graphics layouts, multi-file object structures, and modular event-driven configurations.</p>
+                <div class="project-links">
+                    <a href="https://github.com/TargetPractice" target="_blank" rel="noopener noreferrer" class="cta-link">View GitHub Repository →</a>
+                </div>
+            </article>
 
-      <!-- Project 2: Pizza Ordering System -->
-      <article class="project-card">
-        <h2>Pizza Ordering System - Relational Database Architecture</h2>
-        <div class="badge-container">
-          <span class="tech-badge">SQL</span>
-          <span class="tech-badge">MS SQL Server</span>
-          <span class="tech-badge">Database Design</span>
-          <span class="tech-badge">ERD Mapping</span>
-        </div>
-        <p> Will be added to GitHub at future point</p>
-        <p>Designed and deployed a structural relational database system from the ground up. 
-        Engineered complete Entity-Relationship Diagrams (ERDs) and schema models, mapping 
-        strict primary/foreign key data relationships. Developed raw SQL deployment scripts 
-        to create tables, handle relational data constraints, and execute multi-table 
-        structural queries.</p>
-        <div class="project-links">
-          <a href="https://github.com/SarahMMoore" target="_blank" rel="noopener noreferrer" class="cta-link">View GitHub Profile for description →</a>
-        </div>
-      </article>
-
-      <!-- Project 3: Target Practice Game -->
-      <article class="project-card">
-        <h2>Target Practice Game - Programming Practicum</h2>
-        <div class="badge-container">
-          <span class="tech-badge">Python</span>
-          <span class="tech-badge">Game Logic</span>
-          <span class="tech-badge">Event Handling</span>
-          <span class="tech-badge">Refactoring</span>
-        </div>
-        <p>Developed an interactive, graphical hit-the-target game while enrolled at 
-        Illinois College. Adapted and scaled structural application components from a 
-        foundational ZyBooks assignment, introducing customized graphics layouts, 
-        custom multi-file object structures, and modular event-driven runtime configurations.</p>
-        <p>Still in development</p>
-        <div class="project-links">
-          <a href="https://github.com/SarahMMoore/TargetPractice" target="_blank" rel="noopener noreferrer" class="cta-link">View GitHub Repository →</a>
-        </div>
-      </article>
-
-    </section>
-  </main>
+        </section>
+    </main>
 </body>
 </html>
