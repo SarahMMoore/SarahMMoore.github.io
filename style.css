@@ -14,34 +14,22 @@
 
 /* Light Mode Overrides */
 [data-theme="light"] {
-    --background: #F8FAFC;      /* Clean, crisp off-white */
-    --text: #0F172A;            /* Deep slate black for high contrast */
-    --text-muted: #475569;      /* Mid-tone slate gray for paragraph text */
-    --accent-secondary: #FFFFFF; /* Stark white background for resume cards */
-    --accent-tertiary: #E2E8F0;  /* Light gray borders and nav background */
-    --accent-primary: #4F46E5;   /* Deeper indigo for accessible reading */
-    --accent: #DE3B40;           /* Richer coral-red for link visibility */
+    --background: #F8FAFC;       /* Clean, crisp off-white */
+    --text: #0F172A;             /* Deep slate black for high contrast */
+    --text-muted: #475569;       /* Mid-tone slate gray for paragraph text */
+    --accent-secondary: #FFFFFF;  /* Stark white background for your resume cards */
+    --accent-tertiary: #E2E8F0;   /* Light gray borders, dividers, and nav bar background */
+    --accent-primary: #4F46E5;    /* Slightly deeper indigo for accessible reading on light screens */
+    --accent: #DE3B40;            /* Richer coral-red to maintain clear link visibility */
 }
 
 /* ==========================================================================
-   1b. GLOBAL BEHAVIOR SETTINGS (PLACE THE NEW CODE HERE)
-========================================================================== */
-
+   2. GLOBAL RESET, BEHAVIOR & BASE STYLES
+   ========================================================================== */
 html {
     scroll-behavior: smooth;
 }
 
-#summary, #skills, #education, #projects, #experience, .portfolio-section {
-    scroll-margin-top: 80px; 
-}
-
-#contact {
-    scroll-margin-top: 120px;
-}
-
-/* ==========================================================================
-   2. GLOBAL RESET & BASE STYLES
-========================================================================== */
 body {
     background-color: var(--background);
     color: var(--text);
@@ -50,6 +38,11 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Set up scroll markers so titles clear the fixed navigation menu */
+#summary, #skills, #education, #projects, #experience {
+    scroll-margin-top: 80px; 
 }
 
 /* Typography Base Rules */
@@ -105,6 +98,7 @@ ul li {
     color: var(--text-muted);
 }
 
+/* Interactive Links & Anchors */
 a {
     color: var(--accent);
     text-decoration: none;
@@ -115,6 +109,11 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Fixes contact links visibility explicitly */
+#contact a {
+    color: var(--accent);
+}
+
 /* ==========================================================================
    3. GLOBAL NAVIGATION MODULE
    ========================================================================== */
@@ -122,24 +121,27 @@ nav {
     background-color: var(--accent-tertiary);
     width: 100%;
     padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style: none;
+    list-style: none; /* Removes the bullet points */
     margin: 0;
-    padding: 10px;
-    flex-wrap: wrap;
-    gap: 16px; /* Base tight mobile gap */
+    padding: 0;
+    gap: 40px;
 }
 
 nav a {
     color: var(--text);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.85rem; /* Base mobile size */
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: color 0.2s ease-in-out;
@@ -149,7 +151,7 @@ nav a:hover {
     color: var(--accent);
 }
 
-/* Interactive Accessibility Theme Toggle */
+/* Style the theme toggle button so it matches your nav bar */
 #theme-toggle {
     background: var(--accent-secondary);
     color: var(--text);
@@ -170,16 +172,82 @@ nav a:hover {
     color: #FFFFFF;
 }
 
-/* Pins your navigation bar firmly to the top of the viewport */
-.sticky-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* Keeps nav layers cleanly above background card containers */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Adds subtle elevation depth */
+/* Layout formatting for the Top Navigation Shortcut Arrow Link */
+.top-nav-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
 }
 
 /* ==========================================================================
-   4. STRUCTURAL RESUME CARDS & CORE COMPONENTS
+   4. INTERACTIVE TOOLTIP POPUP PATTERN
+   ========================================================================== */
+.tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-wrapper .tooltip-text {
+    visibility: hidden;
+    width: max-content;
+    max-width: 280px;
+    background-color: var(--background);
+    color: var(--text);
+    border: 1px solid var(--accent-tertiary);
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+    white-space: normal;
+    
+    /* Absolute anchoring below the button link */
+    position: absolute;
+    z-index: 100;
+    top: 135%; 
+    left: 50%;
+    transform: translateX(-50%);
+    
+    opacity: 0;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    pointer-events: none;
+}
+
+/* Decorative arrow pointer bubble */
+.tooltip-wrapper .tooltip-text::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent transparent var(--background) transparent;
+}
+
+.tooltip-wrapper .tooltip-text::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent var(--accent-tertiary) transparent;
+    z-index: -1;
+}
+
+/* Show popup on hover or keyboard focus */
+.tooltip-wrapper:hover .tooltip-text,
+.tooltip-wrapper:focus-within .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ==========================================================================
+   5. STRUCTURAL RESUME CARDS (Layout Grid Frame)
    ========================================================================== */
 header {
     background-color: var(--accent-secondary);
@@ -189,65 +257,112 @@ header {
     border-bottom: 1px solid var(--accent-tertiary);
 }
 
-/* Old layout legacy IDs kept intact to ensure backward HTML compatibility */
-#summary, #skills, #education, #projects, #experience, .portfolio-section {
+#summary, #skills, #education, #projects, #experience {
     background-color: var(--accent-secondary);
     color: var(--text);
-    border-radius: 8px;
+    max-width: 800px;
+    margin: 30px auto; 
+    padding: 30px; 
+    border-radius: 8px; 
     border: 1px solid var(--accent-tertiary);
     box-sizing: border-box;
 }
 
-/* Base Mobile Structure for Content Split Rows (Vertical Flow) */
-.split-row {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 20px 0;
-    border-bottom: 1px solid var(--accent-tertiary);
+/* Two-column layout grid fields for Desktop Screen viewports */
+@media screen and (min-width: 769px) {
+    .split-row {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        gap: 30px;
+        padding: 24px 0;
+        border-bottom: 1px solid var(--accent-tertiary);
+    }
+    
+    .split-row:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .meta-side {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .meta-side h3 {
+        margin: 0;
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+
+    .meta-location {
+        margin: 0;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+    }
+
+    .date-badge {
+        align-self: flex-start;
+        background-color: var(--accent-tertiary);
+        color: var(--text);
+        padding: 4px 10px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        border-radius: 4px;
+        letter-spacing: 0.5px;
+    }
+
+    .content-side {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content-side h4 {
+        margin: 0 0 10px 0;
+        font-size: 1.1rem;
+        color: var(--text);
+        font-weight: 600;
+    }
 }
 
-.split-row:last-of-type {
-    border-bottom: none;
-    padding-bottom: 0;
+/* Mobile Fallbacks for Split Rows */
+@media screen and (max-width: 768px) {
+    .split-row {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 20px 0;
+        border-bottom: 1px solid var(--accent-tertiary);
+    }
+    
+    .split-row:last-of-type {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    
+    .date-badge {
+        display: inline-block;
+        background-color: var(--accent-tertiary);
+        padding: 4px 8px;
+        font-size: 0.75rem;
+        border-radius: 4px;
+        margin-top: 4px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 5px;
+    }
+    
+    nav a {
+        font-size: 0.85rem;
+    }
 }
 
-.meta-side {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.meta-side h3 {
-    margin: 0;
-    font-size: 1.15rem;
-    line-height: 1.3;
-}
-
-.meta-location {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-.date-badge {
-    align-self: flex-start;
-    background-color: var(--accent-tertiary);
-    color: var(--text);
-    padding: 4px 10px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    border-radius: 4px;
-    margin-top: 4px;
-    letter-spacing: 0.5px;
-}
-
-.content-side {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Modern Skill Tag Display Grid */
+/* ==========================================================================
+   6. SKILLS TAG CHIPS MODULE
+   ========================================================================== */
 .skills-grid {
     display: flex;
     flex-direction: column;
@@ -283,165 +398,4 @@ header {
 .tech-tag:hover {
     background-color: var(--accent-secondary);
     border-color: var(--accent-primary);
-}
-
-/* ==========================================================================
-   5. MOBILE-FIRST RESPONSIVE DESIGN BREAKPOINTS
-   ========================================================================== */
-
-/* 📱 CELL PHONES / SMALL DEVICE PORTFOLIO FRAME (0px to 480px) */
-.portfolio-container {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 0 16px;
-    margin: 0 auto;
-}
-
-#summary, #skills, #education, #projects, #experience, .portfolio-section {
-    margin: 16px auto;
-    padding: 16px;
-}
-
-/* 📋 TABLET SCREEN PORTRAIT VIEWPORT (Minimum Width: 481px to 768px) */
-@media screen and (min-width: 481px) {
-    .portfolio-container {
-        padding: 0 24px;
-    }
-
-    #summary, #skills, #education, #projects, #experience, .portfolio-section {
-        margin: 24px auto;
-        padding: 24px;
-    }
-
-    nav ul {
-        gap: 24px;
-    }
-
-    nav a {
-        font-size: 0.9rem;
-    }
-}
-
-/* 💻 LARGE LANDSCAPE DESKTOP SCREENS (Minimum Width: 769px and Up) */
-@media screen and (min-width: 769px) {
-    .portfolio-container {
-        max-width: 860px; /* Accommodates inner row grid padding boundaries */
-        padding: 0 30px;
-    }
-
-    #summary, #skills, #education, #projects, #experience, .portfolio-section {
-        max-width: 800px;
-        margin: 30px auto;
-        padding: 30px;
-    }
-
-    /* Shift layout blocks into clear, standard side-by-side columns */
-    .split-row {
-        display: grid;
-        grid-template-columns: 240px 1fr;
-        gap: 30px;
-        padding: 24px 0;
-    }
-
-    nav ul {
-        gap: 40px;
-    }
-
-    nav a {
-        font-size: 1rem;
-    }
-}
-/* ==========================================================================
-   INTERACTIVE TOOLTIP POPUP PATTERN
-   ========================================================================== */
-
-/* Relative anchor container for correct popup baseline tracking */
-.tooltip-wrapper {
-    position: relative;
-    display: inline-block;
-}
-
-/* Base popup element structure hid from window viewports by default */
-.tooltip-wrapper .tooltip-text {
-    visibility: hidden;
-    width: 210px;
-    background-color: var(--background);
-    color: var(--text);
-    border: 1px solid var(--accent-tertiary);
-    text-align: center;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-transform: none; /* Keeps paragraph lowercase reading flow */
-    letter-spacing: 0;
-    
-    /* Perfect absolute anchoring alignment below navigation links */
-    position: absolute;
-    z-index: 100;
-    top: 135%; 
-    left: 50%;
-    transform: translateX(-50%);
-    
-    /* Fluid fade-in visual motion triggers */
-    opacity: 0;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
-    pointer-events: none; /* Prevents text elements from blocking mouse clicks */
-}
-
-/* Subtle decorative arrow pointer on top of the popup text box bubble */
-.tooltip-wrapper .tooltip-text::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -6px;
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent transparent var(--background) transparent;
-}
-
-/* Make sure a second accent border matches on the top pointer line */
-.tooltip-wrapper .tooltip-text::before {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -7px;
-    border-width: 7px;
-    border-style: solid;
-    border-color: transparent transparent var(--accent-tertiary) transparent;
-    z-index: -1;
-}
-
-/* ⚡ Interactive States: Show popup on desktop mouse hover or keyboard track focus */
-.tooltip-wrapper:hover .tooltip-text,
-.tooltip-wrapper:focus-within .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
-/* Fixes inline links and social anchor visibility across both background states */
-#contact a, .hero-content a {
-    color: var(--accent);
-    transition: color 0.2s ease;
-}
-
-/* Adjust link appearance when light theme overrides are active */
-[data-theme="light"] #contact a, 
-[data-theme="light"] .hero-content a {
-    color: var(--accent); /* Uses your rich coral-red variable perfectly */
-}
-
-/* Widens the interactive pop-up text box slightly to prevent line breaks */
-.tooltip-wrapper .tooltip-text {
-    width: max-content; /* Dynamically sizes to fit the sentence on one line */
-    max-width: 280px;   /* Sets an upper safety boundary limit */
-    white-space: normal;
-}
-
-.top-nav-arrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px; /* Adds clean structural spacing between the emoji and the text */
 }
