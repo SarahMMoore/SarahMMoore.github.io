@@ -1,66 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development Projects - Sarah M. Moore</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="theme.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development Projects - Sarah M. Moore</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js" defer></script>
 </head>
 <body>
-    <!-- Context-Specific Subpage Navigation Bar -->
-    <nav class="sticky-nav">
-        <ul>
-            <li><a href="index.html" class="back-link">← Back to Home</a></li>
-            <li>
-                <span class="tooltip-wrapper">
-                    <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓 Theme</button>
-                    <span class="tooltip-text">Click to switch color contrast profiles</span>
-                </span>
-            </li>
-        </ul>
-    </nav>
 
-    <main class="portfolio-container">
-        <!-- Subpage Header Context -->
-        <header class="section-header" style="background-color: var(--accent-secondary); padding: 30px; border-radius: 8px; border: 1px solid var(--accent-tertiary); margin: 20px 0 30px 0;">
-            <h1 style="font-size: 2rem; margin: 0; padding-bottom: 10px;">Web Development</h1>
-            <p class="subtitle" style="margin: 0; color: var(--text-muted); line-height: 1.6;">Semantic web applications, production deployments, and responsive platform builds linking version-controlled servers to client-facing products.</p>
-        </header>
+  <!-- Context-Specific Subpage Navigation Bar -->
+  <nav class="sticky-nav">
+    <ul>
+      <li><a href="index.html" class="back-link">← Back to Home</a></li>
+      <li>
+        <span class="tooltip-wrapper">
+          <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓 Theme</button>
+          <span class="tooltip-text">Click to switch color contrast profiles</span>
+        </span>
+      </li>
+    </ul>
+  </nav>
 
-        <!-- Project Deployment List -->
-        <section class="project-list" style="display: flex; flex-direction: column; gap: 24px;">
-            
-            <!-- Project 1: Portfolio Site -->
-            <div class="project-card" style="background-color: var(--accent-secondary); padding: 30px; border-radius: 8px; border: 1px solid var(--accent-tertiary);">
-                <h2 style="border-bottom: none; padding-bottom: 0; margin-bottom: 12px;">Responsive Portfolio Architecture</h2>
-                <div class="badge-container" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
-                    <span class="tech-badge" style="background-color: var(--accent-tertiary); color: var(--text); font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px; text-transform: uppercase;">HTML5</span>
-                    <span class="tech-badge" style="background-color: var(--accent-tertiary); color: var(--text); font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px; text-transform: uppercase;">CSS Variables</span>
-                    <span class="tech-badge" style="background-color: var(--accent-tertiary); color: var(--text); font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px; text-transform: uppercase;">Vanilla JS</span>
-                    <span class="tech-badge" style="background-color: var(--accent-tertiary); color: var(--text); font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px; text-transform: uppercase;">GitHub Pages</span>
-                </div>
-                <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Engineered a semantic portfolio application using standard HTML5 structures and vanilla CSS custom properties. Established decoupled continuous deployment configurations pulling from production branches.</p>
-                <div class="project-links" style="display: flex; gap: 20px;">
-                    <a href="https://github.com/SarahMMoore/SarahMMoore.github.io" target="_blank" style="color: var(--accent); font-weight: 600;">View Portfolio Repository →</a>
-                </div>
-            </div>
+  <main class="portfolio-container">
+    <!-- Subpage Header Context -->
+    <header class="section-header">
+      <h1>Web Development</h1>
+      <p class="subtitle">Semantic web applications, production deployments, and 
+      responsive platform builds linking version-controlled servers to client-facing products.</p>
+    </header>
 
-            <!-- Project 2: WordPress Core Implementation -->
-            <div class="project-card" style="background-color: var(--accent-secondary); padding: 30px; border-radius: 8px; border: 1px solid var(--accent-tertiary);">
-                <h2 style="border-bottom: none; padding-bottom: 0; margin-bottom: 12px;">Digital Platform</h2>
-                <div class="badge-container" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;">
-                    <span class="tech-badge" style="background-color: var(--accent-tertiary); color: var(--text); font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px; text-transform: uppercase;">WordPress Core</span>
-                    <span class="tech-badge" style="background-color: var(--accent-tertiary); color: var(--text); font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px; text-transform: uppercase;">Domain Mapping</span>
-                    <span class="tech-badge" style="background-color: var(--accent-tertiary); color: var(--text); font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 4px; letter-spacing: 0.5px; text-transform: uppercase;">UI Optimization</span>
-                </div>
-                <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 15px;">Deployed and structured a self-hosted ecosystem optimized specifically for mobile viewports. Managed data flow logic, database plugin hooks, and custom domain server record alignment.</p>
-                <div class="project-links" style="display: flex; gap: 20px;">
-                    <a href="https://thecamperaguidetorvliving.com" target="_blank" style="color: var(--accent); font-weight: 600;">The Camper: A Guide To RV Living | Live Production Link →</a>
-                </div>
-            </div>
+    <!-- Project Deployment List -->
+    <section class="project-list">
 
-        </section>
-    </main>
+      <!-- Project 1: Portfolio Site -->
+      <article class="project-card">
+        <h2>Responsive Portfolio Architecture</h2>
+        <div class="badge-container">
+          <span class="tech-badge">HTML5</span>
+          <span class="tech-badge">CSS Variables</span>
+          <span class="tech-badge">Vanilla JS</span>
+          <span class="tech-badge">GitHub Pages</span>
+        </div>
+        <p>Engineered a semantic portfolio application using standard HTML5 structures and 
+        vanilla CSS custom properties. Established decoupled continuous deployment 
+        configurations pulling from production branches.</p>
+        <div class="project-links">
+          <a href="https://github.com/SarahMMoore/SarahMMoore.github.io" target="_blank" class="cta-link">View Portfolio Repository →</a>
+        </div>
+      </article>
+
+      <!-- Project 2: WordPress Core Implementation -->
+      <article class="project-card">
+        <h2>Digital Platform</h2>
+        <div class="badge-container">
+          <span class="tech-badge">WordPress Core</span>
+          <span class="tech-badge">Domain Mapping</span>
+          <span class="tech-badge">UI Optimization</span>
+        </div>
+        <p>Deployed and structured a self-hosted ecosystem optimized specifically for 
+        mobile viewports. Managed data flow logic, database plugin hooks, and custom 
+        domain server record alignment.</p>
+        <div class="project-links">
+          <a href="https://thecamperaguidetorvliving.com" target="_blank" class="cta-link">The Camper: A Guide To RV Living | Live Production Link →</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
 </body>
 </html>
