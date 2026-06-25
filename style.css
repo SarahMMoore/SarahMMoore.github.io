@@ -2,496 +2,548 @@
    1. DESIGN SYSTEM VARIABLES (Custom Properties)
    ========================================================================== */
 :root {
-    --background: #0A0F1D;
-    --text: #F4F6FA;
-    --text-muted: #94A3B8;
-    --accent-secondary: #131B2E;
-    --accent-tertiary: #1C263E;
-    --accent-primary: #6366F1;
-    --accent: #FF5A5F;
+  --background: #0A0F1D;
+  --text: #F4F6FA;
+  --text-muted: #94A3B8;
+  --accent-secondary: #131B2E;
+  --accent-tertiary: #1C263E;
+  --accent-primary: #6366F1;
+  --accent: #FF5A5F;
 }
 
 [data-theme="light"] {
-    --background: #F8FAFC;
-    --text: #0F172A;
-    --text-muted: #475569;
-    --accent-secondary: #FFFFFF;
-    --accent-tertiary: #E2E8F0;
-    --accent-primary: #4F46E5;
-    --accent: #DE3B40;
+  --background: #F8FAFC;
+  --text: #0F172A;
+  --text-muted: #475569;
+  --accent-secondary: #FFFFFF;
+  --accent-tertiary: #E2E8F0;
+  --accent-primary: #4F46E5;
+  --accent: #DE3B40;
 }
 
 /* ==========================================================================
    2. GLOBAL RESET, BEHAVIOR & BASE STYLES
    ========================================================================== */
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--background);
-    color: var(--text);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1rem;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #summary, #skills, #education, #projects, #experience {
-    scroll-margin-top: 80px;
+  scroll-margin-top: 80px;
 }
 
 h1 {
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    font-size: 2.5rem;
-    margin: 0;
-    padding: 10px 0;
-    color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 10px 0;
+  color: var(--text);
 }
 
 h2 {
-    color: var(--accent-primary);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 1.25rem;
-    margin: 0;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--accent-tertiary);
+  color: var(--accent-primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.25rem;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--accent-tertiary);
 }
 
 h3 {
-    color: var(--text);
-    font-size: 1.25rem;
-    margin: 20px 0 5px 0;
+  color: var(--text);
+  font-size: 1.25rem;
+  margin: 20px 0 5px 0;
 }
 
 h4 {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin: 0 0 15px 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 0 0 15px 0;
 }
 
 p {
-    margin: 0 0 15px 0;
-    line-height: 1.6;
-    color: var(--text-muted);
+  margin: 0 0 15px 0;
+  line-height: 1.6;
+  color: var(--text-muted);
 }
 
 ul {
-    list-style-type: square;
-    padding-left: 1.25rem;
-    margin: 10px 0;
+  list-style-type: square;
+  padding-left: 1.25rem;
+  margin: 10px 0;
 }
 
 ul li {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 8px;
-    color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  color: var(--text-muted);
 }
 
 a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 #contact a {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 /* ==========================================================================
    3. GLOBAL NAVIGATION MODULE
    ========================================================================== */
 nav {
-    background-color: var(--accent-tertiary);
-    width: 100%;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  background-color: var(--accent-tertiary);
+  width: 100%;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 40px;
 }
 
 nav a {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: color 0.2s ease-in-out;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease-in-out;
 }
 
 nav a:hover {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 #theme-toggle {
-    background: var(--accent-secondary);
-    color: var(--text);
-    border: 1px solid var(--accent-tertiary);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    transition: all 0.2s ease;
+  background: var(--accent-secondary);
+  color: var(--text);
+  border: 1px solid var(--accent-tertiary);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
 }
 
 #theme-toggle:hover {
-    background: var(--accent);
-    color: #FFFFFF;
+  background: var(--accent);
+  color: #FFFFFF;
 }
 
 .top-nav-arrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 /* ==========================================================================
    4. INTERACTIVE TOOLTIP POPUP PATTERN
    ========================================================================== */
 .tooltip-wrapper {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .tooltip-wrapper .tooltip-text {
-    visibility: hidden;
-    width: max-content;
-    max-width: 280px;
-    background-color: var(--background);
-    color: var(--text);
-    border: 1px solid var(--accent-tertiary);
-    text-align: center;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-transform: none;
-    letter-spacing: 0;
-    white-space: normal;
-    position: absolute;
-    z-index: 100;
-    top: 135%;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
-    pointer-events: none;
+  visibility: hidden;
+  width: max-content;
+  max-width: 280px;
+  background-color: var(--background);
+  color: var(--text);
+  border: 1px solid var(--accent-tertiary);
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  white-space: normal;
+  position: absolute;
+  z-index: 100;
+  top: 135%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  pointer-events: none;
 }
 
 .tooltip-wrapper .tooltip-text::after {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -6px;
-    border-width: 6px;
-    border-style: solid;
-    border-color: transparent transparent var(--background) transparent;
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent var(--background) transparent;
 }
 
 .tooltip-wrapper .tooltip-text::before {
-    content: "";
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -7px;
-    border-width: 7px;
-    border-style: solid;
-    border-color: transparent transparent var(--accent-tertiary) transparent;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -7px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: transparent transparent var(--accent-tertiary) transparent;
+  z-index: -1;
 }
 
 .tooltip-wrapper:hover .tooltip-text, 
 .tooltip-wrapper:focus-within .tooltip-text {
-    visibility: visible;
-    opacity: 1;
+  visibility: visible;
+  opacity: 1;
 }
 
 /* ==========================================================================
    5. CONTAINER & CARD LAYOUTS
    ========================================================================== */
 header {
-    background-color: var(--accent-secondary);
-    color: var(--text);
-    padding: 40px 20px;
-    text-align: center;
-    border-bottom: 1px solid var(--accent-tertiary);
+  background-color: var(--accent-secondary);
+  color: var(--text);
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--accent-tertiary);
 }
 
 .portfolio-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 #summary, #skills, #education, #projects, #experience {
-    background-color: var(--accent-secondary);
-    color: var(--text);
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid var(--accent-tertiary);
-    box-sizing: border-box;
+  background-color: var(--accent-secondary);
+  color: var(--text);
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-tertiary);
+  box-sizing: border-box;
 }
 
 /* ==========================================================================
    6. SKILLS & PROJECTS MODULE
    ========================================================================== */
 .skills-grid, .projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 15px;
 }
 
 .skills-category h3 {
-    margin: 0 0 10px 0;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--text-muted);
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
 }
 
 .tag-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .tech-tag {
-    background-color: var(--accent-tertiary);
-    color: var(--text);
-    font-size: 0.85rem;
-    font-weight: 500;
-    padding: 6px 12px;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    transition: background-color 0.2s ease;
+  background-color: var(--accent-tertiary);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease;
 }
 
 .tech-tag:hover {
-    background-color: var(--accent-secondary);
-    border-color: var(--accent-primary);
+  background-color: var(--accent-secondary);
+  border-color: var(--accent-primary);
 }
 
 /* ==========================================================================
    7. PROJECT SUBPAGES STRUCTURE (SaaS Layout Framework)
    ========================================================================== */
 .section-header {
-    background-color: var(--accent-secondary);
-    padding: 40px 30px;
-    border-radius: 8px;
-    border: 1px solid var(--accent-tertiary);
-    margin-bottom: 30px;
+  background-color: var(--accent-secondary);
+  padding: 40px 30px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-tertiary);
+  margin-bottom: 30px;
 }
 
 .section-header h1 {
-    font-size: 2rem;
-    color: var(--text);
+  font-size: 2rem;
+  color: var(--text);
 }
 
 .subtitle {
-    margin-top: 10px;
-    font-size: 1.1rem;
-    color: var(--text-muted);
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: var(--text-muted);
 }
 
 .project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .project-card {
-    background-color: var(--accent-secondary);
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid var(--accent-tertiary);
+  background-color: var(--accent-secondary);
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-tertiary);
 }
 
 .project-card h2 {
-    border-bottom: none;
-    padding-bottom: 0;
-    margin-bottom: 12px;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 12px;
 }
 
 .badge-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 .tech-badge {
-    background-color: var(--accent-tertiary);
-    color: var(--text);
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 4px 10px;
-    border-radius: 4px;
+  background-color: var(--accent-tertiary);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 4px;
 }
 
 .project-links {
-    display: flex;
-    gap: 20px;
-    margin-top: 15px;
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
 }
 
 .cta-link {
-    color: var(--accent);
-    font-weight: 600;
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .secondary-link {
-    color: var(--text-muted);
-    transition: color 0.2s ease;
+  color: var(--text-muted);
+  transition: color 0.2s ease;
 }
 
 .secondary-link:hover {
-    color: var(--text);
+  color: var(--text);
 }
 
 .portfolio-nav {
-    display: flex;
-    align-items: center;
-    padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
 }
 
 .back-link {
-    color: var(--text-muted);
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 0.5px;
-    transition: color 0.2s ease;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
 }
 
 .back-link:hover {
-    color: var(--accent);
-    text-decoration: none;
+  color: var(--accent);
+  text-decoration: none;
 }
 
 /* ==========================================================================
    8. RESPONSIVE MEDIA QUERIES (Unified Breakpoints Hub)
    ========================================================================== */
-
 /* --- Desktop Layout Rules --- */
 @media screen and (min-width: 769px) {
-    .split-row {
-        display: grid;
-        grid-template-columns: 240px 1fr;
-        gap: 30px;
-        padding: 24px 0;
-        border-bottom: 1px solid var(--accent-tertiary);
-    }
-
-    .split-row:last-of-type {
-        border-bottom: none;
-        padding-bottom: 0;
-    }
-
-    .meta-side {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    .meta-side h3 {
-        margin: 0;
-        font-size: 1.15rem;
-        line-height: 1.3;
-    }
-
-    .meta-location {
-        margin: 0;
-        font-size: 0.9rem;
-        color: var(--text-muted);
-    }
-
-    .date-badge {
-        align-self: flex-start;
-        background-color: var(--accent-tertiary);
-        color: var(--text);
-        padding: 4px 10px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        border-radius: 4px;
-        letter-spacing: 0.5px;
-    }
-
-    .content-side {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .content-side h4 {
-        margin: 0 0 10px 0;
-        font-size: 1.1rem;
-        color: var(--text);
-        font-weight: 600;
-    }
+  .split-row {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 30px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--accent-tertiary);
+  }
+  
+  .split-row:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .meta-side {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .meta-side h3 {
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.3;
+  }
+  
+  .meta-location {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  
+  .date-badge {
+    align-self: flex-start;
+    background-color: var(--accent-tertiary);
+    color: var(--text);
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+  }
+  
+  .content-side {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .content-side h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: var(--text);
+    font-weight: 600;
+  }
 }
 
 /* --- Mobile Layout Fallbacks --- */
 @media screen and (max-width: 768px) {
-    .split-row {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        padding: 20px 0;
-        border-bottom: 1px solid var(--accent-tertiary);
-    }
+  .split-row {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--accent-tertiary);
+  }
+  
+  .split-row:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .date-badge {
+    display: inline-block;
+    background-color: var(--accent-tertiary);
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    margin-top: 4px;
+  }
+  
+  nav ul {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 5px;
+  }
+  
+  nav a {
+    font-size: 0.85rem;
+  }
+}
 
-    .split-row:last-of-type {
-        border-bottom: none;
-        padding-bottom: 0;
-    }
+/* ==========================================================================
+   9. INSTITUTIONAL BRAND MATRIX (Multi-Brand Showcase Overrides)
+   ========================================================================== */
 
-    .date-badge {
-        display: inline-block;
-        background-color: var(--accent-tertiary);
-        padding: 4px 8px;
-        font-size: 0.75rem;
-        border-radius: 4px;
-        margin-top: 4px;
-    }
+/* --- Clean Typography Fix for Content Content Blocks --- */
+.content-side p strong {
+  color: var(--text);
+}
 
-    nav ul {
-        flex-wrap: wrap;
-        gap: 16px;
-        padding: 5px;
-    }
+/* --- Arizona State University Theme --- */
+.edu-asu h3 {
+  font-family: 'Arial Black', Impact, sans-serif;
+  color: #8C1D40 !important;
+}
 
-    nav a {
-        font-size: 0.85rem;
-    }
+.edu-asu .date-badge {
+  background-color: #8C1D40 !important;
+  color: #FFFFFF !important;
+}
+
+.edu-asu .tech-tag {
+  background-color: #FFC627 !important;
+  color: #8C1D40 !important;
+  border-color: #8C1D40 !important;
+  font-weight: 700;
+}
+
+/* --- Illinois College Theme --- */
+.edu-ic h3 {
+  font-family: 'Times New Roman', Times, serif;
+  color: #004B87 !important;
+}
+
+.edu-ic .date-badge {
+  background-color: #004B87 !important;
+  color: #FFFFFF !important;
+}
+
+/* --- Indian River State College Theme --- */
+.edu-irsc h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #003DA5 !important;
+}
+
+.edu-irsc .date-badge {
+  background-color: #003DA5 !important;
+  color: #FEDB00 !important;
+}
+
+.edu-irsc .honors-text {
+  color: #003DA5 !important;
 }
