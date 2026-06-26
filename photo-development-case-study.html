@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Development Case Study - Sarah M. Moore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+
+    <!-- Context-Specific Subpage Navigation Bar -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="creative-suite.html" class="back-link">← Back to Media & Content</a></li>
+            <li>
+                <span class="tooltip-wrapper">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">Theme</button>
+                    <span class="tooltip-text">Click to switch color contrast profiles</span>
+                </span>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="portfolio-container">
+
+        <!-- Case Study Header Context -->
+        <header class="section-header">
+            <h1>Photography Development</h1>
+            <p class="subtitle">A visual study exploring asset enhancement, RAW exposure balancing, and color grading workflows across landscape environments.</p>
+        </header>
+
+        <!-- Project Overview & Methodology -->
+        <section class="project-card">
+            <h2>Post-Processing & Enhancement Overview</h2>
+            <p>Capturing complex natural lighting environments frequently introduces exposure challenges, ranging from blown-out coastal highlights to deeply under-exposed mountain terrain shadows. This series treats image enhancement as a structured technical workflow: converting uncompressed digital assets into vibrant, balanced visual compositions while maintaining environmental authenticity.</p>
+            <p>The post-processing framework isolates adjustments across three target segments: tonal dynamic range restoration, local color contrast adjustments, and precision sharpening. The resulting portfolio showcases the transformation from flat sensor data to idealized atmospheric profiles.</p>
+        </section>
+
+        <!-- Dynamic Layout Grid for the 3 Photo Sets (6 Cards Total) -->
+        <h2 style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; font-size: 1.25rem; margin: 30px 0 15px 0;">Visual Asset Breakdown & Adjustments</h2>
+        
+        <section class="project-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+            
+            <!-- PHOTO SET 1: ST. GEORGE LIGHTHOUSE -->
+            <article class="project-card" style="margin: 0; display: flex; flex-direction: column;">
+                <img src="images/Original St George Island LightHouse.jpg" alt="St. George Island Lighthouse - Original RAW Exposure" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>1A. St. George Lighthouse (RAW)</h3>
+                <p style="font-size: 0.9rem; color: #666;">The uncompressed file captured flat midtones, hazy background definition, and muted sky contrast due to intense ambient coastal glare.</p>
+            </article>
+
+            <article class="project-card" style="margin: 0; display: flex; flex-direction: column;">
+                <img src="images/SGLighthouse.jpg" alt="St. George Island Lighthouse - Final Color Grade" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>1B. St. George Lighthouse (Enhanced)</h3>
+                <p style="font-size: 0.9rem;">Corrected via selective luminance masking, pulling back sky highlights to reveal cloud structures while applying subtle warmth to the structure.</p>
+            </article>
+
+            <!-- PHOTO SET 2: TEXAS HORIZON -->
+            <article class="project-card" style="margin: 0; display: flex; flex-direction: column;">
+                <img src="images/Original Texas 2019.jpg" alt="Texas Horizon - Original Sensor Capture" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>2A. Texas Horizon (Original)</h3>
+                <p style="font-size: 0.9rem; color: #666;">Initial image details were obscured by harsh midday shadows across the valley terrain, combined with an over-saturated horizon line.</p>
+            </article>
+
+            <article class="project-card" style="margin: 0; display: flex; flex-direction: column;">
+                <img src="images/Stormy HorizonTexas 2019.jpg" alt="Texas Horizon - Stormy Atmosphere Enhancement" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>2B. Texas Horizon (Enhanced)</h3>
+                <p style="font-size: 0.9rem;">Shadow depths were recovered by +1.5 stops, and localized dodging and burning was applied to enhance the dramatic, stormy atmosphere across the plains.</p>
+            </article>
+
+            <!-- PHOTO SET 3: TRINIDAD STATE PARK -->
+            <article class="project-card" style="margin: 0; display: flex; flex-direction: column;">
+                <img src="images/Original Trinidad State Park, Trinidad, CO.png" alt="Trinidad State Park - Flat Profile" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>3A. Trinidad State Park (Original)</h3>
+                <p style="font-size: 0.9rem; color: #666;">The original mountain layout lacked tonal depth. Forest greens appeared muddy and mountain peaks blended into the overcast background.</p>
+            </article>
+
+            <article class="project-card" style="margin: 0; display: flex; flex-direction: column;">
+                <img src="images/Trinidad State Park, Trinidad, CO.png" alt="Trinidad State Park - Final Polish" style="width: 100%; height: 180px; object-fit: cover; border-radius: 4px; border: 1px solid var(--accent-tertiary); margin-bottom: 12px;">
+                <h3>3B. Trinidad State Park (Enhanced)</h3>
+                <p style="font-size: 0.9rem;">Introduced target split-toning to enrich shadow depth, used a polarizing curve map to separate foliage layers, and optimized clarity parameters.</p>
+            </article>
+
+        </section>
+    </main>
+
+</body>
+</html>
