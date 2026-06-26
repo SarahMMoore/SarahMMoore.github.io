@@ -227,11 +227,19 @@ nav a:hover {
   z-index: -1;
 }
 
-.tooltip-wrapper:hover .tooltip-text, 
-.tooltip-wrapper:focus-within .tooltip-text {
-  visibility: visible;
-  opacity: 1;
+@media (hover: hover) {
+    .tooltip-wrapper:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+    }
 }
+
+/* Accessible focus engine: Uses structural next-sibling combinator */
+#theme-toggle:focus-visible + .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 /* ==========================================================================
    5. CONTAINER & CARD LAYOUTS
