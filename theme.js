@@ -13,23 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // 3. Unified function to handle both CSS variables and text values
-    function applyTheme(theme) {
-        if (theme === 'light') {
-            document.documentElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-            
-            // Set text to show what the NEXT toggle click will do
-            toggleButton.innerHTML = '🌙 Dark Mode';
-            if (tooltipText) tooltipText.textContent = 'Click to switch to dark mode contrast profile';
-        } else {
-            document.documentElement.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'dark');
-            
-            // Set text to show what the NEXT toggle click will do
-            toggleButton.innerHTML = '☀️ Light Mode';
-            if (tooltipText) tooltipText.textContent = 'Click to switch to light mode contrast profile';
-        }
+    function applyTheme(theme) { 
+    // Force the button to drop focus so the tooltip closes immediately on mouse leave
+    if (typeof toggleButton !== 'undefined') {
+        toggleButton.blur();
     }
+
+    if (theme === 'light') { 
+        document.documentElement.setAttribute('data-theme', 'light'); 
+        localStorage.setItem('theme', 'light'); 
+        toggleButton.innerHTML = '🌙 Dark Mode'; 
+        if (tooltipText) tooltipText.textContent = 'Click to switch to dark mode contrast profile'; 
+    } else { 
+        document.documentElement.removeAttribute('data-theme'); 
+        localStorage.setItem('theme', 'dark'); 
+        toggleButton.innerHTML = '☀️ Light Mode'; 
+        if (tooltipText) tooltipText.textContent = 'Click to switch to light mode contrast profile'; 
+    } 
+}
     
     // Execute on initial page load
     applyTheme(currentTheme);
