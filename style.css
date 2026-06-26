@@ -6,7 +6,7 @@
   --text: #F4F6FA;
   --text-muted: #94A3B8;
   --accent-secondary: #131B2E;
-  --accent-tertiary: #1C263E;
+  --accent-tertiary: #4a68ae;
   --accent-primary: #6366F1;
   --accent: #FF5A5F;
 }
@@ -20,6 +20,8 @@
   --accent-primary: #4F46E5;
   --accent: #DE3B40;
 }
+/* Import Official Brand-Style Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Crimson+Pro:wght@600&family=Roboto:wght@700&display=swap');
 
 /* ==========================================================================
    2. GLOBAL RESET, BEHAVIOR & BASE STYLES
@@ -76,7 +78,6 @@ h4 {
 
 p {
   margin: 0 0 15px 0;
-  line-height: 1.6;
   color: var(--text-muted);
 }
 
@@ -349,17 +350,6 @@ header {
   margin-bottom: 16px;
 }
 
-.tech-badge {
-  background-color: var(--accent-tertiary);
-  color: var(--text);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 4px 10px;
-  border-radius: 4px;
-}
-
 .project-links {
   display: flex;
   gap: 20px;
@@ -410,7 +400,7 @@ header {
     grid-template-columns: 240px 1fr;
     gap: 30px;
     padding: 24px 0;
-    border-bottom: 1px solid var(--accent-tertiary);
+    border-bottom: 4px solid var(--accent-tertiary);
   }
   
   .split-row:last-of-type {
@@ -421,18 +411,17 @@ header {
   .meta-side {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
   }
   
   .meta-side h3 {
     margin: 0;
     font-size: 1.15rem;
-    line-height: 1.3;
   }
   
   .meta-location {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--text-muted);
   }
   
@@ -440,11 +429,11 @@ header {
     align-self: flex-start;
     background-color: var(--accent-tertiary);
     color: var(--text);
-    padding: 4px 10px;
     font-size: 0.75rem;
     font-weight: 600;
     border-radius: 4px;
     letter-spacing: 0.5px;
+    padding: 4px 8px;
   }
   
   .content-side {
@@ -496,82 +485,82 @@ header {
 }
 
 /* ==========================================================================
-   9. INSTITUTIONAL BRAND MATRIX (Multi-Brand Showcase Overrides)
+   9. INSTITUTIONAL BRAND MATRIX (Logo & Identity)
    ========================================================================== */
 
-/* --- Clean Typography Fix for Content Content Blocks --- */
-.content-side p strong {
-  color: var(--text);
-}
-
-/* --- Arizona State University Theme --- */
-.edu-asu h3 {
-  font-family: 'Arial Black', Impact, sans-serif;
-  color: #8C1D40 !important;
-}
-
-.edu-asu .date-badge {
-  background-color: #8C1D40 !important;
-  color: #FFFFFF !important;
-}
-
-.edu-asu .tech-tag {
-  background-color: #FFC627 !important;
-  color: #8C1D40 !important;
-  border-color: #8C1D40 !important;
-  font-weight: 700;
-}
-
+/* --- Global Logo Standards --- */
 .brand-logo {
-  height: auto !important;
-  max-height: 32px !important; /* Forces it to remain headline-sized */
-  width: auto !important;
-  object-fit: contain !important;
-  display: inline-block;
+    display: block; /* Ensures they stack correctly in the header block */
+    width: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
 }
 
-.split-row {
-  overflow: hidden;
-}
+/* --- Per-School Size Adjustments (Visual Weighting) --- */
 
+/* ASU: Rectangular logo, needs a slightly smaller height to not feel huge */
 .edu-asu .brand-logo {
-  max-height: 43px !important; /* Increases the crest size for structural balance */
-  margin-bottom: 2px;
+    max-height: 35px;
 }
 
-/* --- Illinois College Theme --- */
-.edu-ic h3 {
-  font-family: 'Times New Roman', Times, serif;
-  color: #004B87 !important;
-}
-
-.edu-ic .date-badge {
-  background-color: #004B87 !important;
-  color: #FFFFFF !important;
-}
-
-/* --- Fine-Tuning Logo Visual Weights --- */
+/* IC: The shield/crest is often taller, so we give it more vertical room */
 .edu-ic .brand-logo {
-  max-height: 95px !important; /* Increases the crest size for structural balance */
-  margin-bottom: 2px;
+    max-height: 50px;
+    margin-bottom: 5px;
 }
 
-/* --- Indian River State College Theme --- */
-.edu-irsc h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #003DA5 !important;
-}
-
-.edu-irsc .date-badge {
-  background-color: #003DA5 !important;
-  color: #FEDB00 !important;
-}
-
-.edu-irsc .honors-text {
-  color: #003DA5 !important;
-}
-
+/* IRSC: A mid-range height works best for their horizontal lockup */
 .edu-irsc .brand-logo {
-  max-height: 70px !important; /* Increases the crest size for structural balance */
-  margin-bottom: 2px;
+    max-height: 40px;
+    margin-bottom: 5px;
+}
+
+/* --- Branding Logic (Typography & Colors) --- */
+.edu-asu {
+    --brand-primary: #8C1D40; /* Maroon */
+    --brand-font: 'Arial Black', sans-serif;
+}
+
+.edu-ic {
+    --brand-primary: #003366; /* Blue */
+    --brand-font: 'Times New Roman', serif;
+}
+
+.edu-irsc {
+    --brand-primary: #003DA5; /* Navy */
+    --brand-font: Arial, sans-serif;
+}
+
+/* Apply Typography and Themed Colors */
+.split-row[class*="edu-"] h3 {
+    font-family: var(--brand-font);
+    color: var(--brand-primary) !important;
+}
+  
+/* Dark Mode Color Swap for Accessibility */
+[data-theme="dark"] .edu-asu h3 { color: #FFC627 !important; } /* Gold on Dark */
+[data-theme="dark"] .edu-ic h3 { color: #94c1ff !important; } /* Light Blue on Dark */
+[data-theme="dark"] .edu-irsc h3 { color: #FEDB00 !important; } /* Gold on Dark */
+
+/* ==========================================================================
+   THEME-BASED LOGO TOGGLE
+   ========================================================================== */
+
+/* Dark Mode (Default) - Hide the logo meant for light backgrounds */
+.logo-light { 
+    display: none !important; 
+}
+
+/* Dark Mode (Default) - Show the logo meant for dark backgrounds */
+.logo-dark { 
+    display: block !important; 
+}
+
+/* Light Mode - Flip the visibility */
+[data-theme="light"] .logo-light { 
+    display: block !important; 
+}
+
+[data-theme="light"] .logo-dark { 
+    display: none !important; 
 }
