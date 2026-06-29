@@ -6,5 +6,5 @@ const businessConfig = {
     phone: "1-561-517-1278",
     email: "sarahmorrigan.si@gmail.com",
     address: "Carlinville, IL",
-    copyright: "2024"
+    copyright: "2026"
 };
