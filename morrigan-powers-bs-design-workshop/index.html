@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><span class="biz-name"></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chivo:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand-container" style="text-decoration: none;">
+            <img src="assets/images/monogram.svg" alt="Logo" class="nav-logo-svg">
+            <div class="brand-text">
+                <span class="main-title"><span class="biz-name"></span></span>
+                <span class="sub-title"><span class="biz-subtitle"></span></span>
+            </div>
+        </a>
+        <nav class="main-nav">
+            <a href="services-pricing.html">Services & Pricing</a>
+            <a href="about.html">My Story</a>
+            <a href="../index.html" class="nav-cta-btn">View Code Portfolio</a>
+        </nav>
+    </header>
+
+    <!-- Main Studio Hero Showcase Section -->
+    <section class="hero-section">
+        <div class="hero-layout-grid">
+            
+            <!-- Left Side: Graphic Artwork Display -->
+            <div class="hero-art-display">
+                <img src="assets/images/monogram.webp" alt="Vector Monogram Artwork" class="large-studio-monogram">
+            </div>
+            
+            <!-- Right Side: Content & Typography Panel -->
+            <div class="hero-copy-display">
+                <header class="hero-text-header">
+                    <h1>Digital Architecture <br>& Physical Craftsmanship</h1>
+                </header>
+                <p class="hero-body-text">
+                    Based in <span class="biz-address"></span>, I am a senior Graphic Information Technology (GIT) student at Arizona State University maintaining a 3.98 GPA. With a professional foundation in accounting, I approach web construction with a rigorous focus on asset protection, entity separation, and operational efficiency. Through my studio sandbox, <span class="biz-subtitle"></span>, I deliver high-performance digital footprints, custom commercial photography, and print-ready stationery layouts for local businesses without systemic bloat or overhead. By combining technical frontend development and automated Git deployments with structural, tangible design principles, I effortlessly bridge the gap between clean virtual UI engines and stunning, practical real-world execution.
+                </p>
+                <div class="hero-actions">
+                    <a href="services-pricing.html" class="primary-btn">Explore Studio Services</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+<!-- Global Studio Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <span class="footer-brand biz-name"></span>
+                <p class="footer-tagline"><span class="biz-subtitle"></span></p>
+                <!-- Fixed: Corrected broken class syntax on the owner tag and unclosed tags -->
+                <p class="footer-copyright">&copy; <span class="biz-copyright"></span> <span class="biz-owner"></span> | <span class="biz-name"></span>. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h2>Connect with the Studio</h2>
+                <div class="contact-links">
+                    <a href="#" id="biz-email-link" class="contact-item">
+                        <span class="contact-icon">✉</span>
+                        <span class="biz-email"></span>
+                    </a>
+                    <span class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span class="biz-address"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Connected Central Configuration and Injection Automation Scripts -->
+    <script src="config.js"></script> 
+    <script> 
+    window.onload = function() { 
+        // Sync Browser Tab Title Layout
+        document.title = "Our Story | " + businessConfig.name + " | " + businessConfig.subtitle;
+
+        // Loop and overwrite element containers
+        document.querySelectorAll('.biz-name').forEach(el => el.textContent = businessConfig.name);
+        document.querySelectorAll('.biz-subtitle').forEach(el => el.textContent = businessConfig.subtitle);
+        document.querySelectorAll('.biz-owner').forEach(el => el.textContent = businessConfig.owner);
+        document.querySelectorAll('.biz-phone').forEach(el => el.textContent = businessConfig.phone);
+        document.querySelectorAll('.biz-email').forEach(el => el.textContent = businessConfig.email);
+        document.querySelectorAll('.biz-copyright').forEach(el => el.textContent = businessConfig.copyright);
+        document.querySelectorAll('.biz-address').forEach(el => el.textContent = businessConfig.address);
+
+        // Bind interactive email redirection anchor
+        const emailLink = document.getElementById('biz-email-link');
+        if(emailLink) {
+            emailLink.href = "mailto:" + businessConfig.email;
+        }
+    } 
+    </script> 
+</body> 
+</html>

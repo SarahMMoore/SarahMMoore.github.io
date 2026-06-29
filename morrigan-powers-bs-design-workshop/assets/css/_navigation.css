@@ -1,0 +1,108 @@
+/* ==========================================================================
+   2. SITE NAVIGATION HEADER (FIXED TRACKING)
+   ========================================================================== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  background-color: var(--bg-primary); /* Swapped legacy emerald token to primary canvas */
+  border-bottom: 1px solid rgba(184, 199, 195, 0.15); /* Cleaned up to use a subtle low-opacity border line derived from typography elements */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nav-logo-svg {
+  height: 4rem;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.brand-container:hover .nav-logo-svg {
+  transform: scale(1.05);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  color: var(--text-primary); /* Updated to primary light typography token */
+  line-height: 1.2;
+}
+
+.sub-title {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-secondary); /* Updated to secondary descriptive text token */
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-nav a {
+  color: var(--text-secondary); /* Updated to secondary descriptive text token */
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  padding-bottom: 4px;
+}
+
+/* --- UPDATED HOVER BLOCK --- */
+.main-nav a:hover {
+  color: var(--text-primary); /* Hover flips cleanly to crisp primary white */
+  text-decoration-color: var(--action-primary); /* Swapped legacy garnet token to primary interactive action */
+  text-underline-offset: 6px;
+}
+
+/* --- EXCLUDE THE CTA BUTTON FROM GETTING AN UNDERLINE --- */
+.main-nav .nav-cta-btn:hover {
+  text-decoration: none;
+}
+
+.main-nav .nav-cta-btn {
+  border: 1px solid var(--text-primary); /* Updated to primary light token */
+  color: var(--text-primary);
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.main-nav .nav-cta-btn:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary); /* Text flips cleanly to contrast against the full background hover state */
+}
+
+.active-nav {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--action-primary); /* Swapped legacy garnet to primary action token */
+  padding-bottom: 4px;
+}

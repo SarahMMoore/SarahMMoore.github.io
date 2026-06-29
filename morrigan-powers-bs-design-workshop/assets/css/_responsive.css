@@ -1,0 +1,91 @@
+/* ==========================================================================
+   8. PROGRESSIVE ENHANCEMENT MEDIA QUERIES (SCALING UPWARDS)
+   ========================================================================== */
+
+/* Tablet & Smaller Laptops Viewport Overrides (850px and up) */
+@media screen and (min-width: 850px) {
+  .hero-section {
+    background: radial-gradient(
+      circle at 25% 50%,
+      var(--bg-surface) 0%,   /* Swapped to elevated surface token (Purple) */
+      var(--bg-glow) 45%,      /* Swapped to ambient decorative glow token (Teal) */
+      var(--bg-primary) 85%    /* Swapped to core canvas backdrop token (Emerald) */
+    );
+  }
+
+  .hero-layout-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    text-align: left;
+    gap: 5%;
+  }
+
+  .large-studio-monogram {
+    max-width: 580px;
+  }
+
+  .hero-copy-display h1 {
+    font-size: 2.4rem;
+  }
+
+  .primary-btn {
+    margin: 0;
+  }
+
+  .about-container {
+    grid-template-columns: 0.8fr 1.2fr;
+    text-align: left;
+    gap: 60px;
+  }
+
+  .about-content-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .story-column h3 {
+    border-left: 2px solid var(--action-primary); /* Swapped to interactive primary token (Garnet) */
+    border-bottom: none;
+    padding-left: 15px;
+    padding-bottom: 0;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .contact-item {
+    justify-content: flex-start;
+  }
+}
+
+/* Full Desktop Monitor Configurations (1100px and up) */
+@media screen and (min-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .bundle-layout {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+  }
+
+  .bundle-container {
+    padding: 45px 40px;
+  }
+
+  .bundle-badge {
+    left: 40px;
+  }
+
+  .bundle-meta h2 {
+    font-size: 1.8rem;
+  }
+}

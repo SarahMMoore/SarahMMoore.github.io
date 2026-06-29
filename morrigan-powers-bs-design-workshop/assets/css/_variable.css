@@ -1,0 +1,22 @@
+/* ==========================================================================
+   DESIGN TOKENS & APPLICATION VARIANTS (FUNCTIONAL ARCHITECTURE)
+   ========================================================================== */
+:root {
+  /* Core App Surface Foundations */
+  --bg-primary: #090e1a;         /* Deep canvas canvas backdrop */
+  --bg-surface: #131224;         /* Elevated cards, pricing containers, and headers */
+  --bg-glow: #1a4d6c;            /* Ambient decorative background blobs/gradients */
+
+  /* High-Priority Interactive States */
+  --action-primary: #e65f2b;     /* Main call-to-action button color */
+  --action-hover: #ff7d4d;       /* Focus and mouse hover interactive changes */
+
+  /* Typography Hierarchy & Data Roles */
+  --text-primary: #f5f7fa;       /* Crisp headlines, tags, and readable copy blocks */
+  --text-secondary: #a0aec0;     /* Descriptive sub-lists, footnotes, and icon fills */
+
+  /* Global Typography Engine Stacks */
+  --font-heading: "Archivo Black", sans-serif;
+  --font-cursive: "WindSong", cursive;
+  --font-body: "Chivo", sans-serif;
+}

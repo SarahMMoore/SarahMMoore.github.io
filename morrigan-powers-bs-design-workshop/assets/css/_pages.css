@@ -1,0 +1,11 @@
+/* ==========================================================================
+   UNIQUE SPACING RULES FOR STANDALONE SUB-PAGES
+   ========================================================================== */
+
+.about-standalone-page, 
+.services-standalone-page {
+  padding: 130px 0 60px 0; /* Keeps content safely pushed below your 80px fixed tracking header */
+  background-color: var(--bg-primary); /* Swapped legacy emerald token to primary canvas */
+  width: 100%;
+  display: block;
+}

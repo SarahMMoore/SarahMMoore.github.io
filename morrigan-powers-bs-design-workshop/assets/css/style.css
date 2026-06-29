@@ -1,0 +1,912 @@
+@charset "UTF-8";
+/* ==========================================================================
+   DESIGN TOKENS & APPLICATION VARIANTS (FUNCTIONAL ARCHITECTURE)
+   ========================================================================== */
+:root {
+  /* Core App Surface Foundations */
+  --bg-primary: #090e1a; /* Deep canvas canvas backdrop */
+  --bg-surface: #131224; /* Elevated cards, pricing containers, and headers */
+  --bg-glow: #1a4d6c; /* Ambient decorative background blobs/gradients */
+  /* High-Priority Interactive States */
+  --action-primary: #e65f2b; /* Main call-to-action button color */
+  --action-hover: #ff7d4d; /* Focus and mouse hover interactive changes */
+  /* Typography Hierarchy & Data Roles */
+  --text-primary: #f5f7fa; /* Crisp headlines, tags, and readable copy blocks */
+  --text-secondary: #a0aec0; /* Descriptive sub-lists, footnotes, and icon fills */
+  /* Global Typography Engine Stacks */
+  --font-heading: "Archivo Black", sans-serif;
+  --font-cursive: "WindSong", cursive;
+  --font-body: "Chivo", sans-serif;
+}
+
+/* ==========================================================================
+   1. GLOBAL RESET ELEMENTS & APP BASE (MOBILE DEFAULT)
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-primary); /* Swapped legacy emerald to primary canvas */
+  color: var(--text-primary); /* Swapped legacy pearl to primary text */
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+   2. SITE NAVIGATION HEADER (FIXED TRACKING)
+   ========================================================================== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 6%;
+  background-color: var(--bg-primary); /* Swapped legacy emerald token to primary canvas */
+  border-bottom: 1px solid rgba(184, 199, 195, 0.15); /* Cleaned up to use a subtle low-opacity border line derived from typography elements */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nav-logo-svg {
+  height: 4rem;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.brand-container:hover .nav-logo-svg {
+  transform: scale(1.05);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  color: var(--text-primary); /* Updated to primary light typography token */
+  line-height: 1.2;
+}
+
+.sub-title {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-secondary); /* Updated to secondary descriptive text token */
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-nav a {
+  color: var(--text-secondary); /* Updated to secondary descriptive text token */
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  padding-bottom: 4px;
+}
+
+/* --- UPDATED HOVER BLOCK --- */
+.main-nav a:hover {
+  color: var(--text-primary); /* Hover flips cleanly to crisp primary white */
+  text-decoration-color: var(--action-primary); /* Swapped legacy garnet token to primary interactive action */
+  text-underline-offset: 6px;
+}
+
+/* --- EXCLUDE THE CTA BUTTON FROM GETTING AN UNDERLINE --- */
+.main-nav .nav-cta-btn:hover {
+  text-decoration: none;
+}
+
+.main-nav .nav-cta-btn {
+  border: 1px solid var(--text-primary); /* Updated to primary light token */
+  color: var(--text-primary);
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.main-nav .nav-cta-btn:hover {
+  background-color: var(--text-primary);
+  color: var(--bg-primary); /* Text flips cleanly to contrast against the full background hover state */
+}
+
+.active-nav {
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--action-primary); /* Swapped legacy garnet to primary action token */
+  padding-bottom: 4px;
+}
+
+/* ==========================================================================
+   3. HERO DISPLAY HERO-SECTION (MOBILE BASE)
+   ========================================================================== */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 130px 6% 40px 6%;
+  background-color: var(--bg-primary);
+  background: radial-gradient(circle at 50% 50%, var(--bg-surface, rgba(59, 17, 77, 0.2)) 0%, var(--bg-glow, #0d5c63) 55%, var(--bg-primary, #032b20) 95%);
+}
+
+.hero-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-art-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.large-studio-monogram {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
+}
+
+.hero-copy-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-copy-display h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.hero-copy-display p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 35px;
+  font-weight: 300;
+}
+
+.primary-btn {
+  display: inline-block;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: var(--action-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.primary-btn:hover {
+  background-color: var(--action-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. EDITORIAL "OUR STORY" BLOCK (MOBILE BASE)
+   ========================================================================== */
+.about-section {
+  padding: 40px 6%;
+  background-color: var(--bg-primary);
+  position: relative;
+  width: 100%;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: flex-start;
+  width: 100%;
+  text-align: center;
+}
+
+.about-pretitle {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--bg-glow);
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.about-header-block h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 1.15;
+}
+
+.about-content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.story-column h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--action-primary);
+  padding-bottom: 8px;
+}
+
+.story-column p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ==========================================================================
+   5. FOUR-COLUMN SERVICES & ENGRAVING PRODUCT (MOBILE BASE)
+   ========================================================================== */
+.services-section {
+  padding: 40px 6%;
+  background-color: var(--bg-primary);
+  position: relative;
+  width: 100%;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  letter-spacing: 0.02em;
+}
+
+.section-header p {
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.service-card {
+  background-color: var(--bg-surface);
+  border: 1px solid rgba(184, 199, 195, 0.25); /* Low opacity tint based on secondary text values */
+  border-radius: 6px;
+  padding: 35px 25px;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--bg-glow); /* Borders light up beautifully with your glow token on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.card-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 30px;
+  background-color: var(--bg-glow);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.service-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  padding-right: 50px;
+  line-height: 1.3;
+}
+
+.price {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.rate-type {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.card-desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.features-list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.features-list li {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 18px;
+  line-height: 1.4;
+}
+
+.features-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--bg-glow);
+  font-size: 0.75rem;
+}
+
+.card-action {
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.cta-btn {
+  display: block;
+  text-align: center;
+  background-color: var(--action-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--bg-glow);
+  padding: 12px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--bg-glow);
+  color: var(--text-primary);
+  box-shadow: 0 4px 12px rgba(13, 92, 99, 0.4);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   6. VALUE BUNDLE BOX ELEMENT (MOBILE BASE)
+   ========================================================================== */
+.bundle-container {
+  background-color: var(--bg-surface);
+  border: 2px solid rgba(184, 199, 195, 0.3);
+  border-radius: 8px;
+  padding: 40px 25px;
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.bundle-badge {
+  position: absolute;
+  top: -14px;
+  left: 25px;
+  background-color: var(--action-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 5px 14px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.bundle-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.bundle-location {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.bundle-meta h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.bundle-price {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.bundle-tag {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.bundle-pitch {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.bundle-list {
+  list-style: none;
+}
+
+.bundle-list li {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 22px;
+  line-height: 1.5;
+}
+
+.bundle-list li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--action-primary);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   6. LEGAL CONTENT & TERMS DISPLAY ARCHITECTURE
+   ========================================================================== */
+.hero-copy-display {
+  max-width: 760px;
+  margin: 120px auto 60px auto; /* Offsets fixed header tracking layout height */
+  text-align: left;
+  padding: 45px;
+  background-color: var(--bg-surface); /* Uses surface container foundation token */
+  border-radius: 8px;
+  border: 1px solid rgba(160, 174, 192, 0.1); /* Subtle definition line using text-secondary */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hero-copy-display h1 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-size: 2.25rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+/* Subtitles and disclaimer highlights */
+.hero-copy-display h2:first-of-type {
+  color: var(--action-primary); /* Pulls action orange forward for alerts */
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 25px;
+}
+
+/* Numeric clause sections (1, 2, 3...) */
+.hero-copy-display h2 {
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  font-size: 1.15rem;
+  margin-top: 35px;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.hero-copy-display p {
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.site-construction {
+  display: flex !important;
+  flex-direction: column; /* Forces items to stack on top of each other */
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-family: var(--font-heading);
+  text-align: center;
+}
+
+/* Hides all original inner HTML content */
+.site-construction * {
+  display: none !important;
+}
+
+/* Line 1: COMING SOON */
+.site-construction::before {
+  content: "COMING SOON";
+  display: block;
+  font-size: 2.8rem;
+  color: var(--action-primary);
+  text-transform: uppercase;
+}
+
+/* Line 2: AUGUST 2026 */
+.site-construction::after {
+  content: "AUGUST 2026";
+  display: block;
+  font-size: 1.5rem; /* Makes the date slightly smaller for better hierarchy */
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  margin-top: 15px; /* Adds space between the two lines */
+}
+
+/* ==========================================================================
+   PROJECT INTAKE FORM GRID LAYOUT
+   ========================================================================= */
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-surface); /* Swapped hardcoded dark hex for your elevated surface token */
+  border: 1px solid rgba(184, 199, 195, 0.2); /* Uses a crisp low-opacity border line derived from your typography scale */
+  border-radius: 4px;
+  color: var(--text-primary); /* Swapped to primary light text token */
+  font-family: var(--font-body); /* Unified with your core typography stack variable */
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--bg-glow); /* Focus rings shift nicely to your ambient glow accent color */
+  box-shadow: 0 0 0 3px rgba(13, 92, 99, 0.25); /* Adds a subtle interactive focal ring using your glow token */
+}
+
+.form-group label {
+  color: var(--text-secondary); /* Swapped to secondary descriptive text token */
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--action-primary); /* Swapped to primary interactive button token */
+  color: var(--text-primary); /* Swapped to primary button typography color */
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-body); /* Unified with your core typography stack variable */
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  transition: background 0.2s ease;
+}
+
+.form-submit-btn:hover {
+  background: var(--action-hover); /* Swapped to interactive hover change token */
+}
+
+/* Responsive Mobile Form Breakpoints */
+@media (max-width: 600px) {
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+}
+/* ==========================================================================
+   UNIQUE SPACING RULES FOR STANDALONE SUB-PAGES
+   ========================================================================== */
+.about-standalone-page,
+.services-standalone-page {
+  padding: 130px 0 60px 0; /* Keeps content safely pushed below your 80px fixed tracking header */
+  background-color: var(--bg-primary); /* Swapped legacy emerald token to primary canvas */
+  width: 100%;
+  display: block;
+}
+
+/* ==========================================================================
+   7. GLOBAL MASTER SITE FOOTER (MOBILE BASE)
+   ========================================================================= */
+.site-footer {
+  width: 100%;
+  background-color: var(--bg-primary); /* Changed to use core canvas token */
+  padding: 40px 6%;
+  border-top: 1px solid rgba(253, 250, 242, 0.15); /* Cleaned up to use a subtle low-opacity border line */
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-brand {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-primary); /* Updated to primary typography token */
+}
+
+.footer-tagline {
+  font-size: 0.8rem;
+  color: var(--text-secondary); /* Updated to secondary descriptive token */
+  font-weight: 300;
+}
+
+.footer-copyright {
+  font-size: 0.75rem;
+  color: var(--text-secondary); /* Updated to secondary descriptive token */
+  margin-top: 12px;
+}
+
+.footer-contact h4 {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-primary); /* Updated to primary typography token */
+  margin-bottom: 15px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-secondary); /* Updated to secondary descriptive token */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+a.contact-item:hover {
+  color: var(--text-primary); /* Hover flips to primary highlight for high readability */
+}
+
+.contact-icon {
+  color: var(--action-primary); /* Updated to call-to-action anchor token */
+  font-size: 0.9rem;
+}
+
+/* --- FIXED LEGAL LINKS LAYOUT --- */
+.legal-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.legal-links a {
+  font-size: 0.75rem;
+  color: var(--text-secondary); /* Uses your existing gray descriptive text token */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+  color: var(--text-primary); /* Flips cleanly to white on hover */
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   8. PROGRESSIVE ENHANCEMENT MEDIA QUERIES (SCALING UPWARDS)
+   ========================================================================== */
+/* Tablet & Smaller Laptops Viewport Overrides (850px and up) */
+@media screen and (min-width: 850px) {
+  .hero-section {
+    background: radial-gradient(circle at 25% 50%, var(--bg-surface) 0%, var(--bg-glow) 45%, var(--bg-primary) 85%);
+  }
+  .hero-layout-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    text-align: left;
+    gap: 5%;
+  }
+  .large-studio-monogram {
+    max-width: 580px;
+  }
+  .hero-copy-display h1 {
+    font-size: 2.4rem;
+  }
+  .primary-btn {
+    margin: 0;
+  }
+  .about-container {
+    grid-template-columns: 0.8fr 1.2fr;
+    text-align: left;
+    gap: 60px;
+  }
+  .about-content-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .story-column h3 {
+    border-left: 2px solid var(--action-primary); /* Swapped to interactive primary token (Garnet) */
+    border-bottom: none;
+    padding-left: 15px;
+    padding-bottom: 0;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+  }
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .contact-item {
+    justify-content: flex-start;
+  }
+}
+/* Full Desktop Monitor Configurations (1100px and up) */
+@media screen and (min-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .bundle-layout {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+  }
+  .bundle-container {
+    padding: 45px 40px;
+  }
+  .bundle-badge {
+    left: 40px;
+  }
+  .bundle-meta h2 {
+    font-size: 1.8rem;
+  }
+}/*# sourceMappingURL=style.css.map */

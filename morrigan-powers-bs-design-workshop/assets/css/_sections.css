@@ -1,0 +1,488 @@
+/* ==========================================================================
+   3. HERO DISPLAY HERO-SECTION (MOBILE BASE)
+   ========================================================================== */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 130px 6% 40px 6%;
+  background-color: var(--bg-primary);
+  background: radial-gradient(
+    circle at 50% 50%,
+    var(--bg-surface, rgba(59, 17, 77, 0.2)) 0%,
+    var(--bg-glow, #0d5c63) 55%,
+    var(--bg-primary, #032b20) 95%
+  );
+}
+
+.hero-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.hero-art-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.large-studio-monogram {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.5));
+}
+
+.hero-copy-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-copy-display h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.hero-copy-display p {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 35px;
+  font-weight: 300;
+}
+
+.primary-btn {
+  display: inline-block;
+  width: max-content;
+  background-color: var(--action-primary);
+  color: var(--text-primary);
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.primary-btn:hover {
+  background-color: var(--action-hover);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   4. EDITORIAL "OUR STORY" BLOCK (MOBILE BASE)
+   ========================================================================== */
+.about-section {
+  padding: 40px 6%;
+  background-color: var(--bg-primary);
+  position: relative;
+  width: 100%;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: flex-start;
+  width: 100%;
+  text-align: center;
+}
+
+.about-pretitle {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--bg-glow);
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.about-header-block h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 1.15;
+}
+
+.about-content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.story-column h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--action-primary);
+  padding-bottom: 8px;
+}
+
+.story-column p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+/* ==========================================================================
+   5. FOUR-COLUMN SERVICES & ENGRAVING PRODUCT (MOBILE BASE)
+   ========================================================================== */
+.services-section {
+  padding: 40px 6%;
+  background-color: var(--bg-primary);
+  position: relative;
+  width: 100%;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-header h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  letter-spacing: 0.02em;
+}
+
+.section-header p {
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.service-card {
+  background-color: var(--bg-surface);
+  border: 1px solid rgba(184, 199, 195, 0.25); /* Low opacity tint based on secondary text values */
+  border-radius: 6px;
+  padding: 35px 25px;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--bg-glow); /* Borders light up beautifully with your glow token on hover */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.card-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 30px;
+  background-color: var(--bg-glow);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.service-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  padding-right: 50px;
+  line-height: 1.3;
+}
+
+.price {
+  font-family: var(--font-body);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.rate-type {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.card-desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 25px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.features-list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.features-list li {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 18px;
+  line-height: 1.4;
+}
+
+.features-list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--bg-glow);
+  font-size: 0.75rem;
+}
+
+.card-action {
+  margin-top: auto;
+  padding-top: 15px;
+}
+
+.cta-btn {
+  display: block;
+  text-align: center;
+  background-color: var(--action-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--bg-glow);
+  padding: 12px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: var(--bg-glow);
+  color: var(--text-primary);
+  box-shadow: 0 4px 12px rgba(13, 92, 99, 0.4);
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   6. VALUE BUNDLE BOX ELEMENT (MOBILE BASE)
+   ========================================================================== */
+.bundle-container {
+  background-color: var(--bg-surface);
+  border: 2px solid rgba(184, 199, 195, 0.3);
+  border-radius: 8px;
+  padding: 40px 25px;
+  position: relative;
+  width: 100%;
+  margin-top: 50px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.bundle-badge {
+  position: absolute;
+  top: -14px;
+  left: 25px;
+  background-color: var(--action-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 5px 14px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.bundle-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.bundle-location {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.bundle-meta h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.bundle-price {
+  font-family: var(--font-body);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.bundle-tag {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.bundle-pitch {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.bundle-list {
+  list-style: none;
+}
+
+.bundle-list li {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 22px;
+  line-height: 1.5;
+}
+
+.bundle-list li::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--action-primary);
+  font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   6. LEGAL CONTENT & TERMS DISPLAY ARCHITECTURE
+   ========================================================================== */
+
+.hero-copy-display {
+    max-width: 760px;
+    margin: 120px auto 60px auto; /* Offsets fixed header tracking layout height */
+    text-align: left;
+    padding: 45px;
+    background-color: var(--bg-surface); /* Uses surface container foundation token */
+    border-radius: 8px;
+    border: 1px solid rgba(160, 174, 192, 0.1); /* Subtle definition line using text-secondary */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.hero-copy-display h1 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    font-size: 2.25rem;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+/* Subtitles and disclaimer highlights */
+.hero-copy-display h2:first-of-type {
+    color: var(--action-primary); /* Pulls action orange forward for alerts */
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin-bottom: 25px;
+}
+
+/* Numeric clause sections (1, 2, 3...) */
+.hero-copy-display h2 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+    font-size: 1.15rem;
+    margin-top: 35px;
+    margin-bottom: 12px;
+    letter-spacing: 0.02em;
+}
+
+.hero-copy-display p {
+    font-family: var(--font-body);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.site-construction {
+    display: flex !important;
+    flex-direction: column; /* Forces items to stack on top of each other */
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    font-family: var(--font-heading);
+    text-align: center;
+}
+
+/* Hides all original inner HTML content */
+.site-construction * { 
+    display: none !important; 
+} 
+
+/* Line 1: COMING SOON */
+.site-construction::before {
+    content: "COMING SOON";
+    display: block;
+    font-size: 2.8rem;
+    color: var(--action-primary);
+    text-transform: uppercase;
+}
+
+/* Line 2: AUGUST 2026 */
+.site-construction::after { 
+    content: "AUGUST 2026";
+    display: block;
+    font-size: 1.5rem; /* Makes the date slightly smaller for better hierarchy */
+    color: var(--text-secondary); 
+    text-transform: uppercase;
+    margin-top: 15px; /* Adds space between the two lines */
+}

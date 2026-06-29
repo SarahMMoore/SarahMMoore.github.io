@@ -1,0 +1,104 @@
+/* ==========================================================================
+   7. GLOBAL MASTER SITE FOOTER (MOBILE BASE)
+   ========================================================================= */
+
+.site-footer {
+  width: 100%;
+  background-color: var(--bg-primary); /* Changed to use core canvas token */
+  padding: 40px 6%;
+  border-top: 1px solid rgba(253, 250, 242, 0.15); /* Cleaned up to use a subtle low-opacity border line */
+  margin-top: auto;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-brand {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--text-primary); /* Updated to primary typography token */
+}
+
+.footer-tagline {
+  font-size: 0.8rem;
+  color: var(--text-secondary); /* Updated to secondary descriptive token */
+  font-weight: 300;
+}
+
+.footer-copyright {
+  font-size: 0.75rem;
+  color: var(--text-secondary); /* Updated to secondary descriptive token */
+  margin-top: 12px;
+}
+
+.footer-contact h4 {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-primary); /* Updated to primary typography token */
+  margin-bottom: 15px;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-secondary); /* Updated to secondary descriptive token */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+a.contact-item:hover {
+  color: var(--text-primary); /* Hover flips to primary highlight for high readability */
+}
+
+.contact-icon {
+  color: var(--action-primary); /* Updated to call-to-action anchor token */
+  font-size: 0.9rem;
+}
+/* --- FIXED LEGAL LINKS LAYOUT --- */
+.legal-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.legal-links a {
+    font-size: 0.75rem;
+    color: var(--text-secondary); /* Uses your existing gray descriptive text token */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: var(--text-primary); /* Flips cleanly to white on hover */
+    text-decoration: underline;
+}

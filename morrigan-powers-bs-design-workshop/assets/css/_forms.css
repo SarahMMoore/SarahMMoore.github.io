@@ -1,0 +1,88 @@
+/* ==========================================================================
+   PROJECT INTAKE FORM GRID LAYOUT
+   ========================================================================= */
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-surface); /* Swapped hardcoded dark hex for your elevated surface token */
+  border: 1px solid rgba(184, 199, 195, 0.2); /* Uses a crisp low-opacity border line derived from your typography scale */
+  border-radius: 4px;
+  color: var(--text-primary); /* Swapped to primary light text token */
+  font-family: var(--font-body); /* Unified with your core typography stack variable */
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--bg-glow); /* Focus rings shift nicely to your ambient glow accent color */
+  box-shadow: 0 0 0 3px rgba(13, 92, 99, 0.25); /* Adds a subtle interactive focal ring using your glow token */
+}
+
+.form-group label {
+  color: var(--text-secondary); /* Swapped to secondary descriptive text token */
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--action-primary); /* Swapped to primary interactive button token */
+  color: var(--text-primary); /* Swapped to primary button typography color */
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-body); /* Unified with your core typography stack variable */
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  box-sizing: border-box;
+  transition: background 0.2s ease;
+}
+
+.form-submit-btn:hover {
+  background: var(--action-hover); /* Swapped to interactive hover change token */
+}
+
+/* Responsive Mobile Form Breakpoints */
+@media (max-width: 600px) {
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-group.full-width {
+    grid-column: span 1;
+  }
+}

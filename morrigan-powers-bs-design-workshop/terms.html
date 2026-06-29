@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><span class="biz-name"></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Chivo:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand-container" style="text-decoration: none;">
+            <img src="assets/images/monogram.svg" alt="Logo" class="nav-logo-svg">
+            <div class="brand-text">
+                <span class="main-title"><span class="biz-name"></span></span>
+                <span class="sub-title"><span class="biz-subtitle"></span></span>
+            </div>
+        </a>
+        <nav class="main-nav">
+            <a href="services-pricing.html">Services & Pricing</a>
+            <a href="about.html">My Story</a>
+            <a href="../index.html" class="nav-cta-btn">View Code Portfolio</a>
+        </nav>
+    </header>
+
+    <!-- Master Terms Content Component -->
+    <main class="content-wrapper">
+        <section class="hero-section">
+            <div class="hero-copy-display">
+                <h1>Terms of Service</h1>
+                <h2>(BOILERPLATE PLEASE HAVE YOUR ATTORNEY REVIEW)</h2>
+                <p>Last Updated: June 2026</p>
+                <p>Welcome to our website. By accessing or using this online platform, you agree to comply with and be bound by the following Terms of Service. If you disagree with any part of these terms, please do not use our site.</p>
+                
+                <h2>1. Intellectual Property Rights</h2>
+                <p>All content, original text layouts, brand assets, and structural interfaces displayed on this website are the property of our business and are protected by applicable copyright and intellectual property laws. Unauthorized reproduction is prohibited.</p>
+                
+                <h2>2. Acceptable Use Policy</h2>
+                <p>You agree to use this website strictly for lawful purposes. You are prohibited from using this form system to submit spam content, malicious software scripts, offensive messaging, or any data that violates local statutes.</p>
+                
+                <h2>3. Limitation of Liability</h2>
+                <p>This website and its digital content components are provided on an "as-is" basis. We make no structural guarantees or warranties regarding availability and shall not be liable for any direct or indirect technical issues or data transmission interruptions resulting from your use of this platform.</p>
+                
+                <h2>4. External Third-Party Links</h2>
+                <p>Our site may occasionally present redirect links to external third-party platforms (such as maps or social channels). We do not control, manage, or accept structural liability for the operational content or data policies of those independent networks.</p>
+                
+                <h2>5. Governing Law</h2>
+                <p>These terms and conditions are governed by and construed in accordance with the state laws of Illinois, and any processing disputes relating to these parameters shall be subject to local jurisdiction.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global Studio Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-info">
+                <span class="footer-brand biz-name"></span>
+                <p class="footer-tagline"><span class="biz-subtitle"></span></p>
+                <!-- Fixed: Corrected broken class syntax on the owner tag and unclosed tags -->
+                <p class="footer-copyright">&copy; <span class="biz-copyright"></span> <span class="biz-owner"></span> | <span class="biz-name"></span>. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h2>Connect with the Studio</h2>
+                <div class="contact-links">
+                    <a href="#" id="biz-email-link" class="contact-item">
+                        <span class="contact-icon">✉</span>
+                        <span class="biz-email"></span>
+                    </a>
+                    <span class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span class="biz-address"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Connected Central Configuration and Injection Automation Scripts -->
+    <script src="config.js"></script> 
+    <script> 
+    window.onload = function() { 
+        // Sync Browser Tab Title Layout
+        document.title = "Our Story | " + businessConfig.name + " | " + businessConfig.subtitle;
+
+        // Loop and overwrite element containers
+        document.querySelectorAll('.biz-name').forEach(el => el.textContent = businessConfig.name);
+        document.querySelectorAll('.biz-subtitle').forEach(el => el.textContent = businessConfig.subtitle);
+        document.querySelectorAll('.biz-owner').forEach(el => el.textContent = businessConfig.owner);
+        document.querySelectorAll('.biz-phone').forEach(el => el.textContent = businessConfig.phone);
+        document.querySelectorAll('.biz-email').forEach(el => el.textContent = businessConfig.email);
+        document.querySelectorAll('.biz-copyright').forEach(el => el.textContent = businessConfig.copyright);
+        document.querySelectorAll('.biz-address').forEach(el => el.textContent = businessConfig.address);
+
+        // Bind interactive email redirection anchor
+        const emailLink = document.getElementById('biz-email-link');
+        if(emailLink) {
+            emailLink.href = "mailto:" + businessConfig.email;
+        }
+    } 
+    </script> 
+</body> 
+</html>
