@@ -492,6 +492,18 @@ header {
   }
 }
 
+/* Automatically constrains and scales case study images to fit cards perfectly */
+.image-wrapper img,
+.image-grid img,
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto 0 auto;
+    border-radius: 6px;
+}
+
+
 /* ==========================================================================
    9. INSTITUTIONAL BRAND MATRIX (Logo & Identity)
    ========================================================================== */

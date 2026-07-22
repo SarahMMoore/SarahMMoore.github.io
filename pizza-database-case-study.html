@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: TargetPractice Simulation Engine | Sarah M. Moore</title>
+    <link rel="stylesheet" href="style.css">
+		<script src="theme.js" defer></script>
+</head>
+<body>
+
+    <!-- Section 7: Top-Level Minimalist Portfolio Navigation -->
+      <nav class="sticky-nav">
+        <ul>
+            <li><a href="backend.html" class="back-link">← BACK TO PROJECTS</a></li>
+            <li>
+                <span class="tooltip-wrapper">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode"> 🌓 Theme</button>
+                    <span class="tooltip-text">Click to switch color contrast profiles</span>
+                </span>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Section 5: Unified Core Layout Container Constraints -->
+    <div class="portfolio-container">
+        
+        <!-- Section 7: Case Study Hero Header Module -->
+        <header class="section-header">
+            <h1>Pizza Ordering System - Relational Database Architecture</h1>
+            <p class="subtitle">IFT 200: Conceptual Database Design | Full Engineering Lifecycle Case Study</p>
+        </header>
+
+        <!-- Section 7: Structural Breakdown List Wrapper -->
+        <main class="project-list">
+
+            <!-- Phase 1 Card -->
+            <section class="project-card">
+                <h2>📋 Phase 1: Conceptual Design & Requirements Mapping (Lab 2)</h2>
+                <p>The development cycle initiated by decomposing a complex retail food business prompt into core structural business entities. Cardinality and relationship parameters were isolated to define exactly how systemic objects interact before physical schema generation began.</p>
+                <ul>
+                    <li><strong>Customer to Order (1:N):</strong> Established that an individual customer can place one or more orders over time, but every individual order ticket traces back to exactly one specific customer registry anchor.</li>
+                    <li><strong>Order to Pizza (N:M Associative Mapping):</strong> Determined that a single order ticket can contain multiple pizza items, and identical pizza configurations appear across numerous distinct orders. This required designing a dedicated associative entity to break down the many-to-many link.</li>
+                </ul>
+                <div class="image-wrapper">
+                    <img src="images/pizza-lab2-erd.png" alt="Lab 2 Conceptual ER Diagram">
+                </div>
+            </section>
+
+            <!-- Phase 2 Card -->
+            <section class="project-card">
+                <h2>📐 Phase 2: Enhanced ERD & Schema Normalization (Lab 4)</h2>
+                <p>To eliminate data redundancy, avoid update anomalies, and enforce clean referential boundaries, the conceptual layout was refactored into an Enhanced Entity-Relationship Diagram (EERD) utilizing advanced supertype/subtype relationships:</p>
+                <ul>
+                    <li><strong>The Customer Union Hierarchy:</strong> Developed a parent <code>CUSTOMERS</code> supertype (Primary Key: <code>Customer_ID</code>) that branches out into distinct <code>INDIVIDUAL</code> and <code>CORPORATE</code> subtype entities via strict foreign key inheritance pathways.</li>
+                    <li><strong>The Polymorphic Food Item Schema:</strong> Engineered a master <code>FOOD_ITEM</code> supertype containing base pricing tables, driving specialized sub-tables for <code>PIZZA</code> (tracking crust and type), <code>BREADSTICKS</code> (tracking flour configurations), and <code>SODA</code> (tracking sugar measurements).</li>
+                    <li><strong>The Associative Resolution Grid:</strong> Implemented <code>ORDER_DETAIL</code> as a robust mapping table, joining <code>Order_ID</code> and <code>Item_ID</code> into a composite primary key to record the localized size and quantity metrics of every single line item.</li>
+                </ul>
+                <div class="image-wrapper">
+                    <img src="images/pizza-lab4-eerd.png" alt="Lab 4 Enhanced EERD Supertype Subtype Mapping">
+                </div>
+            </section>
+
+            <!-- Phase 3 Card -->
+            <section class="project-card">
+                <h2>💻 Phase 3: Physical DDL Implementation & Database Scripts</h2>
+                <p>The normalized EER diagram blueprints were compiled into raw SQL Data Definition Language (DDL) deployment scripts inside a Microsoft SQL Server environment, manually building table topologies and structural constraints:</p>
+                <ul>
+                    <li><strong>Enforcing Referential Integrity:</strong> Authored schema declaration statements defining explicit <code>PRIMARY KEY</code> constraints alongside cascading <code>FOREIGN KEY ... REFERENCES</code> keys to safeguard downstream database dependencies.</li>
+                    <li><strong>Securing Payment Type Tracks:</strong> Configured an independent <code>PAYMENT_TYPE</code> supertype tracking branch relationships into specialized, inherited tables for <code>CASH</code> and <code>CREDIT_CARD</code> processing records.</li>
+                </ul>
+                <div class="image-wrapper">
+                    <img src="images/pizza-ddl-code.png" alt="SQL Server Table Schema DDL Scripts">
+                </div>
+            </section>
+
+            <!-- Phase 4 Card -->
+            <section class="project-card">
+                <h2>⚡ Phase 4: Programmatic Data Manipulation & System Audits (Lab 9)</h2>
+                <p>With the database tables compiled, programmatic interactions were deployed using Python's <code>pyodbc</code> driver to connect seamlessly with the <code>TheCamper</code> local server workstation instance hosting the <code>PizzaOrderingSystem</code> relational database. Scripts were written to handle both structured transactional adjustments and deep database discovery routines:</p>
+                <ul>
+                    <li><strong>Sanitized Multi-Table Insertions:</strong> Built parameterized transaction blocks to safely record incoming customer acquisitions. The script pushes data parameters concurrently into <code>dbo.Customers</code> and <code>dbo.Individual</code> before triggering a secure <code>conn.commit()</code> event.</li>
+                    <li><strong>Relational Validation JOIN Queries:</strong> Implemented an immediate programmatic verification script using inner <code>JOIN</code> syntax on matching <code>CustomerID</code> keys, confirming transactional validity instantly down the line.</li>
+                    <li><strong>Automated Schema Iteration Scanner:</strong> Programmed a global diagnostic script loading all active system tables into a structured array. The script uses an operational loop to iterate through every schema asset, executing dynamic queries and fetching tuples to dump database registers directly into logs.</li>
+                </ul>
+                <div class="image-grid">
+                    <div class="image-wrapper">
+                        <img src="images/pizza-dml-results.png" alt="Python pyodbc Multi-Table Transaction Insertion Scripts">
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="images/pizza-audit-loop.png" alt="Python pyodbc Automated Database Schema Iteration Logs">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card 5: Technical Core Skills Featured (Section 6 Integration) -->
+            <section class="project-card">
+                <h2>🛠️ Technical Core Skills Featured</h2>
+                <div class="skills-grid">
+                    <div class="skills-category">
+                        <div class="tag-group">
+                            <span class="tech-tag">IFT 200 Database Curriculum</span>
+                            <span class="tech-tag">Enhanced Entity-Relationship Diagrams (EERD)</span>
+                            <span class="tech-tag">Third Normal Form (3NF) Normalization</span>
+                            <span class="tech-tag">Microsoft SQL Server Architecture</span>
+                            <span class="tech-tag">Data Definition Language (DDL)</span>
+                            <span class="tech-tag">Data Manipulation Language (DML)</span>
+                            <span class="tech-tag">Multi-Table Relational JOIN Queries</span>
+                            <span class="tech-tag">Python pyodbc Driver Integration</span>
+                            <span class="tech-tag">Database Audit Loop Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card 6: Operational Access Portal -->
+            <section class="project-card deployment-card">
+                <h2>Deployment Architecture Status</h2>
+                <p>This comprehensive relational backend system was designed, mapped, normalized, and deployed across local workstation environments to meet full academic criteria.</p>
+                <div class="badge-status">
+                    💻 Local Workstation Environment Deployment Verified
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
