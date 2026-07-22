@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Stock Portfolio & Ledger System - Sarah M. Moore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+
+    <!-- Sticky Navigation Block -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="backend.html" class="back-link">← BACK TO PROJECTS</a></li>
+            <li>
+                <span class="tooltip-wrapper">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">☀️ LIGHT MODE</button>
+                    <span class="tooltip-text" aria-hidden="true">Click to switch color contrast profiles</span>
+                </span>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main Dynamic Content Wrapper -->
+    <main class="portfolio-container">
+        
+        <!-- Center Header Box Component -->
+        <header class="section-header">
+            <span class="back-link">Academic Capstone Project</span>
+            <h1>CASE STUDY: OBJECT-ORIENTED STOCK PORTFOLIO & LEDGER SYSTEM</h1>
+            <p class="subtitle">Java OOP • Data Structures • FinTech Simulation</p>
+        </header>
+				<section class="project-list">
+        <!-- Project Meta Info Card -->
+        <article class="project-card">
+            <p><strong>Role:</strong> Solo Backend Engineer</p>
+            <p><strong>Context:</strong> ASU IFT210 Capstone (Scored 100/100)</p>
+            <p><strong>Stack:</strong> Java 100% (Console CLI / Eclipse IDE)</p>
+        </article>
+
+        <!-- Overview Block -->
+        <article class="project-card">
+            <h2>📌 PROJECT OVERVIEW</h2>
+            <p>Developed as the capstone final project for Arizona State University's <strong>IFT210</strong> course, this desktop application simulates a real-world financial brokerage account. The system allows users to execute simulated investments while maintaining a strictly validated transactional history ledger that matches complex multi-action banking criteria.</p>
+        </article>
+
+        <!-- Architecture Deep Dive Block -->
+        <article class="project-card">
+            <h2>🏗️ TECHNICAL ARCHITECTURE & DESIGN PATTERNS</h2>
+            
+            <div class="skills-category">
+                <h3>1. Data Modeling & Encapsulation</h3>
+            </div>
+            <p>The architecture isolates data state mutation by splitting logic into two core classes to ensure strict data boundaries:</p>
+            <ul>
+                <li><strong><code>TransactionHistory.java</code>:</strong> A tightly encapsulated entity model using private fields (<code>ticker</code>, <code>transDate</code>, <code>transType</code>, <code>qty</code>, <code>costBasis</code>). State access is strictly funneled through explicit getters and setters.</li>
+                <li><strong><code>PortfolioManager.java</code>:</strong> The core application execution engine managing the global runtime loop, interface strings, validation steps, and system memory state.</li>
+            </ul>
+
+            <div class="skills-category">
+                <h3>🔍 Core Implementation: Encapsulated Entity Design</h3>
+            </div>
+            <p>The data layer utilizes a strict entity blueprint ensuring safe object instantiation through default and overloaded constructor state controls:</p>
+            <ul>
+                <li><strong>Default Constructor:</strong> Enforces safe fallback initialization states and sets the default CASH unit valuation to <code>1.00</code> per rubric mandate.</li>
+                <li><strong>Overloaded Constructor:</strong> Used directly by the execution engine for dynamic ledger instantiation when recording new events.</li>
+            </ul>
+
+            <!-- Image 1 Location: Constructor Code Architecture -->
+            <div class="skills-grid">
+                <img src="images/port-mgr-image-1.png" alt="Clean Java implementation showing default and overloaded constructors for TransactionHistory class">
+                <p class="secondary-link">Figure 1: Encapsulated TransactionHistory constructor implementation.</p>
+            </div>
+
+            <div class="skills-category">
+                <h3>2. Dual-Entry Ledger Engine (Automated Transaction Pairing)</h3>
+            </div>
+            <p>To simulate actual financial compliance standards, a single investment choice triggers a dual-entry transaction pairing mechanism. Buying or selling an asset does not just change an array value; it generates two distinct atomic objects concurrently inside a unified <code>ArrayList&lt;TransactionHistory&gt;</code> collection to preserve absolute data integrity:</p>
+            <ul>
+                <li><strong>Asset Leg:</strong> Records the equity modification (e.g., <code>Ticker: DFEN</code>, <code>Type: BUY</code>, <code>Qty: 100.0</code>, <code>Cost Basis: 15.0</code>).</li>
+                <li><strong>Liquidity Leg:</strong> Automatically computes the total capital offset and logs the secondary opposing cash movement (e.g., <code>Ticker: CASH</code>, <code>Type: WITHDRAW</code>, <code>Qty: -1500.0</code>, <code>Cost Basis: 1.00</code>).</li>
+            </ul>
+
+            <!-- Image 2 Location: Multi-Leg Automated Account Generation -->
+            <div class="skills-grid">
+                <img src="images/port-mgr-image-2.png" alt="Java code block showing simultaneous multi-leg entry logging for equity trades">
+                <p class="secondary-link">Figure 2: Automated dual-entry execution pairing mechanics.</p>
+            </div>
+        </article>
+
+        <!-- Engineering Challenges Box -->
+        <article class="project-card">
+            <h2>⚙️ KEY ENGINEERING CHALLENGES & SOLUTIONS</h2>
+            
+            <div class="skills-category">
+                <h3>🛡️ Defensive Programming & Input Validation</h3>
+            </div>
+            <p>The system implements strict validation guardrails inside the application loop before allowing state mutations, meeting exact production-grade requirements:</p>
+            <ul>
+                <li><strong>Liquidity Guard:</strong> Before processing a stock purchase, the engine iterates through the dynamic ledger history to compute cumulative cash positions, blocking transactions if available liquidity cannot cover the total asset cost.</li>
+                <li><strong>Overdraft Interception:</strong> Capital withdrawals are benchmarked against current cash holdings. Malformed withdrawals are denied with explicit user-facing messages rather than allowing negative cash anomalies.</li>
+                <li><strong>Asset Ownership Verification:</strong> Prevented users from short-selling assets they do not hold by validating the portfolio's active keys and quantity limits before allowing liquidations.</li>
+            </ul>
+
+            <!-- Image 3 Location: Validation Layers & Guardrails -->
+            <div class="skills-grid">
+                <img src="images/port-mgr-image-3.png" alt="Java input validation block for preventing balance overdrafts and illegal stock liquidations">
+                <p class="secondary-link">Figure 3: Runtime asset validation and mathematical guardrails.</p>
+            </div>
+
+            <div class="skills-category">
+                <h3>📊 Dynamic Algorithmic State Reduction</h3>
+            </div>
+            <p>Instead of maintaining a fragile, static, or hardcoded list of asset variables, the engine processes the full historical ledger stream into a live state snapshot completely on-demand:</p>
+            <ul>
+                <li><strong>Timeline Replay Logic:</strong> Every time menu option 6 is triggered, the system scans every transaction chronologically. If the operation is a <code>SELL</code>, the asset scalar maps into a negative value; if it is a <code>BUY</code>, it maps as positive.</li>
+                <li><strong>Dynamic Collapse Strategy (<code>HashMap</code>):</strong> The engine dynamically combines duplicate keys on the fly using a Java <code>HashMap</code> and the <code>.getOrDefault()</code> method. It calculates the live adjusted cost basis and actively hides completely liquidated or zero-balance tickers to ensure a perfectly clean profile layout.</li>
+            </ul>
+
+            <!-- Image 4 Location: HashMap Reduction Loop -->
+            <div class="skills-grid">
+                <img src="images/port-mgr-image-4.png" alt="Java code loop utilizing a HashMap to dynamically aggregate and collapse transaction historical entries into current holdings">
+                <p class="secondary-link">Figure 4: HashMap timeline data array reduction logic.</p>
+            </div>
+        </article>
+
+        <!-- Interface View Card -->
+        <article class="project-card">
+            <h2>💻 SYSTEM EXECUTION & INTERFACE</h2>
+            <div class="skills-category">
+                <h3>Clean CLI Layout</h3>
+            </div>
+            <p>The interface utilizes well-spaced text matrices to construct an organized, human-readable menu layout that handles input selection cleanly while intercepting non-integer data types smoothly.</p>
+            
+            <!-- Image 5 Location: Console Menu Interface -->
+            <div class="skills-grid">
+                <img src="images/port-mgr-image-5.png" alt="Terminal window showing the running stock portfolio simulation interactive terminal layout menu options">
+                <p class="secondary-link">Figure 5: User command interface and input handling menu layout.</p>
+            </div>
+
+            <div class="skills-category">
+                <h3>Formatted Audit Ledger Output</h3>
+            </div>
+            <p>The system outputs a tabular stream of raw data arrays, aligning columns dynamically with standard padding to guarantee clear visual hierarchy.</p>
+
+                        <!-- Image 6 Location: History Table & Portfolio State Streams -->
+            <div class="skills-grid">
+                <img src="images/port-mgr-image-6.png" alt="Console window layout showcasing formatted tabular column strings for transaction auditing data">
+                <p class="secondary-link">Figure 6: Formatted transactional tables stream and audit trails snapshot outputs.</p>
+            </div>
+        </article>
+
+        <!-- Takeaways Box Block -->
+        <article class="project-card">
+            <h2>🚀 KEY TAKEAWAYS & ENGINEERING GROWTH</h2>
+            <ul>
+                <li><strong>Financial State Patterns:</strong> Mastered dual-entry ledger logic and audit trails within an Object-Oriented environment.</li>
+                <li><strong>Algorithmic Reduction:</strong> Learned how to process a raw transaction history queue to generate a clean, real-time snapshot of current user assets.</li>
+                <li><strong>Defensive Engineering:</strong> Developed strong instincts for validation layers, type-checking, input filtering, and safe edge-case handling.</li>
+            </ul>
+        </article>
+
+        <!-- Footer Repository Call to Action Box -->
+        <article class="project-card">
+            <div class="project-links">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="cta-link">VIEW CODEBASE ON GITHUB →</a>
+            </div>
+        </article>
+		</section>
+    </main>
+</body>
+</html>
