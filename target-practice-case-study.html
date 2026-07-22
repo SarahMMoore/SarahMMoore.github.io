@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: TargetPractice Simulation Engine | Sarah M. Moore</title>
+    <!-- Links directly to your unified global stylesheet containing sections 5, 6, and 7 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Section 7: Top-Level Minimalist Portfolio Navigation -->
+    <nav class="portfolio-nav">
+        <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+    </nav>
+
+    <!-- Section 5: Unified Core Layout Container Constraints -->
+    <div class="portfolio-container">
+        
+        <!-- Section 7: Case Study Hero Header Module -->
+        <header class="section-header">
+            <h1>Refactoring ZyBooks: 2D Vector Radar Simulation Engine</h1>
+            <p class="subtitle">Advanced Refactoring & Optimization Showcase | Programming Practicum at Illinois College</p>
+        </header>
+
+        <!-- Section 7: Structural Breakdown List Wrapper -->
+        <main class="project-list">
+
+            <!-- Card 1: Backstory & Context -->
+            <section class="project-card">
+                <h2>🎯 Architectural Backstory</h2>
+                <p>This project originated as a foundational, text-driven target-hitting drill within a standard academic <strong>ZyBooks</strong> curriculum. The original implementation required blocking terminal-based text entries, halting script execution completely to wait for user text prompts, and utilized rudimentary unbuffered rendering cycles.</p>
+                <p>Recognizing the math framework's potential, I voluntarily extracted the baseline code and extensively re-engineered it. I transitioned the project away from linear, command-line console limitations into an interactive, real-time desktop radar grid and vector tracking simulation engine.</p>
+            </section>
+
+            <!-- Card 2: Technical Deep Dive: Event Polling -->
+            <section class="project-card">
+                <h2>⚡ Asynchronous Controls & Engine Logic</h2>
+                <p>The updated simulation decouples core data registries completely from visual presentation elements to protect application health metrics during flight execution cycles.</p>
+                <p>Key Technical Implementations:</p>
+                <ul>
+                    <li><strong>Non-Blocking Event Polling:</strong> Implemented active asynchronous keyboard listeners (<code>turtle.listen()</code>) to poll hardware input flags without pausing background processing threads.</li>
+                    <li><strong>Real-Time Vector Tuning:</strong> Mapped dedicated callback routines directly to system arrow keys, allowing users to fluidly scale aim trajectories and launch force limits on a shifting numerical range.</li>
+                    <li><strong>State-Locked Execution Boundaries:</strong> Programmed a conditional state gate (<code>config.is_fired</code>) to instantly freeze coordinate modifications while physics arrays are computing, eliminating input cross-contamination.</li>
+                </ul>
+            </section>
+
+            <!-- Card 3: Technical Deep Dive: Buffer Optimizations -->
+            <section class="project-card">
+                <h2>🎨 Low-Latency Frame Buffer Optimization</h2>
+                <p>To eliminate native rendering glitches and graphical lag, I reconfigured the canvas engine to handle data updates inside an optimized memory layout before rendering components to the screen.</p>
+                <ul>
+                    <li><strong>Double-Buffering Control:</strong> Bypassed standard visual trailing lag completely by turning off incremental line animation updates via <code>turtle.tracer(0)</code> commands.</li>
+                    <li><strong>Layered Layout Redraws:</strong> Structured a procedural frame pipeline that sweeps stale vectors, draws Cartesian grids, aligns target circles, and stamps user data fields onto a clean layout.</li>
+                    <li><strong>Instant Canvas Flushes:</strong> Forced instantaneous visual rendering by invoking explicit display flushes via <code>turtle.update()</code> right before reopening global trace registers.</li>
+                </ul>
+            </section>
+
+                         <!-- Card 4: Code Preview Box (Utilizing Image Screenshot) -->
+            <section class="project-card">
+                <h2>💻 Core Runtime Loop Implementation</h2>
+                <p>Below is the decoupled rendering engine from <code>core/game_play.py</code> demonstrating manual trace buffering controls and asset pipeline isolation:</p>
+                <div style="margin-top: 20px; text-align: center;">
+                    <img src="images/tar-prac-image1.png" alt="Python Core Runtime Loop Source Code" style="max-width: 100%; border-radius: 6px; border: 1px solid var(--accent-tertiary);">
+                </div>
+            </section>
+
+            <!-- Card 4b: Global State Registry (Utilizing Image Screenshot) -->
+            <section class="project-card">
+                <h2>🎛️ State Registry & Dynamic Property Architecture</h2>
+                <p>Below is the global tracking registry from <code>core/config.py</code>, showcasing random scalar objective placement bounds alongside explicit boolean toggle locks used to secure input parameters during runtime calculations:</p>
+                <div style="margin-top: 20px; text-align: center;">
+                    <img src="images/tar-prac-image2.png" alt="Python Global Configuration State Registry Source Code" style="max-width: 100%; border-radius: 6px; border: 1px solid var(--accent-tertiary);">
+                </div>
+            </section>
+
+                        <!-- Card 4c: Verified File Blueprint Matrix (No Pre/Code Tags) -->
+            <section class="project-card">
+                <h2>📂 System Architecture Blueprint</h2>
+                <p>The completely refactored component tree demonstrating modular package decoupling across core mechanics, display layer dimensions, and progressive view scenes:</p>
+                
+                <!-- Styled Directory Container -->
+                <div class="directory-tree-container" style="background-color: var(--accent-tertiary); padding: 20px; border-radius: 6px; font-family: monospace; font-size: 0.9rem; margin-top: 15px;">
+                    
+                    <!-- Root Item -->
+                    <div style="font-weight: bold; margin-bottom: 8px; color: var(--text);">📂 TargetPractice (Root)</div>
+                    
+                    <ul style="list-style-type: none; padding-left: 15px; margin: 0; border-left: 1px dashed var(--accent-primary);">
+                        <!-- Core Package -->
+                        <li style="margin-bottom: 12px; padding-left: 10px; position: relative;">
+                            <strong style="color: var(--text);">📂 core/</strong>
+                            <ul style="list-style-type: none; padding-left: 15px; margin-top: 4px; color: var(--text-muted); font-size: 0.85rem;">
+                                <li style="margin-bottom: 4px;">📄 config.py <span style="opacity: 0.6; padding-left: 8px;">— Global runtime states & registries</span></li>
+                                <li style="margin-bottom: 4px;">📄 game_play.py <span style="opacity: 0.6; padding-left: 8px;">— Central engine render frame loops</span></li>
+                                <li style="margin-bottom: 4px;">📄 hit.py <span style="opacity: 0.6; padding-left: 8px;">— Collision boundary validation math</span></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Graphics Package -->
+                        <li style="margin-bottom: 12px; padding-left: 10px;">
+                            <strong style="color: var(--text);">📂 graphics/</strong>
+                            <ul style="list-style-type: none; padding-left: 15px; margin-top: 4px; color: var(--text-muted); font-size: 0.85rem;">
+                                <li style="margin-bottom: 4px;">📄 crosshairs.py <span style="opacity: 0.6; padding-left: 8px;">— Cartesian layout lines & crosshairs</span></li>
+                                <li style="margin-bottom: 4px;">📄 draw_target.py <span style="opacity: 0.6; padding-left: 8px;">— Objective box canvas specs</span></li>
+                                <li style="margin-bottom: 4px;">📄 scope.py <span style="opacity: 0.6; padding-left: 8px;">— Overlay targeting reticles</span></li>
+                                <li style="margin-bottom: 4px;">📄 display.py <span style="opacity: 0.6; padding-left: 8px;">— Global vector canvas controller</span></li>
+                                <li style="margin-bottom: 4px;">📄 x_axis.py / y_axis.py <span style="opacity: 0.6; padding-left: 8px;">— Axis grid ruler metrics</span></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Scenes Package -->
+                        <li style="margin-bottom: 12px; padding-left: 10px;">
+                            <strong style="color: var(--text);">📂 scenes/</strong>
+                            <ul style="list-style-type: none; padding-left: 15px; margin-top: 4px; color: var(--text-muted); font-size: 0.85rem;">
+                                <li style="margin-bottom: 4px;">📄 title_animations.py <span style="opacity: 0.6; padding-left: 8px;">— Intro splash vector frames</span></li>
+                                <li style="margin-bottom: 4px;">📄 page_1.py / page_2.py <span style="opacity: 0.6; padding-left: 8px;">— Instructional & config views</span></li>
+                                <li style="margin-bottom: 4px;">📄 page_3.py <span style="opacity: 0.6; padding-left: 8px;">— Core simulation challenges</span></li>
+                                <li style="margin-bottom: 4px;">📄 animation_sequence_1.py <span style="opacity: 0.6; padding-left: 8px;">— Inter-scene transitional logic</span></li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Main Script -->
+                        <li style="padding-left: 10px; color: var(--text);">
+                            🚀 <strong>1play_me.py</strong> <span style="color: var(--text-muted); font-size: 0.85rem; opacity: 0.6; padding-left: 8px;">— Main application execution driver</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+
+
+            <!-- Card 5: Core Skills Manifest (Section 6 Integration) -->
+            <section class="project-card">
+                <h2>🛠️ Technical Core Skills Featured</h2>
+                <div class="skills-grid" style="padding-top: 5px;">
+                    <div class="skills-category">
+                        <div class="tag-group">
+                            <span class="tech-tag">Python 3.x</span>
+                            <span class="tech-tag">Turtle Graphics</span>
+                            <span class="tech-tag">Event-Driven Architecture</span>
+                            <span class="tech-tag">Double-Buffering</span>
+                            <span class="tech-tag">Asynchronous Callbacks</span>
+                            <span class="tech-tag">State-Locking Logic</span>
+                            <span class="tech-tag">Refactoring & Code Modernization</span>
+                            <span class="tech-tag">UI/UX Layout Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card 6: Project Action Links -->
+            <section class="project-card" style="text-align: center;">
+                <h2>Review the Source Implementation</h2>
+                <p>Explore the full multi-package framework layout, global configuration objects, and operational directories directly on GitHub.</p>
+                <!-- Section 7 Link Architecture Components -->
+                <div class="project-links" style="justify-content: center;">
+                    <a href="https://github.com/SarahMMoore/TargetPractice" target="_blank" rel="noopener noreferrer" class="cta-link">Explore GitHub Repository &rarr;</a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>
