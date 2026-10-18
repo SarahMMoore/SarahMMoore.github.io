@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Identity & Brand Asset Generation Case Study - Sarah M. Moore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+
+    <!-- Context-Specific Subpage Navigation Bar -->
+    <nav class="sticky-nav">
+        <ul>
+            <li><a href="creative-suite.html" class="back-link">← Back to Media & Content</a></li>
+            <li>
+                <span class="tooltip-wrapper">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode">🌓 Theme</button>
+                    <span class="tooltip-text">Click to switch color contrast profiles</span>
+                </span>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="portfolio-container">
+
+        <!-- Case Study Header Context -->
+        <header class="section-header">
+            <h1>Cross-Platform Vector Identity Deployment</h1>
+            <p class="subtitle"><strong>Project Name:</strong> The Camper: A Guide to RV Living</p>
+            <p class="subtitle"><strong>Role:</strong> Lead Brand Designer &amp; Front-End Asset Engineer</p>
+            <p class="subtitle"><strong>Core Stack:</strong> Adobe Illustrator, Adobe Photoshop, SVG, Fluid CSS Hierarchy</p>
+        </header>
+
+        <!-- 1. Executive Summary -->
+        <section class="project-card">
+            <h2>1. Executive Summary</h2>
+            <p><strong>The Subject:</strong> The Camper is an emerging digital platform designed to provide interactive guides, technical field reports, and lifestyle resources for the recreational vehicle (RV) community.</p>
+            <p><strong>The Challenge:</strong> The client required a complete visual identity that felt modern and community-oriented, while executing flawlessly across highly disparate digital touchpoints&mdash;from a tiny 16x16 browser favicon to massive high-DPI desktop viewports.</p>
+            <p><strong>The Solution:</strong> An asset pipeline engineered entirely in lossless vector formats, mapped to a standardized design system tokenized by a dark-theme color palette and structured fluid typography.</p>
+        </section>
+
+        <!-- 2. Design Challenge & Scope -->
+        <section class="project-card">
+            <h2>2. Design Challenge &amp; Scope</h2>
+            <p>Digital media platforms in the travel and niche lifestyle space face extreme layout volatility. Users access content while on the move using variable mobile viewports, tablet orientations, and desktop environments.</p>
+            
+            <h3 style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; font-size: 1.1rem; margin: 20px 0 10px 0;">Key Obstacles</h3>
+            <ul style="padding-left: 20px; line-height: 1.6;">
+                <li><strong>Pixelation &amp; Artifacting:</strong> Standard raster graphics (.png, .jpg) lose clarity and look blurred on high-DPI (Retina) screens when scaled dynamically.</li>
+                <li><strong>Visual Disconnect:</strong> Lack of unified design tokens creates a jarring user experience when transitioning from social media platforms to the live web deployment.</li>
+                <li><strong>Performance Overhead:</strong> Heavy, poorly formatted media assets inflate web page load times, which degrades mobile user experiences on unpredictable RV campgrounds networks.</li>
+            </ul>
+        </section>
+
+        <!-- 3. The Solution & Creative Process -->
+        <section class="project-card">
+            <h2>3. The Solution &amp; Creative Process</h2>
+            
+            <h3 style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; font-size: 1.1rem; margin: 20px 0 10px 0;">Phase 1: Pure Vector Identity Generation</h3>
+            <p>Using Adobe Illustrator, the primary visual mark for The Camper was engineered from scratch using geometric vector paths. This methodology ensures mathematical scaling without fidelity loss.</p>
+            <p><strong>Logo Ideation:</strong> Combining outdoor motifs with clean, modern tech aesthetics to echo the spirit of modern, off-grid adventure.</p>
+            <p><strong>The Favicon Optimization:</strong> The logo's primary elements were carefully adapted and simplified down to bare-minimum visual paths, ensuring readability when scaled down to a standard micro-UI browser canvas (16x16, 32x32, and 48x48 pixels).</p>
+
+            <h3 style="color: var(--accent-primary); text-transform: uppercase; letter-spacing: 1px; font-size: 1.1rem; margin: 30px 0 15px 0;">Phase 2: Design System Architecture</h3>
+            <p>To bridge static design files with live code deployment, a formal style guide was established:</p>
+            
+            <!-- Structural Table Mockup matching subpage typography data -->
+            <div style="overflow-x: auto; margin-top: 15px;">
+                <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.95rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid var(--accent-tertiary);">
+                            <th style="padding: 10px;">Design System Element</th>
+                            <th style="padding: 10px;">Strategy &amp; Purpose</th>
+                            <th style="padding: 10px;">Technical Choice</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid var(--accent-tertiary);">
+                            <td style="padding: 12px; font-weight: bold;">Color Palette</td>
+                            <td style="padding: 12px;">Dark-theme optimized layout; maintains strict accessibility and high contrast ratio for glare environments.</td>
+                            <td style="padding: 12px;">Deep Navy Baseline, Charcoal Midtones, Coral/Rust Accent (#Orange-Red)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--accent-tertiary);">
+                            <td style="padding: 12px; font-weight: bold;">Typography</td>
+                            <td style="padding: 12px;">Strict mathematical scaling rules configured to automatically resize based on user viewport widths.</td>
+                            <td style="padding: 12px;">Scalable Fluid Hierarchy (rem / vw CSS units)</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid var(--accent-tertiary);">
+                            <td style="padding: 12px; font-weight: bold;">Layer Structure</td>
+                            <td style="padding: 12px;">Asset files organized into independent, clearly labeled semantic layer groups.</td>
+                            <td style="padding: 12px;">Grouped Vector Outlines (Clean SVG Output)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 4. Technical Implementation & Live Deployment -->
+        <section class="project-card">
+            <h2>4. Technical Implementation &amp; Live Deployment</h2>
+            <p>The definitive value of this case study lies in the transition from Graphic Asset Generation to Live Front-End Deployment:</p>
+            <ul style="padding-left: 20px; line-height: 1.6;">
+                <li><strong>SVG Asset Optimization:</strong> Raw vector paths exported from Illustrator were scrubbed of redundant meta-data and inline style junk. This results in minimal file sizes, improving the website's performance metrics.</li>
+                <li><strong>Asset Package Handoff:</strong> Created a unified asset delivery pipeline, enabling immediate production use across front-end web files, social assets, and physical print components.</li>
+                <li><strong>Responsive Layout Integration:</strong> Integrated the new vectors into fluid web viewports, matching the live site layout architecture to guarantee crisp rendering across any viewport configuration.</li>
+            </ul>
+        </section>
+
+        <!-- 5. Measurable Outcomes & Key Takeaways -->
+        <section class="project-card">
+            <h2>5. Measurable Outcomes &amp; Key Takeaways</h2>
+            <p><strong>Infinite Scalability:</strong> The visual assets scale dynamically without rendering distortions across mobile, tablet, and ultra-wide monitor arrays.</p>
+            <p><strong>Optimized Performance:</strong> Shifting from uncompressed raster graphics to clean, vectorized SVGs significantly cut down the platform's initial page asset overhead.</p>
+            <p><strong>Unified Visual Footprint:</strong> Standardizing color palettes and typographic treatments successfully established a recognizable design voice across the entire digital ecosystem.</p>
+        </section>
+
+    </main>
+
+</body>
+</html>
+
